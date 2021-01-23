@@ -1,11 +1,28 @@
-# SOAD-Final-Review
+# Travel Agency 
+It is a Django Rest Framework based website targetted at tourists. 
+It is concentrated at Service Oriented Architecture. Hence, as many as 4 RESTful APIs have been exposed and 7 APIs have been consumed.
 
-Jaswanth K - S20180010068
+## Features for users
 
-Shazada Salman - S20170010148
+- Search Flight Details
+- Search Hotel Details
+- Rent Travel Products
+- Crowdfunding Travel Expenses
+- Find a Travel Partner
+- Weather
+- Stripe for Secure Payments
+- Github and Google Authentication
 
-Thippabathuni Vishruth - S20180010175
+## Mock Server Application (Django)
+A Django based Mock Application to show the implementation, working, and permissions of the exposed APIs.
 
-Mopidevi Venkateswarlu - S20180010107
-
-Yadlapally Uday Kumar - S20180010195
+#### To Run the Mock Application
+Go to the 'app' directory and run:
+```bash
+python manage.py runserver 8000
+```
+Open another shell and go to 'mock' directory and run:
+```bash
+python manage.py runserver 4000
+```
+To see the mock application, go to localhost:4000 on your web browser.
