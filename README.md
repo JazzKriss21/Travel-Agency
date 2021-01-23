@@ -13,6 +13,8 @@ It is concentrated at Service Oriented Architecture. Hence, as many as 4 RESTful
 - Stripe for Secure Payments
 - Github and Google Authentication
 
+### Swagger Documentation for the APIs in HTML format is available.
+
 ## Mock Server Application (Django)
 A Django based Mock Application to show the implementation, working, and permissions of the exposed APIs.
 
@@ -26,3 +28,4 @@ Open another shell and go to 'mock' directory and run:
 python manage.py runserver 4000
 ```
 To see the mock application, go to http://localhost:4000 on your web browser.
+
