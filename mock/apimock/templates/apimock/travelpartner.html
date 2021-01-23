@@ -1,0 +1,61 @@
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class='container'>
+    <a class="navbar-brand" href="#">Travel Agency API Mock Application</a>
+    </div>
+    </nav>
+<div class="jumbotron">
+    <div>
+    <h1 class="display-4 container">Travel Partner API</h1>
+    </div>
+</div>
+
+<div class='container'>
+    <h3>1. List of travel partner registrations</h3>
+    <button type="button" class="btn btn-primary active">GET</button>
+    {{ listAll  }}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>2. Register yourself for travel partner</h3>
+    <button type="button" class="btn btn-success active">POST</button>
+    {{ newReg }}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>3. Edit your registration </h3>
+    <button type="button" class="btn btn-warning active">PUT</button>
+    {{ edit }}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>4. Edit different person's registration </h3>
+    <button type="button" class="btn btn-warning active">PUT</button>
+    {{ edit_different_person }}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>5. Delete your registartion</h3>
+    <button type="button" class="btn btn-danger active">DELETE</button>
+    {{ delete}}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>6. Delete different person's registartion</h3>
+    <button type="button" class="btn btn-danger active">DELETE</button>
+    {{delete_different}}
+    <br><br>
+    <br><br>
+    <br><br>
+
+</div>
+<div class='container'>
+
+</div>

@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <span class="nav-item active pt-3">
+          <span class="title">
+            <span style='color: blue'>T</span>
+            <span style='color: red' >R</span>
+            <span style='color: orange'>A</span>
+            <span style='color: blue'>V</span>
+            <span style='color: green'>E</span>
+            <span style='color: red'>L</span>
+            <span style='color: orange'>A</span>
+            <span style='color: blue'>G</span>
+            <span style='color: red'>E</span>
+            <span style='color: green'>N</span>
+            <span style='color: orange'>C</span>
+            <span style='color: blue'>Y</span>
+               </span>
+          </span>
+
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item active">
+                          <a href="{% url 'home' %}" class="nav-link"><strong>HOME</strong></a>
+                      </li>
+                      {% if user.is_authenticated %}
+            					<li class="nav-item active one">
+            						<a href="{% url 'partner' %}" class="nav-link" style="font-size:17px;position:relative;top:-2px;"><strong>TravelPartner</strong></a>
+            					</li>
+                      {% endif %}
+                      <li class="nav-item active three">
+                          <a href="faq.htm" class="nav-link"><strong>FAQ</strong></a>
+                      </li>
+                      <li class="nav-item active four">
+                          <a href="#aboutus" class="nav-link"><strong>ABOUT US</strong></a>
+                      </li>
+                      {% if not user.is_authenticated %}
+                      <li class="nav-item active five">
+                          <a href="{% url 'signup' %}" class="nav-link"><strong>REGISTER</strong></a>
+                      </li>
+                      {% endif %}
+                      {% if user.is_authenticated %}
+                      <li class="nav-item active two">
+                        <a href="" class="nav-link"><strong>SHOP</strong></a>
+                    </li>
+                      <li class="nav-item active six">
+                        <a href="{% url 'logout' %}" class="nav-link"><strong>LOGOUT</strong></a>
+                    </li>
+                    <li class="nav-item active seven">
+                        <a href="" class="nav-link"><strong>{{user}}</strong></a>
+                    </li>
+                    {% endif %}
+                  </ul>
+              </div>
+    </nav>
+
+
+
+    <div class="image1">
+        <div class="text-center" style="position: relative; top: -60px;">
+            <h1><bold>Cart</bold></h1>
+            <h5><a href="#">Home</a> / Cart</h5>
+        </div>
+    </div>
+
+    <!-- Breadcrumb Area End Here -->
+        <!-- Cart Main Area Start -->
+        <div class="cart-main-area white-bg" style="padding-top: 80px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <!-- Form Start -->
+                        <form action="#">
+                            <!-- Table Content Start -->
+                            <div class="table-content table-responsive mb-45">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="product-thumbnail">Image</th>
+                                            <th class="product-name">Product</th>
+                                            <th class="product-price">Price</th>
+                                            <th class="product-quantity">Quantity</th>
+                                            <th class="product-subtotal">Total</th>
+                                            <th class="product-remove">Remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a href="/shop/products/detail"><img src="{% static 'images/p7.jpg' %}" alt="cart-image" /></a>
+                                            </td>
+                                            <td class="product-name"><a href="/shop/products/detail">summer dress</a></td>
+                                            <td class="product-price"><span class="amount">£165.00</span></td>
+                                            <td class="product-quantity"><input type="number" value="1" /></td>
+                                            <td class="product-subtotal">£165.00</td>
+                                            <td class="product-remove"> <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a href="/shop/products/detail"><img src="{% static 'images/p5.jpg' %}" alt="cart-image" /></a>
+                                            </td>
+                                            <td class="product-name"><a href="/shop/products/detail">Printed Winter collection</a></td>
+                                            <td class="product-price"><span class="amount">£50.00</span></td>
+                                            <td class="product-quantity"><input type="number" value="1" /></td>
+                                            <td class="product-subtotal">£50.00</td>
+                                            <td class="product-remove"> <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a href="/shop/products/detail"><img src="{% static 'images/p3.jpg' %}" alt="cart-image" /></a>
+                                            </td>
+                                            <td class="product-name"><a href="/shop/products/detail">awesome bag</a></td>
+                                            <td class="product-price"><span class="amount">£165.00</span></td>
+                                            <td class="product-quantity"><input type="number" value="1" /></td>
+                                            <td class="product-subtotal">£165.00</td>
+                                            <td class="product-remove"> <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a href="/shop/products/detail"><img src="{% static 'images/p5.jpg' %}" alt="cart-image" /></a>
+                                            </td>
+                                            <td class="product-name"><a href="/shop/products/detail">trolley bags</a></td>
+                                            <td class="product-price"><span class="amount">£50.00</span></td>
+                                            <td class="product-quantity"><input type="number" value="1" /></td>
+                                            <td class="product-subtotal">£50.00</td>
+                                            <td class="product-remove"> <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Table Content Start -->
+                            <div class="row" style="padding-top: 30px;">
+                               <!-- Cart Button Start -->
+                                <div class="col-md-8 col-sm-12">
+                                    <div class="buttons-cart">
+                                        <input type="submit" value="Update Cart" />
+                                        <a href="#">Continue Shopping</a>
+                                    </div>
+                                </div>
+                                <!-- Cart Button Start -->
+                                <!-- Cart Totals Start -->
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="cart_totals float-md-right text-md-right">
+                                        <h2>Cart Totals</h2>
+                                        <br />
+                                        <table class="float-md-right">
+                                            <tbody>
+                                                <tr class="cart-subtotal">
+                                                    <th>Subtotal</th>
+                                                    <td><span class="amount">$215.00</span></td>
+                                                </tr>
+                                                <tr class="order-total">
+                                                    <th>Total</th>
+                                                    <td>
+                                                        <strong><span class="amount">$215.00</span></strong>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="wc-proceed-to-checkout">
+                                            <a href="#">Proceed to Checkout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Cart Totals End -->
+                            </div>
+                            <!-- Row End -->
+                        </form>
+                        <!-- Form End -->
+                    </div>
+                </div>
+                 <!-- Row End -->
+            </div>
+        </div>
+
+    <!--------------------------->
+    <section id="social-media">
+        <div class="container text-center">
+          <p>FOLLOW US ON SOCIAL MEDIA</p>
+          <div class="social-icons">
+
+            <a href="https://www.facebook.com/"><img src="{% static 'images/fb.png' %}"></a>
+
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><img src="{% static 'images/instagram.png' %}"></a>
+
+            <a href="https://twitter.com/login?lang=en"><img src="{% static 'images/twitter.jpg' %}"></a>
+
+    </div>
+
+
+
+        </div>
+      </section>
+
+
+<section id="contactus">
+<footer class="page-footer font-small unique-color-dark pt-4">
+
+<!-- Footer Elements -->
+<div class="container-fluid pt-4" style="background: #41A3FF; color: white;">
+    <div class="row">
+        <div class="col-md-6 text-center">
+         <span class="logo pt-3">
+      <span style='color: blue'>T</span>
+      <span style='color: red' >R</span>
+      <span style='color: orange'>A</span>
+      <span style='color: blue'>V</span>
+      <span style='color: green'>E</span>
+      <span style='color: red'>L</span>
+      <span style='color: orange'>A</span>
+      <span style='color: blue'>G</span>
+      <span style='color: red'>E</span>
+      <span style='color: green'>N</span>
+      <span style='color: orange'>C</span>
+      <span style='color: blue'>Y</span>
+         </span>
+          <pre style="font-size: 18px;color: white;padding-top: 45px;">Examples might be simplified to improve
+reading and basic understanding.
+but we cannot warrant full correctness of all content.
+          </pre>
+        </div>
+        <div class="col-md-6 footer-box text-center ">
+          <p style="font-size: 30px;"><b>CONTACT US</b></p>
+          <p><i class="fa fa-map-marker" ></i>  Sri City, Andhra pradesh</p>
+          <p><i class="fa fa-phone"></i>  +91 6876984329</p>
+          <p><i class="fa fa-envelope"></i>  travelagency@gmail.com</p>
+        </div>
+
+</div>
+<!-- Footer Elements -->
+
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+  <p>All Right Reserved</p>
+</div>
+<!-- Copyright -->
+
+</footer>
+</section>
+</body>
+</html>

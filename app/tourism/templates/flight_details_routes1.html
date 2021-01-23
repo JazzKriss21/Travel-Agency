@@ -1,0 +1,165 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/hotel_styles.css' %}">
+  </head>
+
+  <body>
+  {% include 'partials/materialize_navbar.html' %}
+
+  <div1 style="margin-left: 30%!important;">
+  {% for i in flights %}
+
+{% for j in i %}
+
+{% for k,l in j.items %}
+
+{% if k in list %}
+
+{% if l not in list1 %}
+    <div style="margin:auto;margin-top: 100px">
+
+
+
+
+            <div class="listingImageCard__sideImages"></div>
+
+        </div>
+        <div class="hotelCardListing__descriptionWrapper">
+          <div
+            class="oyo-row oyo-row--no-spacing listingHotelDescription"
+            name="HotelListCard-76132"
+            itemscope="true"
+            itemtype="http://schema.org/Hotel"
+          >
+            <meta itemprop="telephone" content="+91 9313 9313 93" /><meta
+              itemprop="checkinTime"
+              content="12:00:00"
+            /><meta itemprop="checkoutTime" content="11:00:00" /><meta
+              itemprop="url"
+              content="https://www.oyorooms.com/76132/"
+            /><meta itemprop="email" content="bookings@oyorooms.com" /><meta
+              itemprop="image"
+              content="https://images.oyoroomscdn.com/uploads/hotel_image/76132/a782dc657373fa10.jpg"
+            />
+            <div class="oyo-cell--12-col listingHotelDescription__content">
+              <div
+                itemprop="geo"
+                itemscope="true"
+                itemtype="http://schema.org/GeoCoordinates"
+              >
+                <meta itemprop="latitude" content="34.083639" /><meta
+                  itemprop="longitude"
+                  content="74.825722"
+                />
+              </div>
+              <div class="listingHotelDescription__contentWrapper">
+                <div
+                  class="listingHotelDescription__contentWrapper--left u-fullWidth"
+                >
+                  <a class="c-nn640c u-width100" href="/76132/"
+                    ><h3
+                      title="OYO 47168 Kashmir Orient"
+                      class="listingHotelDescription__hotelName d-textEllipsis"
+                      itemprop="name"
+                    >  {{k}}:    {{l}}
+
+                    </h3></a
+                  >
+                  <div
+                    class="d-body-lg listingHotelDescription__hotelAddress"
+                    itemprop="address"
+                    itemscope="true"
+                    itemtype="http://schema.org/PostalAddress"
+                  >
+                    <span
+                      itemprop="streetAddress"
+                      title="Near Khona-Khan Dalgate, Srinagar"
+                      class="u-line--clamp-2"
+                      style="-moz-box-orient: vertical"
+                      >Near Khona-Khan Dalgate, Srinagar</span
+                    ><meta itemprop="addressRegion" content="Srinagar" /><meta
+                      itemprop="addressCountry"
+                      content="India"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="amenityWrapper">
+
+                </div>
+              </div>
+              <div class="oyo-cell--12-col listingHotelDescription__labels">
+                <div class="c-hpocxd">
+                  <div class="c-fjzhb9">
+                    <div class="c-ztdfbn">
+                      <svg><use xlink:href="#wizard-logo"></use></svg>
+                    </div>
+                  </div>
+                  <div class="c-1ubn3p0">Departure-Date:
+</div>
+                </div>
+                <span class="c-2z8wjd">{{Departure_date}}</span>
+              </div>
+            </div>
+            <div class="oyo-cell--12-col listingHotelDescription__priceBtn">
+              <div class="listingHotelDescription__HotelCategory"></div>
+              <div class="oyo-row oyo-row--no-spacing">
+                <div class="oyo-cell--5-col">
+                  <div class="listingPrice">
+                    <meta itemprop="priceRange" content="₹1332 - ₹2220" />
+                    <div class="listingPrice__numbers">
+                      <span class="listingPrice__finalPrice">₹1332</span
+                      ><span class="listingPrice__slashedPrice d-body-lg"
+                        >₹3333</span
+                      ><span class="listingPrice__percentage">40% off</span>
+                    </div>
+                    <div class="listingPrice__perRoomNight">
+                      per room per night
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="oyo-cell--7-col listingHotelDescription__btnWrapper"
+                >
+                  <button class="c-17di9jl d-whiteButton" type="button">
+                    <span>View Details</span></button
+                  ><button class="c-17di9jl d-greenButton" type="button">
+                    <span>Book Now</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+    </div>
+
+
+  {{k}}:    {{l}}
+<br>
+<br>
+{% endif %}
+{% endif %}
+
+{% endfor %}
+
+{% endfor %}
+Departure-Date: {{Departure_date}}
+
+
+{% endfor %}
+  </div1>
+  {% include 'partials/footer.html' %}
+
+  </body>
+
+  <script>
+      document.getElementById('city__').value =city;
+  </script>
+</html>

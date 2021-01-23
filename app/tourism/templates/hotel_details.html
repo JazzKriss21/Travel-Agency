@@ -1,0 +1,907 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/063ffbfcf9.css">
+    <link rel="stylesheet" href="{% static 'css/h_details.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/weather23.css' %}">
+
+    <title>Hotel Details</title>
+</head>
+<body>
+{% include 'partials/materialize_navbar.html' %}
+<div class="c-1irv0cp" style="margin-top: 100px">
+    <div class="c-1uka13e">
+        <div class="c-1r1ps0e" id="1202">
+            <div name="1202">
+                <div>
+                    <div class="c-1qdyvok">
+                        <div class="c-120gsus"><h1 class="c-1wj1luj" itemprop="name">{{ hotel_name }} </h1>
+                            <div class="c-1grqag4">
+                                <h3 itemprop="address" itemscope="true" itemtype="http://schema.org/PostalAddress"><span
+                                        itemprop="streetAddress">{{ address }}</span>
+                                    <meta itemprop="@id" content="">
+                                    <meta itemprop="addressCountry" content="India">
+                                    <meta itemprop="addressLocality" content="Rishikesh">
+                                </h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div><span itemprop="starRating" itemscope="true" itemtype="http://schema.org/Rating"><meta
+                                    itemprop="ratingValue" content="3.7"></span>
+                                <div class="c-1ktt90" itemprop="aggregateRating" itemscope="true"
+                                     itemtype="http://schema.org/AggregateRating">
+                                    <meta itemprop="worstRating" content="1">
+                                    <meta itemprop="reviewCount" content="55">
+                                    <meta itemprop="bestRating" content="5">
+                                    <meta itemprop="ratingValue" content="3.7">
+                                    <div class="c-v9oteh">{{ rating }} <span lazyload="true" class="c-1q47mlo"><svg
+                                            viewBox="0 0 9 10" xmlns="http://www.w3.org/2000/svg"><path
+                                            d="M7.25 9.5a.238.238 0 01-.12-.032L4.5 7.948l-2.63 1.52a.238.238 0 01-.265-.017.271.271 0 01-.102-.26l.48-3.042-1.91-2.021a.276.276 0 01-.061-.268.255.255 0 01.197-.18l2.874-.508L4.276.646A.25.25 0 014.5.5c.094 0 .181.057.223.146l1.194 2.526 2.874.508a.255.255 0 01.197.18.275.275 0 01-.061.268l-1.91 2.021.48 3.042c.015.1-.024.201-.102.26a.242.242 0 01-.145.049z"></path></svg></span>
+                                    </div>
+                                    <div class="c-1qcdse5">{{ no_of_reviews }} <span>Ratings</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-1dtnjt5">
+                        <div class="c-um1zau">
+                            <div class="c-178pqzh">
+                                <div class="">
+                                    <div class="c-ztdfbn">
+                                        &nbsp; &nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>
+
+                                    </div>
+                                </div>
+                                <div class="c-1ubn3p0"><a href="https://www.google.com/maps/search/{{ maps }}">View on
+                                    Map</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-1x8xkzi"><span class="c-1nnk08h"><span class="c-1916hik"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><path
+                            fill="none" stroke="#F49242" stroke-width="1.6"
+                            d="M6.498 9.957l.431-.362c3.13-2.617 4.122-3.558 4.792-4.703.324-.555.479-1.07.479-1.595C12.2 1.907 10.999.8 9.425.8c-.891 0-1.77.38-2.337.996l-.588.636-.588-.636C5.344 1.18 4.466.8 3.575.8 2.001.8.8 1.908.8 3.297c0 .523.153 1.036.475 1.588C1.943 6.031 2.93 6.968 6.07 9.6l.428.357z"></path></svg></span> Safe and sanitised with daily temperature checks of our staff.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-1r1ps0e" id="1203">
+            <div name="1203">
+                <div class="">
+                    <div class="c-gcrtsc">Description</div>
+                    <div itemprop="description">
+                        <div class="c-1cdl5t3"><em>The COVID19 pandemic has made us all understand the importance of
+                            sanitization and not take it for granted. Rest assured, we have reached out to our partners
+                            to uphold the highest standards of sanitation and
+                            safety.</em><br><br><strong class="c-1sems81">Location</strong><br>{{ hotel_name }} is a
+                            comfortable and cosy
+                            accommodation located in {{ saddress }}.
+                        </div>
+                        <div class="c-7xk1xt"> The hotels is situated close to the banks of the holy river Ganga and is
+                            close to popular pilgrimage spots.<br><br><strong>Special Features</strong><br>The rooms are
+                            capacious and clad up with all the modern comforts for the guests’ convenience. The solid
+                            hues on the wall give a vibrant and chic look to the decor of the place.<br><br><strong>Amenities</strong><br>Wooden
+                            Floors, AC, Pre Book Meals, Pre Book Meals, Room Ventilation, Complimentary Breakfast,
+                            Kitchen, Room Service, Free Wifi, 24/7 Checkin, Geyser, Modern Wardrobe, TV, Reception,
+                            Fire-Extinguisher, Attached Bathroom, Mirror, CCTV Cameras are some of the amenities
+                            available at this property.<br><br><strong>What's Nearby</strong><br>The tourists can relish
+                            on multitude of food options at the popular eateries nearby namely Little Buddha Cafe, 60'S
+                            Beatles Cafe, Pure Soul, Patio - alsoha On The Ganges, and The Eat Story.
+                        </div>
+                    </div>
+                    {#                    <div class="c-1sems81">Read more</div>#}
+                </div>
+            </div>
+        </div>
+        <div class="c-1r1ps0e" id="1204">
+            <div name="1204">
+                <div>
+                    <div class="c-gcrtsc">Amenities</div>
+                    <div class="c-2cojj">
+
+
+                        {#                        ------------------------#}
+
+                        {% for i in amenities %}
+                            <div class="c-riklip" itemprop="amenityFeature" itemscope="true"
+                                 itemtype="http://schema.org/LocationFeatureSpecification">
+
+                                <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+
+                                <div class="c-12w6zty" itemprop="name">{{ i }}</div>
+                                <meta itemprop="value" content="True">
+                            </div>
+
+                        {% endfor %}
+
+
+
+
+
+
+
+                        {#                        --------------------------#}
+                        {#                        <div class="c-riklip" itemprop="amenityFeature" itemscope="true"#}
+                        {#                             itemtype="http://schema.org/LocationFeatureSpecification"><span lazyload="true"#}
+                        {#                                                                                             class="c-szaiwv"><svg#}
+                        {#                                xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">#}
+                        {#    <path fill="#000" fill-rule="evenodd"#}
+                        {#          d="M20.172 0H1.832C.823 0 0 .792 0 1.767v6.422c0 .971.823 1.763 1.832 1.763h18.336C21.177 9.952 22 9.16 22 8.189V1.767C22.004.792 21.181 0 20.172 0zm.712 8.277a.61.61 0 0 1-.617.604H1.737a.61.61 0 0 1-.617-.604V1.683a.61.61 0 0 1 .617-.604h18.526a.61.61 0 0 1 .617.604v6.594h.004zm-2.315-1.85H3.435c-.338 0-.61.218-.61.49 0 .27.272.49.61.49h15.13c.338 0 .61-.22.61-.49 0-.272-.272-.49-.606-.49zm-4.965-3.001H8.049c-.124 0-.224.219-.224.49 0 .27.1.49.224.49h5.553c.124 0 .224-.22.224-.49 0-.271-.1-.49-.222-.49zm-9.03 8.996a3.31 3.31 0 0 0-.291-.559c-.148-.213-.08-.495.154-.63a.529.529 0 0 1 .69.14c.1.145.242.392.38.72.488 1.153.55 2.383-.103 3.545a4.304 4.304 0 0 1-.666.885.534.534 0 0 1-.706.04.43.43 0 0 1-.044-.645 3.39 3.39 0 0 0 .526-.697c.503-.896.454-1.866.06-2.8zm3.599 0a3.31 3.31 0 0 0-.292-.559c-.148-.213-.079-.495.155-.63a.529.529 0 0 1 .69.14c.1.145.241.392.38.72.487 1.153.55 2.383-.103 3.545a4.304 4.304 0 0 1-.667.885.534.534 0 0 1-.706.04.43.43 0 0 1-.043-.645 3.39 3.39 0 0 0 .526-.697c.503-.896.454-1.866.06-2.8zm9.002 0c-.394.933-.443 1.903.06 2.8.135.24.309.472.525.696a.43.43 0 0 1-.043.645.534.534 0 0 1-.706-.04 4.304 4.304 0 0 1-.666-.885c-.653-1.162-.59-2.392-.104-3.545.14-.328.28-.575.38-.72a.529.529 0 0 1 .69-.14c.234.135.303.417.155.63a3.31 3.31 0 0 0-.291.559zm-3.603 0c-.395.933-.443 1.903.06 2.8.135.24.309.472.525.696a.43.43 0 0 1-.043.645.534.534 0 0 1-.706-.04 4.304 4.304 0 0 1-.666-.885c-.653-1.162-.59-2.392-.104-3.545.14-.328.28-.575.38-.72a.529.529 0 0 1 .69-.14c.234.135.303.417.155.63a3.31 3.31 0 0 0-.291.559z"></path>#}
+                        {#</svg>#}
+                        {#</span>#}
+                        {#                            <div class="c-12w6zty" itemprop="name">AC</div>#}
+                        {#                            <meta itemprop="value" content="True">#}
+                        {#                        </div>#}
+                        {#                        <div class="c-riklip" itemprop="amenityFeature" itemscope="true"#}
+                        {#                             itemtype="http://schema.org/LocationFeatureSpecification"><span lazyload="true"#}
+                        {#                                                                                             class="c-szaiwv"><svg#}
+                        {#                                xmlns="http://www.w3.org/2000/svg" width="22" height="21" viewBox="0 0 22 21">#}
+                        {#    <path fill="#000" fill-rule="evenodd"#}
+                        {#          d="M20.62 0H1.38C.619 0 0 .619 0 1.38V13.76c0 .761.619 1.38 1.38 1.38h9.131v1.97c-1.547.05-2.993.334-4.113.814-1.369.587-2.122 1.417-2.122 2.339 0 .27.219.489.489.489h12.47c.27 0 .49-.219.49-.489 0-.922-.755-1.752-2.123-2.339-1.12-.48-2.566-.764-4.113-.813v-1.97h9.131c.761 0 1.38-.62 1.38-1.38V1.38C22 .619 21.38 0 20.62 0zm-4.049 19.775H5.429c.238-.34.708-.674 1.354-.951 1.119-.48 2.616-.743 4.217-.743 1.6 0 3.098.264 4.217.743.646.277 1.116.612 1.354.951zm4.451-6.014c0 .222-.18.402-.402.402H1.38a.402.402 0 0 1-.402-.402V1.38c0-.222.18-.402.402-.402h19.24c.222 0 .402.18.402.402V13.76zM19.284 2.227H2.716a.489.489 0 0 0-.489.489v9.71c0 .27.219.488.489.488h16.568c.27 0 .49-.219.49-.489v-9.71a.489.489 0 0 0-.49-.488zm-.489 9.71H3.205V3.204h15.59v8.731z"></path>#}
+                        {#</svg>#}
+                        {#</span>#}
+                        {#                            <div class="c-12w6zty" itemprop="name">TV</div>#}
+                        {#                            <meta itemprop="value" content="True">#}
+                        {#                        </div>#}
+                        {#                        <div class="c-riklip" itemprop="amenityFeature" itemscope="true"#}
+                        {#                             itemtype="http://schema.org/LocationFeatureSpecification"><span lazyload="true"#}
+                        {#                                                                                             class="c-szaiwv"><svg#}
+                        {#                                xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">#}
+                        {#    <path fill="#000" fill-rule="evenodd"#}
+                        {#          d="M18.67 9.038a10.705 10.705 0 0 0-15.388 0 .585.585 0 0 1-.86 0 .617.617 0 0 1 0-.88 11.917 11.917 0 0 1 17.108 0 .617.617 0 0 1 0 .88c-.099.125-.246.176-.418.176a.623.623 0 0 1-.443-.176zm-2.926 3.293a6.437 6.437 0 0 0-4.621-1.96c-1.745 0-3.368.703-4.621 1.96a.585.585 0 0 1-.86 0 .617.617 0 0 1 0-.88 7.65 7.65 0 0 1 5.48-2.313c2.066 0 4.008.83 5.482 2.313a.617.617 0 0 1 0 .88c-.098.126-.27.176-.417.176a.623.623 0 0 1-.443-.176zm5.187-6.888a13.859 13.859 0 0 0-19.886 0 .585.585 0 0 1-.86 0 .617.617 0 0 1 0-.88c5.948-6.084 15.657-6.084 21.63 0a.617.617 0 0 1-.442 1.056.623.623 0 0 1-.442-.176zM9.796 17.233a2.128 2.128 0 0 1 0-2.941c.762-.78 2.113-.78 2.876 0a2.128 2.128 0 0 1 0 2.941 2.006 2.006 0 0 1-1.426.604c-.541 0-1.057-.227-1.45-.604zm.86-2.061a.848.848 0 0 0 0 1.181c.32.327.86.327 1.155 0a.848.848 0 0 0 0-1.181.705.705 0 0 0-.565-.252.79.79 0 0 0-.59.252z"></path>#}
+                        {#</svg>#}
+                        {#</span>#}
+                        {#                            <div class="c-12w6zty" itemprop="name">Free Wifi</div>#}
+                        {#                            <meta itemprop="value" content="True">#}
+                        {#                        </div>#}
+                        {#                        <div class="c-riklip" itemprop="amenityFeature" itemscope="true"#}
+                        {#                             itemtype="http://schema.org/LocationFeatureSpecification"><span lazyload="true"#}
+                        {#                                                                                             class="c-szaiwv"><svg#}
+                        {#                                xmlns="http://www.w3.org/2000/svg" id="kitchen" viewBox="0 0 24 24">#}
+                        {#          <path d="M3.75609756 2.30352304c0-.67247968.5415622-1.2195122 1.20731707-1.2195122.66575488 0 1.20731708.54703252 1.20731708 1.2195122v.00542005c0 .29634791.24023745.53658537.53658536.53658537.29634792 0 .53658537-.24023746.53658537-.53658537v-.00542005C7.24390244 1.03333062 6.22077366 0 4.96341463 0c-1.25735902 0-2.2804878 1.03333062-2.2804878 2.30352304v3.14363143H.5c-.27614237 0-.5.22385763-.5.5V19.0392954c0 .2761424.22385763.5.5.5h21c.2761424 0 .5-.2238576.5-.5V5.94715447c0-.27614237-.2238576-.5-.5-.5H3.75609756V2.30352304zm7.78048784 4.22764227h9.3902439v2.16802168h-9.3902439V6.53116531zm0 3.25203252h9.3902439v8.67208677h-9.3902439V9.78319783zm-1.0731708-3.25203252V18.4552846H1.07317073V6.53116531h9.39024387zM13.1097561 17.100271c-.2761424 0-.5-.2238576-.5-.5v-3.3360434c0-.2761423.2238576-.5.5-.5h6.2439024c.2761424 0 .5.2238577.5.5v3.3360434c0 .2761424-.2238576.5-.5.5h-6.2439024zm.5731707-3.2520325v2.1680217h5.097561v-2.1680217h-5.097561z"#}
+                        {#                fill="#000" fillrule="nonzero"></path>#}
+                        {#        </svg></span>#}
+                        {#                            <div class="c-12w6zty" itemprop="name">Kitchen</div>#}
+                        {#                            <meta itemprop="value" content="True">#}
+                        {#                        </div>#}
+                        {#                        <div class="c-riklip" itemprop="amenityFeature" itemscope="true"#}
+                        {#                             itemtype="http://schema.org/LocationFeatureSpecification"><span lazyload="true"#}
+                        {#                                                                                             class="c-szaiwv"><svg#}
+                        {#                                xmlns="http://www.w3.org/2000/svg" id="queen-sized-bed" viewBox="0 0 24 24">#}
+                        {#          <path d="M23 12.39c0-1.101-.794-1.983-1.808-2.204v-5.82c0-.749-.617-1.366-1.366-1.366H4.174c-.75 0-1.366.617-1.366 1.367v5.82C1.794 10.406 1 11.288 1 12.39v7.715c0 .265.22.441.44.441.221 0 .442-.22.442-.44v-1.103h20.236v1.102a.442.442 0 0 0 .882 0v-7.715zm-12.345-2.248H5.85V6.615h4.805v3.527zm7.451 0h-4.805V6.615h4.805v3.527zM3.69 4.367a.49.49 0 0 1 .485-.485h15.652a.49.49 0 0 1 .485.485v5.775h-1.279V6.174c0-.264-.22-.44-.44-.44H12.86c-.265 0-.441.22-.441.44v3.968h-.882V6.174c0-.264-.22-.44-.44-.44H5.408c-.265 0-.441.22-.441.44v3.968H3.689V4.367zm-.485 6.701h17.548c.749 0 1.322.617 1.322 1.367v1.367H1.838v-1.367c0-.794.617-1.367 1.366-1.367zM1.838 14.64h20.28v3.483H1.838V14.64z"#}
+                        {#                fill="#000" fillrule="nonzero"></path>#}
+                        {#        </svg></span>#}
+                        {#                            <div class="c-12w6zty" itemprop="name">Queen Sized Bed</div>#}
+                        {#                            <meta itemprop="value" content="True">#}
+                        {#                        </div>#}
+                        {#                        <div class="c-riklip" itemprop="amenityFeature" itemscope="true"#}
+                        {#                             itemtype="http://schema.org/LocationFeatureSpecification">#}
+                        {#                            <span lazyload="true"#}
+                        {#                                                                                             class="c-szaiwv"><svg#}
+                        {#                                xmlns="http://www.w3.org/2000/svg" id="geyser" viewBox="0 0 21 21">#}
+                        {#          <path d="M20.282 2.77L17.56 18.416C17.312 19.85 15.944 21 14.49 21H5.83c-1.454 0-2.82-1.15-3.07-2.583L.04 2.767C-.222 1.264.84 0 2.368 0h15.585c1.527 0 2.59 1.264 2.33 2.77zM14.49 19.913c.926 0 1.842-.77 2-1.683l2.722-15.647c.146-.84-.406-1.497-1.26-1.497H2.37c-.854 0-1.405.656-1.26 1.497l2.723 15.65c.158.91 1.073 1.68 2 1.68h8.658zM4.986 8.892L4.12 1.595l1.08-.128.867 7.305c.343 3.326 2.322 6.61 4.25 6.61 1.847 0 3.553-3.144 3.942-6.618l.864-7.297 1.08.128-.866 7.294c-.445 3.965-2.404 7.578-5.022 7.578-2.663 0-4.936-3.772-5.33-7.576zm3.48 8.634a1.68 1.68 0 1 1-3.358 0 1.68 1.68 0 0 1 3.36 0zm-2.272 0a.593.593 0 1 0 1.187 0 .593.593 0 0 0-1.186 0zm9.02 0a1.698 1.698 0 1 1-3.396 0 1.698 1.698 0 0 1 3.396 0zm-2.31 0a.61.61 0 1 0 1.223 0 .61.61 0 0 0-1.222 0zM9.618 11.8V8.713h1.086V11.8H9.618zm-1.57-9.744h4.225v5.416H8.05V2.056zm3.682 1.087H8.592l.543-.544v4.33l-.543-.545h3.138l-.543.543V2.6l.543.544z"></path>#}
+                        {#        </svg></span>#}
+                        {#                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>#}
+                        {##}
+                        {#                            <div class="c-12w6zty" itemprop="name">Geyser</div>#}
+                        {#                            <meta itemprop="value" content="True">#}
+                        {#                        </div>#}
+                    </div>
+                    {#                    <div class="c-1vevh8c"><span>Show More</span></div>#}
+                </div>
+            </div>
+        </div>
+        <div class="c-1r1ps0e" id="1424">
+            <div name="1424">
+                <div>
+                    <div class="c-gcrtsc">Choose your room</div>
+{#                    <div class="c-28j001" itemprop="containsPlace" itemscope="true"#}
+{#                         itemtype="http://schema.org/HotelRoom">#}
+{#                        <div class="c-1bdbnnk">#}
+{#                            <div class="c-1q9wn95"><span class="c-kz45la"><svg width="12" height="12" viewBox="0 0 9 10"#}
+{#                                                                               xmlns="http://www.w3.org/2000/svg"><path#}
+{#                                    d="M7.25 9.5a.238.238 0 01-.12-.032L4.5 7.948l-2.63 1.52a.238.238 0 01-.265-.017.271.271 0 01-.102-.26l.48-3.042-1.91-2.021a.276.276 0 01-.061-.268.255.255 0 01.197-.18l2.874-.508L4.276.646A.25.25 0 014.5.5c.094 0 .181.057.223.146l1.194 2.526 2.874.508a.255.255 0 01.197.18.275.275 0 01-.061.268l-1.91 2.021.48 3.042c.015.1-.024.201-.102.26a.242.242 0 01-.145.049z"#}
+{#                                    fill="#ffdc64" fill-rule="evenodd"></path></svg></span><span class="c-dldzsc"><span>Selected Category</span></span>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="c-7doipl">#}
+{#                            <div class="c-ebnjpp">#}
+{#                                <div class="c-1xhj18k"><span class="c-2j9z2q" itemprop="name">Classic (2X)</span>#}
+{#                                    <div class="c-1r30k9r">#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="c-12z2e50">Room size: 110 sqft</div>#}
+{#                                <hr class="c-mjnk4s">#}
+{#                                <div>#}
+{#                                    <div class="c-1xhj18k">#}
+{#                                        <div class="c-1b873yf">#}
+{#                                            <div class="c-3g5f28"><span lazyload="true" class="c-1bb5hkt"><svg#}
+{#                                                    xmlns="http://www.w3.org/2000/svg" id="intercom"#}
+{#                                                    viewBox="0 0 24 24">#}
+{#          <path d="M10.6 3.429V20.57h10.45V3.43H10.6zm0 17.619a.951.951 0 0 1-.95.952h-5.7a.951.951 0 0 1-.95-.952V2.952C3 2.426 3.425 2 3.95 2h5.7c.525 0 .95.426.95.952v-.476h10.45c.525 0 .95.427.95.953V20.57a.951.951 0 0 1-.95.953H10.6v-.476zm5.225-1.905a2.378 2.378 0 0 0 2.375-2.381 2.378 2.378 0 0 0-2.375-2.381 2.378 2.378 0 0 0-2.375 2.38 2.378 2.378 0 0 0 2.375 2.382zm0-.953c-.787 0-1.425-.64-1.425-1.428 0-.79.638-1.429 1.425-1.429s1.425.64 1.425 1.429-.638 1.428-1.425 1.428zM13.45 6.586a.3.3 0 0 1 .3-.3h4.15a.3.3 0 0 1 .3.3v4.162a.3.3 0 0 1-.3.3h-4.15a.3.3 0 0 1-.3-.3V6.586zm-.65-1.253a.3.3 0 0 0-.3.3V11.7a.3.3 0 0 0 .3.3h6.05a.3.3 0 0 0 .3-.3V5.633a.3.3 0 0 0-.3-.3H12.8zm-8.85-2.38v18.095h5.7V2.952h-5.7z"></path>#}
+{#        </svg></span>#}
+{#                                                <div class="c-14dq6lk">Intercom</div>#}
+{#                                            </div>#}
+{#                                            <div class="c-3g5f28"><span lazyload="true" class="c-1bb5hkt"><!--?xml version="1.0" encoding="UTF-8"?-->#}
+{#<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"#}
+{#     xmlns:xlink="http://www.w3.org/1999/xlink">#}
+{#    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->#}
+{#    <title>checkmark</title>#}
+{#    <desc>Created with Sketch.</desc>#}
+{#    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">#}
+{#        <g id="new-icon-set-(exportable)" transform="translate(-121.000000, -698.000000)" fill="#000000">#}
+{#            <path d="M132,720 C129.061263,720 126.299684,718.856 124.221263,716.778737 C122.142842,714.701474 121,711.938737 121,709.001158 C121,706.062421 122.144,703.300842 124.221263,701.222421 C126.298526,699.144 129.061263,698 132,698 C134.938737,698 137.700316,699.144 139.778737,701.222421 C141.857158,703.300842 143,706.062421 143,709.001158 C143,711.939895 141.856,714.701474 139.778737,716.778737 C137.701474,718.856 134.938737,720 132,720 L132,720 Z M132,699.157895 C137.427053,699.157895 141.842105,703.572947 141.842105,709 C141.842105,714.427053 137.427053,718.842105 132,718.842105 C126.572947,718.842105 122.157895,714.427053 122.157895,709 C122.157895,703.572947 126.572947,699.157895 132,699.157895 Z M129.684211,713.631579 L129.681895,713.631579 C129.830105,713.631579 129.978316,713.576 130.091789,713.462526 L138.197053,705.357263 C138.422842,705.131474 138.422842,704.764421 138.197053,704.538632 C137.971263,704.312842 137.604211,704.312842 137.378421,704.538632 L129.683053,712.234 L126.619263,709.170211 C126.393474,708.944421 126.026421,708.944421 125.800632,709.170211 C125.574842,709.396 125.574842,709.763053 125.800632,709.988842 L129.274316,713.462526 C129.387789,713.574842 129.536,713.631579 129.684211,713.631579 Z"#}
+{#                  id="checkmark"></path>#}
+{#        </g>#}
+{#    </g>#}
+{#</svg>#}
+{#</span>#}
+{#                                                <div class="c-14dq6lk">Fan</div>#}
+{#                                            </div>#}
+{#                                            <div class="c-3g5f28"><span lazyload="true" class="c-1bb5hkt"><svg#}
+{#                                                    xmlns="http://www.w3.org/2000/svg" width="22" height="21"#}
+{#                                                    viewBox="0 0 22 21">#}
+{#    <path fill="#000" fill-rule="evenodd"#}
+{#          d="M20.62 0H1.38C.619 0 0 .619 0 1.38V13.76c0 .761.619 1.38 1.38 1.38h9.131v1.97c-1.547.05-2.993.334-4.113.814-1.369.587-2.122 1.417-2.122 2.339 0 .27.219.489.489.489h12.47c.27 0 .49-.219.49-.489 0-.922-.755-1.752-2.123-2.339-1.12-.48-2.566-.764-4.113-.813v-1.97h9.131c.761 0 1.38-.62 1.38-1.38V1.38C22 .619 21.38 0 20.62 0zm-4.049 19.775H5.429c.238-.34.708-.674 1.354-.951 1.119-.48 2.616-.743 4.217-.743 1.6 0 3.098.264 4.217.743.646.277 1.116.612 1.354.951zm4.451-6.014c0 .222-.18.402-.402.402H1.38a.402.402 0 0 1-.402-.402V1.38c0-.222.18-.402.402-.402h19.24c.222 0 .402.18.402.402V13.76zM19.284 2.227H2.716a.489.489 0 0 0-.489.489v9.71c0 .27.219.488.489.488h16.568c.27 0 .49-.219.49-.489v-9.71a.489.489 0 0 0-.49-.488zm-.489 9.71H3.205V3.204h15.59v8.731z"></path>#}
+{#</svg>#}
+{#</span>#}
+{#                                                <div class="c-14dq6lk">TV</div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                        <div class="c-1slosxv" tabindex="0" role="button">+11 more</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="c-sn9j7k">#}
+{#                                <div class="c-e2r6u2"><img alt="" class="c-wbro1p"#}
+{#                                                           src="https://images.oyoroomscdn.com/uploads/hotel_image/61917/thumb/507e8dc44182ab40.jpg">#}
+{#                                </div>#}
+{#                                <span class="c-141v0bq"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="13"#}
+{#                                                             viewBox="0 0 16 13"><path fill="#FFF" fill-rule="evenodd"#}
+{#                                                                                       d="M1.016.467h14.48c.267 0 .483.207.483.463v10.978c0 .256-.216.678-.483.678H1.016c-.266 0-.483-.422-.483-.678V.93c0-.256.217-.463.483-.463zm.483 8.984v2.142h9.025L5.183 6.096a.404.404 0 00-.295-.128.403.403 0 00-.291.135L1.499 9.45zm9.653-2.494c-1.065 0-1.93-.832-1.93-1.855 0-1.022.865-1.854 1.93-1.854s1.931.832 1.931 1.854c0 1.023-.866 1.855-1.93 1.855zm0-2.782c-.532 0-.965.417-.965.927 0 .511.433.928.965.928s.966-.417.966-.928c0-.51-.434-.927-.966-.927zm3.862 7.418v-10.2H1.499v6.662l2.376-2.568a1.374 1.374 0 011.001-.446c.385-.004.744.146 1.013.423l5.955 6.129h3.17z"></path></svg></span>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="c-1x21dx0">#}
+{##}
+{##}
+{#                            <div class="c-8atqhb" itemprop="potentialAction" itemtype="http://schema.org/Action"#}
+{#                                 itemscope="true">#}
+{#                                <div class="c-2t9rox">#}
+{#                                    <div class="c-0">#}
+{#                                        <div class="c-j7qwjs">#}
+{#                                            <div class="c-1a812ti">#}
+{#                                                <div class="c-gnxvp8">{{ r_p }}</div>#}
+{#                                                <span class="c-77737p">{{ r_o }}</span></div>#}
+{#                                            <div class="c-131wcsq"></div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <button type="button" class="c-1m5xxnu"><span class="c-k008qs" itemprop="name"><span#}
+{#                                            class="c-5xqqil"><span class="c-1owv2mq"><svg#}
+{#                                            xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path#}
+{#                                            fill-rule="evenodd"#}
+{#                                            d="M4.247 6.034l-2.204-2.07L1 5.006l2.81 2.678.003-.003.457.457 7.067-7.075L10.274 0z"></path></svg></span> </span>SELECTED</span>#}
+{#                                    </button>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+                    {#                    --------------#}
+                    {% for roomname, imageurl,current_price,old_price in multi_list %}
+
+                        <div class="c-28j001" itemprop="containsPlace" itemscope="true"
+                             itemtype="http://schema.org/HotelRoom">
+                            <div class="c-7doipl">
+                                <div class="c-ebnjpp">
+                                    <div class="c-1xhj18k"><span class="c-2j9z2q" itemprop="name">{{ roomname }}</span>
+                                    </div>
+                                    <div class="c-12z2e50">Saver: Spaces with functional amenities</div>
+                                    <hr class="c-mjnk4s">
+                                    <div>
+                                        <div class="c-1xhj18k">
+                                            <div class="c-1b873yf">
+                                                <div class="c-3g5f28"><span lazyload="true" class="c-1bb5hkt"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="22" height="21"
+                                                        viewBox="0 0 22 21">
+    <path fill="#000" fill-rule="evenodd"
+          d="M20.62 0H1.38C.619 0 0 .619 0 1.38V13.76c0 .761.619 1.38 1.38 1.38h9.131v1.97c-1.547.05-2.993.334-4.113.814-1.369.587-2.122 1.417-2.122 2.339 0 .27.219.489.489.489h12.47c.27 0 .49-.219.49-.489 0-.922-.755-1.752-2.123-2.339-1.12-.48-2.566-.764-4.113-.813v-1.97h9.131c.761 0 1.38-.62 1.38-1.38V1.38C22 .619 21.38 0 20.62 0zm-4.049 19.775H5.429c.238-.34.708-.674 1.354-.951 1.119-.48 2.616-.743 4.217-.743 1.6 0 3.098.264 4.217.743.646.277 1.116.612 1.354.951zm4.451-6.014c0 .222-.18.402-.402.402H1.38a.402.402 0 0 1-.402-.402V1.38c0-.222.18-.402.402-.402h19.24c.222 0 .402.18.402.402V13.76zM19.284 2.227H2.716a.489.489 0 0 0-.489.489v9.71c0 .27.219.488.489.488h16.568c.27 0 .49-.219.49-.489v-9.71a.489.489 0 0 0-.49-.488zm-.489 9.71H3.205V3.204h15.59v8.731z"></path>
+</svg>
+</span>
+                                                    <div class="c-14dq6lk">TV</div>
+                                                </div>
+                                                <div class="c-3g5f28"><span lazyload="true" class="c-1bb5hkt"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" id="queen-sized-bed"
+                                                        viewBox="0 0 24 24">
+          <path d="M23 12.39c0-1.101-.794-1.983-1.808-2.204v-5.82c0-.749-.617-1.366-1.366-1.366H4.174c-.75 0-1.366.617-1.366 1.367v5.82C1.794 10.406 1 11.288 1 12.39v7.715c0 .265.22.441.44.441.221 0 .442-.22.442-.44v-1.103h20.236v1.102a.442.442 0 0 0 .882 0v-7.715zm-12.345-2.248H5.85V6.615h4.805v3.527zm7.451 0h-4.805V6.615h4.805v3.527zM3.69 4.367a.49.49 0 0 1 .485-.485h15.652a.49.49 0 0 1 .485.485v5.775h-1.279V6.174c0-.264-.22-.44-.44-.44H12.86c-.265 0-.441.22-.441.44v3.968h-.882V6.174c0-.264-.22-.44-.44-.44H5.408c-.265 0-.441.22-.441.44v3.968H3.689V4.367zm-.485 6.701h17.548c.749 0 1.322.617 1.322 1.367v1.367H1.838v-1.367c0-.794.617-1.367 1.366-1.367zM1.838 14.64h20.28v3.483H1.838V14.64z"
+                fill="#000" fillrule="nonzero"></path>
+        </svg></span>
+                                                    <div class="c-14dq6lk">Queen Sized Bed</div>
+                                                </div>
+                                                <div class="c-3g5f28"><span lazyload="true" class="c-1bb5hkt"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" id="intercom"
+                                                        viewBox="0 0 24 24">
+          <path d="M10.6 3.429V20.57h10.45V3.43H10.6zm0 17.619a.951.951 0 0 1-.95.952h-5.7a.951.951 0 0 1-.95-.952V2.952C3 2.426 3.425 2 3.95 2h5.7c.525 0 .95.426.95.952v-.476h10.45c.525 0 .95.427.95.953V20.57a.951.951 0 0 1-.95.953H10.6v-.476zm5.225-1.905a2.378 2.378 0 0 0 2.375-2.381 2.378 2.378 0 0 0-2.375-2.381 2.378 2.378 0 0 0-2.375 2.38 2.378 2.378 0 0 0 2.375 2.382zm0-.953c-.787 0-1.425-.64-1.425-1.428 0-.79.638-1.429 1.425-1.429s1.425.64 1.425 1.429-.638 1.428-1.425 1.428zM13.45 6.586a.3.3 0 0 1 .3-.3h4.15a.3.3 0 0 1 .3.3v4.162a.3.3 0 0 1-.3.3h-4.15a.3.3 0 0 1-.3-.3V6.586zm-.65-1.253a.3.3 0 0 0-.3.3V11.7a.3.3 0 0 0 .3.3h6.05a.3.3 0 0 0 .3-.3V5.633a.3.3 0 0 0-.3-.3H12.8zm-8.85-2.38v18.095h5.7V2.952h-5.7z"></path>
+        </svg></span>
+                                                    <div class="c-14dq6lk">Intercom</div>
+                                                </div>
+                                            </div>
+                                            <div class="c-1slosxv" tabindex="0" role="button">+11 more</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-sn9j7k">
+                                    <div class="c-e2r6u2"><img alt="" class="c-wbro1p"
+                                                               src="{{ imageurl }}">
+                                    </div>
+                                    <span class="c-141v0bq"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                 height="13"
+                                                                 viewBox="0 0 16 13"><path fill="#FFF"
+                                                                                           fill-rule="evenodd"
+                                                                                           d="M1.016.467h14.48c.267 0 .483.207.483.463v10.978c0 .256-.216.678-.483.678H1.016c-.266 0-.483-.422-.483-.678V.93c0-.256.217-.463.483-.463zm.483 8.984v2.142h9.025L5.183 6.096a.404.404 0 00-.295-.128.403.403 0 00-.291.135L1.499 9.45zm9.653-2.494c-1.065 0-1.93-.832-1.93-1.855 0-1.022.865-1.854 1.93-1.854s1.931.832 1.931 1.854c0 1.023-.866 1.855-1.93 1.855zm0-2.782c-.532 0-.965.417-.965.927 0 .511.433.928.965.928s.966-.417.966-.928c0-.51-.434-.927-.966-.927zm3.862 7.418v-10.2H1.499v6.662l2.376-2.568a1.374 1.374 0 011.001-.446c.385-.004.744.146 1.013.423l5.955 6.129h3.17z"></path></svg></span>
+                                </div>
+                            </div>
+                            <div class="c-1x21dx0">
+                                <div class="c-8atqhb" itemprop="potentialAction" itemtype="http://schema.org/Action"
+                                     itemscope="true">
+                                    <div class="c-2t9rox">
+                                        <div class="c-0">
+                                            <div class="c-j7qwjs">
+                                                <div class="c-1a812ti">
+                                                    <div class="c-gnxvp8">₹{{ current_price }}</div>
+                                                    <span class="c-77737p">₹{{ old_price }}</span></div>
+                                                <div class="c-131wcsq"></div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="c-ahnyqw" itemprop="name">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+                    {#                    ------------------------#}
+                    {#                    <div class="c-28j001" itemprop="containsPlace" itemscope="true"#}
+                    {#                         itemtype="http://schema.org/HotelRoom">#}
+                    {#                        <div class="c-7doipl">#}
+                    {#                            <div class="c-ebnjpp">#}
+                    {#                                <div class="c-1xhj18k"><span class="c-2j9z2q" itemprop="name">Saver Double (X)</span>#}
+                    {#                                </div>#}
+                    {#                                <div class="c-12z2e50">Saver: Spaces with functional amenities</div>#}
+                    {#                                <hr class="c-mjnk4s">#}
+                    {#                                <div>#}
+                    {#                                    <div class="c-1xhj18k">#}
+                    {#                                        <div class="c-1b873yf">#}
+                    {#                                            <div class="c-3g5f28"><span lazyload="true" class="c-1bb5hkt"><svg#}
+                    {#                                                    xmlns="http://www.w3.org/2000/svg" width="22" height="21"#}
+                    {#                                                    viewBox="0 0 22 21">#}
+                    {#    <path fill="#000" fill-rule="evenodd"#}
+                    {#          d="M20.62 0H1.38C.619 0 0 .619 0 1.38V13.76c0 .761.619 1.38 1.38 1.38h9.131v1.97c-1.547.05-2.993.334-4.113.814-1.369.587-2.122 1.417-2.122 2.339 0 .27.219.489.489.489h12.47c.27 0 .49-.219.49-.489 0-.922-.755-1.752-2.123-2.339-1.12-.48-2.566-.764-4.113-.813v-1.97h9.131c.761 0 1.38-.62 1.38-1.38V1.38C22 .619 21.38 0 20.62 0zm-4.049 19.775H5.429c.238-.34.708-.674 1.354-.951 1.119-.48 2.616-.743 4.217-.743 1.6 0 3.098.264 4.217.743.646.277 1.116.612 1.354.951zm4.451-6.014c0 .222-.18.402-.402.402H1.38a.402.402 0 0 1-.402-.402V1.38c0-.222.18-.402.402-.402h19.24c.222 0 .402.18.402.402V13.76zM19.284 2.227H2.716a.489.489 0 0 0-.489.489v9.71c0 .27.219.488.489.488h16.568c.27 0 .49-.219.49-.489v-9.71a.489.489 0 0 0-.49-.488zm-.489 9.71H3.205V3.204h15.59v8.731z"></path>#}
+                    {#</svg>#}
+                    {#</span>#}
+                    {#                                                <div class="c-14dq6lk">TV</div>#}
+                    {#                                            </div>#}
+                    {#                                            <div class="c-3g5f28"><span lazyload="true" class="c-1bb5hkt"><svg#}
+                    {#                                                    xmlns="http://www.w3.org/2000/svg" id="queen-sized-bed"#}
+                    {#                                                    viewBox="0 0 24 24">#}
+                    {#          <path d="M23 12.39c0-1.101-.794-1.983-1.808-2.204v-5.82c0-.749-.617-1.366-1.366-1.366H4.174c-.75 0-1.366.617-1.366 1.367v5.82C1.794 10.406 1 11.288 1 12.39v7.715c0 .265.22.441.44.441.221 0 .442-.22.442-.44v-1.103h20.236v1.102a.442.442 0 0 0 .882 0v-7.715zm-12.345-2.248H5.85V6.615h4.805v3.527zm7.451 0h-4.805V6.615h4.805v3.527zM3.69 4.367a.49.49 0 0 1 .485-.485h15.652a.49.49 0 0 1 .485.485v5.775h-1.279V6.174c0-.264-.22-.44-.44-.44H12.86c-.265 0-.441.22-.441.44v3.968h-.882V6.174c0-.264-.22-.44-.44-.44H5.408c-.265 0-.441.22-.441.44v3.968H3.689V4.367zm-.485 6.701h17.548c.749 0 1.322.617 1.322 1.367v1.367H1.838v-1.367c0-.794.617-1.367 1.366-1.367zM1.838 14.64h20.28v3.483H1.838V14.64z"#}
+                    {#                fill="#000" fillrule="nonzero"></path>#}
+                    {#        </svg></span>#}
+                    {#                                                <div class="c-14dq6lk">Queen Sized Bed</div>#}
+                    {#                                            </div>#}
+                    {#                                            <div class="c-3g5f28"><span lazyload="true" class="c-1bb5hkt"><svg#}
+                    {#                                                    xmlns="http://www.w3.org/2000/svg" id="intercom"#}
+                    {#                                                    viewBox="0 0 24 24">#}
+                    {#          <path d="M10.6 3.429V20.57h10.45V3.43H10.6zm0 17.619a.951.951 0 0 1-.95.952h-5.7a.951.951 0 0 1-.95-.952V2.952C3 2.426 3.425 2 3.95 2h5.7c.525 0 .95.426.95.952v-.476h10.45c.525 0 .95.427.95.953V20.57a.951.951 0 0 1-.95.953H10.6v-.476zm5.225-1.905a2.378 2.378 0 0 0 2.375-2.381 2.378 2.378 0 0 0-2.375-2.381 2.378 2.378 0 0 0-2.375 2.38 2.378 2.378 0 0 0 2.375 2.382zm0-.953c-.787 0-1.425-.64-1.425-1.428 0-.79.638-1.429 1.425-1.429s1.425.64 1.425 1.429-.638 1.428-1.425 1.428zM13.45 6.586a.3.3 0 0 1 .3-.3h4.15a.3.3 0 0 1 .3.3v4.162a.3.3 0 0 1-.3.3h-4.15a.3.3 0 0 1-.3-.3V6.586zm-.65-1.253a.3.3 0 0 0-.3.3V11.7a.3.3 0 0 0 .3.3h6.05a.3.3 0 0 0 .3-.3V5.633a.3.3 0 0 0-.3-.3H12.8zm-8.85-2.38v18.095h5.7V2.952h-5.7z"></path>#}
+                    {#        </svg></span>#}
+                    {#                                                <div class="c-14dq6lk">Intercom</div>#}
+                    {#                                            </div>#}
+                    {#                                        </div>#}
+                    {#                                        <div class="c-1slosxv" tabindex="0" role="button">+11 more</div>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                            <div class="c-sn9j7k">#}
+                    {#                                <div class="c-e2r6u2"><img alt="" class="c-wbro1p"#}
+                    {#                                                           src="https://images.oyoroomscdn.com/uploads/hotel_image/61917/thumb/c92610f7f533c7d4.jpg">#}
+                    {#                                </div>#}
+                    {#                                <span class="c-141v0bq"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="13"#}
+                    {#                                                             viewBox="0 0 16 13"><path fill="#FFF" fill-rule="evenodd"#}
+                    {#                                                                                       d="M1.016.467h14.48c.267 0 .483.207.483.463v10.978c0 .256-.216.678-.483.678H1.016c-.266 0-.483-.422-.483-.678V.93c0-.256.217-.463.483-.463zm.483 8.984v2.142h9.025L5.183 6.096a.404.404 0 00-.295-.128.403.403 0 00-.291.135L1.499 9.45zm9.653-2.494c-1.065 0-1.93-.832-1.93-1.855 0-1.022.865-1.854 1.93-1.854s1.931.832 1.931 1.854c0 1.023-.866 1.855-1.93 1.855zm0-2.782c-.532 0-.965.417-.965.927 0 .511.433.928.965.928s.966-.417.966-.928c0-.51-.434-.927-.966-.927zm3.862 7.418v-10.2H1.499v6.662l2.376-2.568a1.374 1.374 0 011.001-.446c.385-.004.744.146 1.013.423l5.955 6.129h3.17z"></path></svg></span>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                        <div class="c-1x21dx0">#}
+                    {#                            <div class="c-8atqhb" itemprop="potentialAction" itemtype="http://schema.org/Action"#}
+                    {#                                 itemscope="true">#}
+                    {#                                <div class="c-2t9rox">#}
+                    {#                                    <div class="c-0">#}
+                    {#                                        <div class="c-j7qwjs">#}
+                    {#                                            <div class="c-1a812ti">#}
+                    {#                                                <div class="c-gnxvp8">₹1014</div>#}
+                    {#                                                <span class="c-77737p">₹1690</span></div>#}
+                    {#                                            <div class="c-131wcsq"></div>#}
+                    {#                                        </div>#}
+                    {#                                    </div>#}
+                    {#                                    <button type="button" class="c-ahnyqw" itemprop="name">Select</button>#}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                </div>
+            </div>
+        </div>
+        <div class="c-1r1ps0e" id="1210">
+            <div name="1210">
+            </div>
+        </div>
+        <div class="c-1r1ps0e" id="1900">
+            <div name="1900">
+                <div name="reviewsWidget">
+                    <div class="c-1ofqig9"><span class="c-12w8d0">Ratings and reviews</span><span
+                            class="c-1n51j2l"><span lazyload="true" class="c-d1ookj"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#57A4FF" fill-rule="nonzero"
+              d="M16.795 4.5l-2.28-1.014L13.5 1.205l-2.481.259L9 0 6.98 1.464l-2.48-.26-1.014 2.28L1.205 4.5l.259 2.481L0 9l1.464 2.02-.26 2.48 2.28 1.014L4.5 16.795l2.481-.259L9 18l2.02-1.464 2.48.26 1.014-2.28 2.281-1.016-.26-2.481L18 9l-1.464-2.02z"></path>
+        <path fill="#FFF"
+              d="M12.216 5.928a.267.267 0 0 0-.378 0l-4.35 4.35-1.324-1.323a.267.267 0 0 0-.377 0l-.758.754a.268.268 0 0 0 0 .378l2.27 2.27a.268.268 0 0 0 .378 0l5.295-5.294a.268.268 0 0 0 0-.378l-.756-.757z"></path>
+    </g>
+</svg>
+</span>Only verified stays</span></div>
+                    <div class="c-1r33t6o">
+                        <div class="c-l8dzab">
+                            <div class="c-lipvz2 c-1rt0ma c-1rmk5jp c-1uk1gs8"
+                                 style="background-color: rgb(180, 218, 85);"><span class="c-1uxth7l">3.7 <span
+                                    class="c-h9sz1i" lazyload="true"><svg viewBox="0 0 9 10"
+                                                                          xmlns="http://www.w3.org/2000/svg"><path
+                                    d="M7.25 9.5a.238.238 0 01-.12-.032L4.5 7.948l-2.63 1.52a.238.238 0 01-.265-.017.271.271 0 01-.102-.26l.48-3.042-1.91-2.021a.276.276 0 01-.061-.268.255.255 0 01.197-.18l2.874-.508L4.276.646A.25.25 0 014.5.5c.094 0 .181.057.223.146l1.194 2.526 2.874.508a.255.255 0 01.197.18.275.275 0 01-.061.268l-1.91 2.021.48 3.042c.015.1-.024.201-.102.26a.242.242 0 01-.145.049z"></path></svg></span></span>
+                            </div>
+                            <h4>Good</h4><h5>56 ratings</h5></div>
+                        <div class="c-1cnmlv3">
+                            <div class="c-19kyb5k">
+                                <div class="c-1q2ekoi">
+                                    <div class="c-1uj1k31">5</div>
+                                    <span class="c-1owv2mq"><svg xmlns="http://www.w3.org/2000/svg" width="10"
+                                                                 height="10" viewBox="0 0 10 10">
+    <path fill="#cdcdcd" fill-rule="evenodd"
+          d="M9.495 3.42H6.423L5.473.357A.499.499 0 0 0 5.003 0a.499.499 0 0 0-.472.357L3.568 3.42H.495a.499.499 0 0 0-.47.358.533.533 0 0 0 .177.58L2.7 6.252 1.744 9.32a.54.54 0 0 0 .07.466.49.49 0 0 0 .401.214.496.496 0 0 0 .282-.105l2.498-1.894 2.498 1.894a.495.495 0 0 0 .29.101.49.49 0 0 0 .4-.214.54.54 0 0 0 .07-.466L7.305 6.25l2.498-1.895a.534.534 0 0 0 .171-.583.498.498 0 0 0-.478-.35z"></path>
+</svg>
+</span><span class="c-cgkhb2"><span class="c-6y901j"></span></span></div>
+                                <div class="c-bcee81">35%</div>
+                            </div>
+                            <div class="c-19kyb5k">
+                                <div class="c-1q2ekoi">
+                                    <div class="c-1uj1k31">4</div>
+                                    <span class="c-1owv2mq"><svg xmlns="http://www.w3.org/2000/svg" width="10"
+                                                                 height="10" viewBox="0 0 10 10">
+    <path fill="#cdcdcd" fill-rule="evenodd"
+          d="M9.495 3.42H6.423L5.473.357A.499.499 0 0 0 5.003 0a.499.499 0 0 0-.472.357L3.568 3.42H.495a.499.499 0 0 0-.47.358.533.533 0 0 0 .177.58L2.7 6.252 1.744 9.32a.54.54 0 0 0 .07.466.49.49 0 0 0 .401.214.496.496 0 0 0 .282-.105l2.498-1.894 2.498 1.894a.495.495 0 0 0 .29.101.49.49 0 0 0 .4-.214.54.54 0 0 0 .07-.466L7.305 6.25l2.498-1.895a.534.534 0 0 0 .171-.583.498.498 0 0 0-.478-.35z"></path>
+</svg>
+</span><span class="c-cgkhb2"><span class="c-u6017t"></span></span></div>
+                                <div class="c-bcee81">23%</div>
+                            </div>
+                            <div class="c-19kyb5k">
+                                <div class="c-1q2ekoi">
+                                    <div class="c-1uj1k31">3</div>
+                                    <span class="c-1owv2mq"><svg xmlns="http://www.w3.org/2000/svg" width="10"
+                                                                 height="10" viewBox="0 0 10 10">
+    <path fill="#cdcdcd" fill-rule="evenodd"
+          d="M9.495 3.42H6.423L5.473.357A.499.499 0 0 0 5.003 0a.499.499 0 0 0-.472.357L3.568 3.42H.495a.499.499 0 0 0-.47.358.533.533 0 0 0 .177.58L2.7 6.252 1.744 9.32a.54.54 0 0 0 .07.466.49.49 0 0 0 .401.214.496.496 0 0 0 .282-.105l2.498-1.894 2.498 1.894a.495.495 0 0 0 .29.101.49.49 0 0 0 .4-.214.54.54 0 0 0 .07-.466L7.305 6.25l2.498-1.895a.534.534 0 0 0 .171-.583.498.498 0 0 0-.478-.35z"></path>
+</svg>
+</span><span class="c-cgkhb2"><span class="c-s8ogdp"></span></span></div>
+                                <div class="c-bcee81">17%</div>
+                            </div>
+                            <div class="c-19kyb5k">
+                                <div class="c-1q2ekoi">
+                                    <div class="c-1uj1k31">2</div>
+                                    <span class="c-1owv2mq"><svg xmlns="http://www.w3.org/2000/svg" width="10"
+                                                                 height="10" viewBox="0 0 10 10">
+    <path fill="#cdcdcd" fill-rule="evenodd"
+          d="M9.495 3.42H6.423L5.473.357A.499.499 0 0 0 5.003 0a.499.499 0 0 0-.472.357L3.568 3.42H.495a.499.499 0 0 0-.47.358.533.533 0 0 0 .177.58L2.7 6.252 1.744 9.32a.54.54 0 0 0 .07.466.49.49 0 0 0 .401.214.496.496 0 0 0 .282-.105l2.498-1.894 2.498 1.894a.495.495 0 0 0 .29.101.49.49 0 0 0 .4-.214.54.54 0 0 0 .07-.466L7.305 6.25l2.498-1.895a.534.534 0 0 0 .171-.583.498.498 0 0 0-.478-.35z"></path>
+</svg>
+</span><span class="c-cgkhb2"><span class="c-kxim7o"></span></span></div>
+                                <div class="c-bcee81">3%</div>
+                            </div>
+                            <div class="c-19kyb5k">
+                                <div class="c-1q2ekoi">
+                                    <div class="c-1uj1k31">1</div>
+                                    <span class="c-1owv2mq"><svg xmlns="http://www.w3.org/2000/svg" width="10"
+                                                                 height="10" viewBox="0 0 10 10">
+    <path fill="#cdcdcd" fill-rule="evenodd"
+          d="M9.495 3.42H6.423L5.473.357A.499.499 0 0 0 5.003 0a.499.499 0 0 0-.472.357L3.568 3.42H.495a.499.499 0 0 0-.47.358.533.533 0 0 0 .177.58L2.7 6.252 1.744 9.32a.54.54 0 0 0 .07.466.49.49 0 0 0 .401.214.496.496 0 0 0 .282-.105l2.498-1.894 2.498 1.894a.495.495 0 0 0 .29.101.49.49 0 0 0 .4-.214.54.54 0 0 0 .07-.466L7.305 6.25l2.498-1.895a.534.534 0 0 0 .171-.583.498.498 0 0 0-.478-.35z"></path>
+</svg>
+</span><span class="c-cgkhb2"><span class="c-juoeb8"></span></span></div>
+                                <div class="c-bcee81">19%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="c-1r1ps0e" id="1427">
+            <div name="1427">
+                <div class="c-0">
+                    <div class="c-gcrtsc">Hotel policies</div>
+                    <ul class="c-f0mxva">
+                        <li>
+                            <div class="c-1f4p2wj">
+                                <div>
+                                    <div class="c-1upilqn">Check-in</div>
+                                    <div class="c-79elbk">
+                                        <div class="c-1xnmrhy"></div>
+                                        <div class="c-1lmmwwo"> 12:00 PM</div>
+                                    </div>
+                                </div>
+                                <div class="c-1s1axp"></div>
+                                <div>
+                                    <div class="c-1upilqn">Check-out</div>
+                                    <div class="c-79elbk">
+                                        <div class="c-1xnmrhy"></div>
+                                        <div class="c-1lmmwwo"> 11:00 AM</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {#                        ------------#}
+                        {% for i in hotel_policy %}
+                            <li>
+                                <div class="c-1f4p2wj">{{ i }}</div>
+                            </li>
+
+                        {% endfor %}
+                        <li>
+                            <div class="c-1f4p2wj">Please check travel advisory issued by the concerned state government
+                                /local authorities before booking, as some places may have COVID-19 related
+                                travel/lodging restrictions
+                            </div>
+                        </li>
+                        <li>
+                            <div class="c-1f4p2wj">Couples are welcome</div>
+                        </li>
+                        <li>
+                            <div class="c-1f4p2wj">Guests can check in using any local or outstation ID proof (PAN card
+                                not accepted).
+                            </div>
+                        </li>
+
+                        {#                        ---------------#}
+
+                    </ul>
+                    <div class="c-e4hyu5">
+                        <div class="c-2db0jw">View Guest Policy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-1r1ps0e" id="1426">
+            <div name="1426">
+                <div><h2 class="c-gcrtsc">What's nearby</h2>
+                    <div>
+                        <div class="c-ygvspr">
+                            <div class="c-r6z5ec">
+
+                                <div class="c-sqr6fe"><span class="u-RTLNegative c-3xgtvu"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
+    <path fill="#EE2A24" fill-rule="nonzero"
+          d="M6 16c.462 0 .896-.22 1.168-.596C8.913 13.007 12 8.43 12 6.038 12 2.703 9.313 0 6 0 2.686 0 0 2.703 0 6.038c0 2.392 3.086 6.97 4.831 9.366.274.375.708.596 1.17.596zM3.504 5.919A2.503 2.503 0 0 1 6 3.408a2.503 2.503 0 0 1 2.495 2.511A2.503 2.503 0 0 1 6 8.43 2.503 2.503 0 0 1 3.504 5.92z"></path>
+</svg>
+</span>
+
+                                </div>
+                            </div>
+                            <div class="c-0">
+                                <div class="c-80v7l8">
+                                    <div class="c-7tqkxz">Places to visit</div>
+                                    {#                                    <div class="c-iahyk2">Restaurant</div>#}
+                                    {#                                    <div class="c-iahyk2">Transport</div>#}
+                                </div>
+                                <div class="c-k008qs">
+                                    <div class="c-1ttywp7">
+                                        <div class="c-14fq5sz">
+                                            {% for i in places_nearby %}
+                                                <div class="c-2olt4i">
+                                                    <div class="c-ft9ciy">
+                                                        <div class="c-1w424n4">{{ i }}</div>
+                                                    </div>
+                                                    <div class="hover c-2rhtyh">
+                                                        <div class="hover__no-hover c-2s06q4"></div>
+                                                        <div class="hover__hover c-18grcrv"><span></span></div>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                            <div class="c-2olt4i">
+                                                <div class="c-ft9ciy">
+                                                    <div class="c-1w424n4">The Shivaay : Hotels in Rishikesh</div>
+                                                </div>
+                                                <div class="hover c-2rhtyh">
+                                                    <div class="hover__no-hover c-2s06q4">0.7kms</div>
+                                                    <div class="hover__hover c-18grcrv"><span>Show on map</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="c-2olt4i">
+                                                <div class="c-ft9ciy">
+                                                    <div class="c-1w424n4">Green Hotel</div>
+                                                </div>
+                                                <div class="hover c-2rhtyh">
+                                                    <div class="hover__no-hover c-2s06q4">1.8kms</div>
+                                                    <div class="hover__hover c-18grcrv"><span>Show on map</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="c-2olt4i">
+                                                <div class="c-ft9ciy">
+                                                    <div class="c-1w424n4">Hotel EllBee Ganga View</div>
+                                                </div>
+                                                <div class="hover c-2rhtyh">
+                                                    <div class="hover__no-hover c-2s06q4">4.4kms</div>
+                                                    <div class="hover__hover c-18grcrv"><span>Show on map</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="c-2olt4i">
+                                                <div class="c-ft9ciy">
+                                                    <div class="c-1w424n4">Helipad</div>
+                                                </div>
+                                                <div class="hover c-2rhtyh">
+                                                    <div class="hover__no-hover c-2s06q4">8.2kms</div>
+                                                    <div class="hover__hover c-18grcrv"><span>Show on map</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-1m6jmuk">
+                                        <div class="c-n3gimw"></div>
+                                        <button class="c-6l5vxq" type="button"><span><a href="https://www.google.com/maps/search/{{ maps }}">Click here to view on map</a></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-1r1ps0e" id="1435">
+            <div name="1435">
+                <div class="c-1eep3rv">
+                    <div class="c-gcrtsc">Weather details</div>
+                    <div class="slick-slider slickCompactArrows c-xi606m slick-initialized" dir="ltr">
+                        <button type="button" data-role="none" class="slick-arrow slick-prev slick-disabled"
+                                style="display: block;"> Previous
+                        </button>
+                        <div class="slick-list">
+                            <div class="slick-track"
+                                 style="width: 1152px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1"
+                                     aria-hidden="false" style="outline: none; width: 144px;">
+                                    <div>
+                                        <div tabindex="-1" style="width: 100%; display: inline-block;">
+                                            <div class="c-1thhuhp"><span>Check-in</span></div>
+                                            <div class="c-1ug1nc4">
+                                                <div class="c-1xmatoy">11 Dec</div>
+                                                <span class="c-z2h9aw"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="41" height="41" viewBox="0 0 41 41">
+    <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="2" transform="translate(1.1 1.5)">
+        <path stroke="#359EED"
+              d="M19 0v4M5.6 5.6l2.8 2.8M0 19h4M5.6 32.5l2.8-2.9M19 38v-4M32.5 32.5l-2.9-2.9M38 19h-4M32.5 5.6l-2.9 2.8"></path>
+        <circle cx="19" cy="19" r="9" stroke="#2B2B2B" stroke-linejoin="round"></circle>
+    </g>
+</svg>
+</span>
+                                                <div class="c-14f2nl2">26 °C</div>
+                                                <div class="c-1nsjbj2">11 °C</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-index="1" class="slick-slide slick-active" tabindex="-1" aria-hidden="false"
+                                     style="outline: none; width: 144px;">
+                                    <div>
+                                        <div tabindex="-1" style="width: 100%; display: inline-block;">
+                                            <div class="c-1thhuhp"><span>Check-out</span></div>
+                                            <div class="c-1ug1nc4">
+                                                <div class="c-1xmatoy">12 Dec</div>
+                                                <span class="c-z2h9aw"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="39" height="30" viewBox="0 0 39 30">
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#359EED" stroke-linecap="round" stroke-width="2"
+              d="M14.1 21l-1 2M14.1 27l-1 2M20.1 21l-1 2M20.1 27l-1 2M26.1 21l-1 2M26.1 27l-1 2"></path>
+        <path fill="#2B2B2B" fill-rule="nonzero"
+              d="M7.1 24c.6 0 1-.4 1-1s-.4-1-1-1c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5c0 .6.4 1 1 1s1-.4 1-1c0-3.5-2.5-6.4-6-6.9.5-4.9 5-8.5 9.9-8 4.6.5 8 4.3 8.1 8.9 0 .6.4 1 1 1h4c2.8 0 5 2.2 5 5s-2.2 5-5 5c-.6 0-1 .4-1 1s.4 1 1 1c3.9 0 7-3.1 7-7s-3.1-7-7-7h-3c-.6-6-6-10.5-12-9.9-5.2.5-9.4 4.7-9.9 9.9-3.8.5-6.5 4.1-5.9 7.9.5 3.5 3.4 6.1 6.8 6.1z"></path>
+    </g>
+</svg>
+</span>
+                                                <div class="c-14f2nl2">20 °C</div>
+                                                <div class="c-1nsjbj2">11 °C</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {#                                <div data-index="2" class="slick-slide slick-active" tabindex="-1" aria-hidden="false"#}
+                                {#                                     style="outline: none; width: 144px;">#}
+                                {#                                    <div>#}
+                                {#                                        <div tabindex="-1" style="width: 100%; display: inline-block;">#}
+                                {#                                            <div class="c-18ansaj">#}
+                                {#                                                <div class="c-1xmatoy">13 Dec</div>#}
+                                {#                                                <span class="c-z2h9aw"><svg xmlns="http://www.w3.org/2000/svg"#}
+                                {#                                                                            width="41" height="41" viewBox="0 0 41 41">#}
+                                {#    <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="2" transform="translate(1.1 1.5)">#}
+                                {#        <path stroke="#359EED"#}
+                                {#              d="M19 0v4M5.6 5.6l2.8 2.8M0 19h4M5.6 32.5l2.8-2.9M19 38v-4M32.5 32.5l-2.9-2.9M38 19h-4M32.5 5.6l-2.9 2.8"></path>#}
+                                {#        <circle cx="19" cy="19" r="9" stroke="#2B2B2B" stroke-linejoin="round"></circle>#}
+                                {#    </g>#}
+                                {#</svg>#}
+                                {#</span>#}
+                                {#                                                <div class="c-14f2nl2">22 °C</div>#}
+                                {#                                                <div class="c-1nsjbj2">9 °C</div>#}
+                                {#                                            </div>#}
+                                {#                                        </div>#}
+                                {#                                    </div>#}
+                                {#                                </div>#}
+                                {#                                <div data-index="3" class="slick-slide slick-active" tabindex="-1" aria-hidden="false"#}
+                                {#                                     style="outline: none; width: 144px;">#}
+                                {#                                    <div>#}
+                                {#                                        <div tabindex="-1" style="width: 100%; display: inline-block;">#}
+                                {#                                            <div class="c-18ansaj">#}
+                                {#                                                <div class="c-1xmatoy">14 Dec</div>#}
+                                {#                                                <span class="c-z2h9aw"><svg xmlns="http://www.w3.org/2000/svg"#}
+                                {#                                                                            width="39" height="29" viewBox="0 0 39 29">#}
+                                {#    <g fill="none" fill-rule="evenodd">#}
+                                {#        <path stroke="#359EED" stroke-width="2"#}
+                                {#              d="M33.6 16.1c2.2-1.5 3.5-4 3.5-6.6v-.3c-.7.2-1.3.3-2 .3-4.3 0-7.9-3.4-8-7.7-2.5.6-4.5 2.4-5.5 4.8"></path>#}
+                                {#        <path fill="#2B2B2B" fill-rule="nonzero"#}
+                                {#              d="M31.1 14.4h-3c-.6-6-6-10.5-12-9.9-5.2.5-9.4 4.7-9.9 9.9-3.8.5-6.5 4.1-5.9 7.9.5 3.4 3.4 6 6.9 6h24c3.9 0 7-3.1 7-7s-3.2-6.9-7.1-6.9zm0 12h-24c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5c0 .6.4 1 1 1s1-.4 1-1c0-3.5-2.5-6.4-6-6.9.5-4.9 5-8.5 9.9-8 4.6.5 8 4.3 8.1 8.9 0 .6.4 1 1 1h4c2.8 0 5 2.2 5 5s-2.2 5-5 5z"></path>#}
+                                {#    </g>#}
+                                {#</svg>#}
+                                {#</span>#}
+                                {#                                                <div class="c-14f2nl2">22 °C</div>#}
+                                {#                                                <div class="c-1nsjbj2">8 °C</div>#}
+                                {#                                            </div>#}
+                                {#                                        </div>#}
+                                {#                                    </div>#}
+                                {#                                </div>#}
+                                {#                                <div data-index="4" class="slick-slide slick-active" tabindex="-1" aria-hidden="false"#}
+                                {#                                     style="outline: none; width: 144px;">#}
+                                {#                                    <div>#}
+                                {#                                        <div tabindex="-1" style="width: 100%; display: inline-block;">#}
+                                {#                                            <div class="c-18ansaj">#}
+                                {#                                                <div class="c-1xmatoy">15 Dec</div>#}
+                                {#                                                <span class="c-z2h9aw"><svg xmlns="http://www.w3.org/2000/svg"#}
+                                {#                                                                            width="41" height="41" viewBox="0 0 41 41">#}
+                                {#    <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="2" transform="translate(1.1 1.5)">#}
+                                {#        <path stroke="#359EED"#}
+                                {#              d="M19 0v4M5.6 5.6l2.8 2.8M0 19h4M5.6 32.5l2.8-2.9M19 38v-4M32.5 32.5l-2.9-2.9M38 19h-4M32.5 5.6l-2.9 2.8"></path>#}
+                                {#        <circle cx="19" cy="19" r="9" stroke="#2B2B2B" stroke-linejoin="round"></circle>#}
+                                {#    </g>#}
+                                {#</svg>#}
+                                {#</span>#}
+                                {#                                                <div class="c-14f2nl2">22 °C</div>#}
+                                {#                                                <div class="c-1nsjbj2">8 °C</div>#}
+                                {#                                            </div>#}
+                                {#                                        </div>#}
+                                {#                                    </div>#}
+                                {#                                </div>#}
+                                {#                                <div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true"#}
+                                {#                                     style="outline: none; width: 144px;"></div>#}
+                                {#                                <div data-index="6" class="slick-slide" tabindex="-1" aria-hidden="true"#}
+                                {#                                     style="outline: none; width: 144px;"></div>#}
+                                {#                                <div data-index="7" class="slick-slide" tabindex="-1" aria-hidden="true"#}
+                                {#                                     style="outline: none; width: 144px;"></div>#}
+                            </div>
+                        </div>
+                        <button type="button" data-role="none" class="slick-arrow slick-next" style="display: block;">
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="c-1e7dqp1">
+        <div class="c-1hmw6f1">
+
+            <div class="c-1w5jjrs"><span class="c-22w5bk"></span></div>
+        </div>
+        <div class="c-2xmewo">
+            <div class="listingPrice c-1w4qezm">
+                <meta itemprop="priceRange" content="₹1216 - ₹2026">
+                <div class="listingPrice__numbers"><span
+                        class="listingPrice__finalPrice listingPrice__finalPrice--black">₹{{ r_p }}</span><span
+                        class="listingPrice__slashedPrice d-body-lg"></span><span
+                        class="listingPrice__percentage">39% off</span>
+                </div>
+                <div class="listingPrice__perRoomNight">inclusive of all taxes</div>
+            </div>
+            <div class="c-1thcb3a">
+                <div class="c-1pzykbe">
+                    <div class="oyo-row oyo-row--no-spacing datePickerDesktop datePickerDesktop--hotel">
+                        <div class="oyo-cell oyo-cell--12-col oyo-cell--8-col-tablet oyo-cell--4-col-phone d-text16 is-fontBold datePickerDesktop__checkInOut u-textEllipsis">
+                            <span class="datePickerDesktop__checkInOutText">{{ checkin }}</span><span
+                                class="datePickerDesktop__arrowWrapper datePickerDesktop__arrowWrapper--hotel">–</span><span
+                                class="datePickerDesktop__checkInOutText">{{ checkout }}</span></div>
+                        <span></span></div>
+                </div>
+                <div class="c-14mt3w6">
+                    <div class="oyo-row oyo-row--no-spacing guestRoomPicker guestRoomPicker--hotel ">
+                        <div class="oyo-cell oyo-cell--12-col oyo-cell--8-col-tablet oyo-cell--4-col-phone d-text16 is-fontBold u-textEllipsis guestRoomPicker__guestRoomCount">
+
+                        </div>
+                        <span></span></div>
+                    <div class="c-18fyjan"> &nbsp;</div>
+                </div>
+            </div>
+            <div class="c-aw4f1d">
+                <div class="c-1pr5noq"><span class="c-1bb5hkt" isrtl="true"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 width="20" height="20"
+                                                                                 viewBox="0 0 20 20">
+    <path fill="#000" fill-rule="nonzero"
+          d="M4.756.968v.008c-.002 0 0-.002 0-.008zm0 18.55h-.951V.968A.96.96 0 0 1 4.755 0H15.22c.525 0 .95.444.95.968v18.544h-.951V.968c0 .008-10.464.008-10.464.008v18.542zm0-18.55l-.001.008.001-.008zm0 18.056H15.22V.968c0 .008-10.464.008-10.464.008v18.048zm-.951 0V.968A.96.96 0 0 1 4.755 0H15.22c.525 0 .95.444.95.968v18.056h3.353c.263 0 .476.219.476.488 0 .27-.213.488-.476.488H.476A.482.482 0 0 1 0 19.512c0-.27.213-.488.476-.488h3.329zm9.233-8.167s-.878-1.303-.878-1.8c0-.498.393-.9.878-.9a.89.89 0 0 1 .878.9c0 .497-.878 1.8-.878 1.8z"
+          opacity=".3"></path>
+</svg>
+</span>
+                    <div><span class="c-1w0k317">{{ r_type }}  </span></div>
+                </div>
+                <div class="c-pbyyuk"><a class=""><span class="c-9f5b16"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                              width="18" height="20"
+                                                                              viewBox="0 0 18 18"><path fill="#EE2A24"
+                                                                                                        fill-rule="evenodd"
+                                                                                                        d="M17.215.785A2.663 2.663 0 0015.32 0a2.66 2.66 0 00-1.896.785l-11.49 11.49a.447.447 0 00-.104.165L.027 17.396a.45.45 0 00.578.577l4.956-1.802a.46.46 0 00.165-.105l11.49-11.49c.506-.506.784-1.18.784-1.896s-.278-1.39-.785-1.896zM5.16 15.359l-3.955 1.438 1.438-3.955 9.974-9.974 2.517 2.517-9.974 9.974zm11.418-11.42l-.807.807-2.517-2.517.807-.807c.336-.336.783-.52 1.258-.52s.922.184 1.258.52c.336.336.521.783.521 1.258s-.185.922-.52 1.258v.001z"></path></svg></span></a>
+                </div>
+            </div>
+
+            <div class="c-1wso87h">
+                <button type="button" class="c-u65gu2"><span> Book</span></button>
+            </div>
+            <div class="c-1glae7g">
+                <div>
+                    <div class="c-1y9junu" tabindex="0" role="button">
+                        <div class="c-1lxcwxd"> Cancellation Policy</div>
+                        <span class="c-15qev37" lazyload="true"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                     height="18" viewBox="0 0 18 18"><path
+                                fill-rule="evenodd"
+                                d="M9.004.957c4.436 0 8.047 3.611 8.047 8.047s-3.61 8.047-8.047 8.047c-4.436 0-8.047-3.61-8.047-8.047C.957 4.568 4.568.957 9.004.957zM9 0C4.02 0 0 4.02 0 9s4.02 9 9 9 9-4.02 9-9-4.02-9-9-9zm.524 13.039v-4.96c0-.34-.226-.6-.52-.6-.294 0-.52.26-.52.6v4.96c0 .34.226.6.52.6.294 0 .52-.28.52-.6zM9.04 4.443a.681.681 0 00-.68.679c0 .373.306.679.68.679a.682.682 0 00.679-.68.681.681 0 00-.68-.678z"
+                                opacity=".7"></path></svg>
+</span></div>
+                </div>
+                <div>
+                    <div class="c-1y9junu" tabindex="0" role="button">
+                        <div class="c-1lxcwxd"> Follow safety measures advised at the hotel</div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-1ccy8kh"><span>By proceeding, you agree to our</span> <a
+                    href="https://www.oyorooms.com/guest-policy?no_header=true" class="c-nn640c" target="_blank"><span
+                    class="c-1u4dhw5">Guest Policies.</span></a></div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/footer.html' %}
+
+{#<div class="clear-fix"></div>#}
+{#            <div class="widget23_">#}
+{#  <div class="weatherIcon23_"></div>#}
+{#  <div class="weatherData23_">#}
+{#    <h1 id="e13" class="temperature23_">25&deg;</h1>#}
+{#    <h2 id="e14" class="description23_">Partly Cloudy</h2>#}
+{#    <h3 id="e15" class="city23_">Tirana, Albania</h3>#}
+{#  </div>#}
+{#  <div class="date23_">#}
+{#    <h4 id="e16" class="month23_" id="month">December</h4>#}
+{#    <h5 id="e17" class="day23_" id="day">32</h5>#}
+{#  </div>#}
+{#</div>#}
+
+
+</body>
+
+<script>
+
+</script>
+
+</html>

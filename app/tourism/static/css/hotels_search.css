@@ -1,0 +1,124 @@
+/*! CSS Used from: https://www.oyorooms.com/assets/desktop/main.5290d32fe455c9ca14a8.css */
+svg:not(:root){overflow:hidden;}
+button,input{font-family:Open Sans,sans-serif;font-size:100%;line-height:1.15;margin:0;}
+button,input{overflow:visible;}
+input:not([type=checkbox]):not([type=radio]){-webkit-appearance:none;border-radius:0;}
+button{text-transform:none;}
+button{-webkit-appearance:button;}
+button::-moz-focus-inner{border-style:none;padding:0;}
+button::-moz-focus-inner,button:focus{outline:none!important;}
+button:-moz-focusring{outline:1px dotted ButtonText;}
+.oyo-row{-ms-flex-align:stretch;align-items:stretch;display:-ms-flexbox;display:flex;-ms-flex-flow:row wrap;flex-flow:row wrap;margin:0 auto;}
+.oyo-row.oyo-row--no-spacing{padding:0;}
+.oyo-cell{box-sizing:border-box;}
+.oyo-row.oyo-row--no-spacing>.oyo-cell{margin:0;}
+@media (max-width:479px){
+.oyo-row{padding:8px;}
+.oyo-cell{margin:8px;width:100%;width:calc(100% - 16px);}
+.oyo-row--no-spacing>.oyo-cell{width:100%;}
+.oyo-cell--2-col{width:50%;width:calc(50% - 16px);}
+.oyo-row--no-spacing>.oyo-cell--2-col{width:50%;}
+.oyo-cell--3-col{width:75%;width:calc(75% - 16px);}
+.oyo-row--no-spacing>.oyo-cell--3-col{width:75%;}
+.oyo-cell--4-col,.oyo-cell--4-col-phone.oyo-cell--4-col-phone{width:100%;width:calc(100% - 16px);}
+.oyo-row--no-spacing>.oyo-cell--4-col,.oyo-row--no-spacing>.oyo-cell--4-col-phone.oyo-cell--4-col-phone{width:100%;}
+.oyo-cell--12-col{width:100%;width:calc(100% - 16px);}
+.oyo-row--no-spacing>.oyo-cell--12-col{width:100%;}
+}
+@media (min-width:480px) and (max-width:839px){
+.oyo-row{padding:8px;}
+.oyo-cell{margin:8px;width:50%;width:calc(50% - 16px);}
+.oyo-row--no-spacing>.oyo-cell{width:50%;}
+.oyo-cell--2-col{width:25%;width:calc(25% - 16px);}
+.oyo-row--no-spacing>.oyo-cell--2-col{width:25%;}
+.oyo-cell--3-col{width:37.5%;width:calc(37.5% - 16px);}
+.oyo-row--no-spacing>.oyo-cell--3-col{width:37.5%;}
+.oyo-cell--4-col,.oyo-cell--4-col-tablet.oyo-cell--4-col-tablet{width:50%;width:calc(50% - 16px);}
+.oyo-row--no-spacing>.oyo-cell--4-col,.oyo-row--no-spacing>.oyo-cell--4-col-tablet.oyo-cell--4-col-tablet{width:50%;}
+.oyo-cell--8-col-tablet.oyo-cell--8-col-tablet{width:100%;width:calc(100% - 16px);}
+.oyo-row--no-spacing>.oyo-cell--8-col-tablet.oyo-cell--8-col-tablet{width:100%;}
+.oyo-cell--12-col{width:100%;width:calc(100% - 16px);}
+.oyo-row--no-spacing>.oyo-cell--12-col{width:100%;}
+}
+@media (min-width:840px){
+.oyo-row{padding:8px;}
+.oyo-cell{margin:8px;width:33.33333%;width:calc(33.33333% - 16px);}
+.oyo-row--no-spacing>.oyo-cell{width:33.33333%;}
+.oyo-cell--2-col{width:16.66667%;width:calc(16.66667% - 16px);}
+.oyo-row--no-spacing>.oyo-cell--2-col{width:16.66667%;}
+.oyo-cell--3-col{width:25%;width:calc(25% - 16px);}
+.oyo-row--no-spacing>.oyo-cell--3-col{width:25%;}
+.oyo-cell--4-col{width:33.33333%;width:calc(33.33333% - 16px);}
+.oyo-row--no-spacing>.oyo-cell--4-col{width:33.33333%;}
+.oyo-cell--12-col{width:100%;width:calc(100% - 16px);}
+.oyo-row--no-spacing>.oyo-cell--12-col{width:100%;}
+}
+::-webkit-scrollbar{width:7px;}
+::-webkit-scrollbar,::-webkit-scrollbar-track{background-color:hsla(0,0%,100%,.1);}
+::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,.65);}
+.u-textCenter{text-align:center;}
+.u-textEllipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.is-fontBold{font-weight:600;}
+.d-text16{color:rgba(0,0,0,.7);}
+.d-text16{font-size:16px;}
+.d-text12{color:rgba(0,0,0,.54);}
+.d-text12{font-size:12px;}
+.ripple{overflow:hidden;position:relative;}
+.ripple:after{background-image:radial-gradient(circle,rgba(0,0,0,.3) 10%,transparent 10.01%);background-position:50%;background-repeat:no-repeat;content:"";display:block;height:100%;left:0;opacity:0;pointer-events:none;position:absolute;top:0;transform:scale(14);transition:transform .2s,opacity 1s;width:100%;}
+.ripple:active:after{opacity:.2;transform:scale(0);transition:0s;}
+*{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+/*! CSS Used from: https://www.oyorooms.com/assets/desktop/commoncss.548574bebc2c5758b27b.css */
+.u-textCenter{text-align:center;}
+.u-textEllipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.is-fontBold{font-weight:600;}
+.searchButton{background:#1ab64f;border:0;border-top-right-radius:4px;border-bottom-right-radius:4px;outline:none;color:#fff;display:block;font-size:18px;font-weight:600;padding:14px 0;width:100%;transition:.2s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;height:100%;}
+.searchButton:focus,.searchButton:hover{cursor:pointer;background:#128036;}
+.guestRoomPicker{position:relative;color:rgba(0,0,0,.87);background-color:transparent;border:1px solid rgba(0,0,0,.07);transition:.2s;box-sizing:border-box;}
+.guestRoomPicker--home{border:1px solid #999;height:100%;}
+.guestRoomPicker:hover{cursor:pointer;box-shadow:0 4px 18px 0 rgba(0,0,0,.08);}
+.guestRoomPicker__guestRoomCount{padding-left:16px;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;color:rgba(0,0,0,.87);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.datePickerDesktop{position:relative;color:rgba(0,0,0,.87);background-color:transparent;border:1px solid rgba(0,0,0,.07);transition:.2s;box-sizing:border-box;}
+.datePickerDesktop--home{height:100%;border:1px solid #999;border-right:none;border-left:none;}
+.datePickerDesktop:hover{cursor:pointer;box-shadow:0 4px 18px 0 rgba(0,0,0,.08);}
+.datePickerDesktop__checkInOut{padding-left:16px;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;color:rgba(0,0,0,.87);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.datePickerDesktop__arrowWrapper{display:inline-block;margin:0 10px;}
+.datePickerDesktop .datePickerDesktop__checkInOutText{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.datePickerDesktop .datePickerDesktop__checkInOutText:hover{overflow:visible;}
+.nearbyComponent{background:#f2f2f2;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;min-width:82px;max-width:100px;max-height:30px;padding:8px;border-radius:100px;box-sizing:border-box;cursor:pointer;}
+.nearbyComponent__iconWrapper{display:-ms-flexbox;display:flex;margin-right:7px;}
+.nearbyComponent__iconWrapper svg{height:15px;width:15px;fill:#222;}
+.nearbyComponent:hover .nearbyComponent__text,.nearbyComponent__text{color:#222;}
+.nearbyComponent:hover .nearbyComponent__iconWrapper svg{fill:#222;}
+.autoCompleteDesktop{position:relative;border-top-left-radius:4px!important;border-bottom-left-radius:4px!important;height:100%;box-sizing:border-box;}
+.autoCompleteDesktop--home{border:1px solid #999;}
+.autoCompleteDesktop--home .autoCompleteDesktop__searchContainer{height:100%;}
+.autoCompleteDesktop__searchContainer{position:relative;height:100%;}
+.autoCompleteDesktop--error{border:1px solid rgba(251,113,125,.9);box-shadow:0 0 8px 0 rgba(251,113,125,.2);animation:shakeIt .3s ease;}
+.autoCompleteDesktop__searchBox{width:100%;height:100%;line-height:1;outline:none;padding:19px 50px 19px 16px;font-size:16px;color:rgba(0,0,0,.87);background-color:transparent;border:none;box-shadow:none;box-sizing:border-box;transition:.2s;font-weight:600;text-transform:capitalize;}
+.autoCompleteDesktop__searchBox--nearbyVisible{padding-right:112px;}
+.autoCompleteDesktop__searchBox:-ms-input-placeholder{font-weight:400;text-transform:none;}
+.autoCompleteDesktop__searchBox::placeholder{font-weight:400;text-transform:none;}
+.autoCompleteDesktop__searchBox:focus,.autoCompleteDesktop__searchBox:hover{box-shadow:0 4px 18px 0 rgba(0,0,0,.08);}
+.autoCompleteDesktop__nearbyComponentWrapper{position:absolute;top:calc(50% - 15px);right:10px;}
+.autoCompleteDesktop__searchBox--home{height:100%;}
+.homeSearchWidget{-ms-flex-pack:justify;justify-content:space-between;border-radius:4px;background-color:#fff;}
+.homeSearchWidget__autoComplete{width:39%!important;}
+.homeSearchWidget__dateRangePicker{width:calc(39% - 165px)!important;}
+.homeSearchWidget__guestRoomPicker{width:22%!important;}
+.homeSearchWidget__search{width:165px!important;}
+/*! CSS Used from: https://www.oyorooms.com/assets/desktop/home.cf3afbb7dab8c79a437d.css */
+.searchContainer__searchWidgetContainer{border-radius:4px;position:relative;}
+@media screen and (min-width:1280px) and (max-width:1340px){
+.searchContainer__searchWidgetContainer{min-width:1044px;}
+}
+/*! CSS Used from: Embedded */
+.c-1xuv5j7{position:absolute;top:62px;left:10px;}
+.c-4yoqfj{top:-5%;left:50%;box-shadow:rgba(166, 166, 166, 0.2) 1px -1px 0px 0px, rgba(166, 166, 166, 0.2) 0px 0px 0px 0px;}
+.c-4yoqfj::after{position:absolute;content:"";width:14px;height:14px;top:-5px;left:10%;background-color:rgb(255, 255, 255);transform:rotate(-45deg);box-shadow:rgba(166, 166, 166, 0.2) 1px -1px 0px 0px, rgba(166, 166, 166, 0.2) 0px 0px 0px 0px;z-index:2;}
+.c-uvxsvt{position:relative;background:rgb(255, 255, 255);border:1px solid rgba(166, 166, 166, 0.2);padding:6px 12px;border-radius:2px;font-size:12px;font-weight:600;line-height:1.25;color:rgb(238, 46, 36);box-shadow:rgba(0, 0, 0, 0.3) -5px 5px 11px 0px;z-index:1;}
+/*! CSS Used fontfaces */
+@font-face{font-family:Open Sans;font-style:normal;font-weight:400;src:local("Open Sans Regular"),local("OpenSans-Regular"),url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2) format("woff2");}
+@font-face{font-family:Open Sans;font-style:normal;font-weight:400;src:local("Open Sans Regular"),local("OpenSans-Regular"),url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format("woff2");}
+@font-face{font-family:Open Sans;font-style:normal;font-weight:600;src:local("Open Sans SemiBold"),local("OpenSans-SemiBold"),url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2) format("woff2");}
+@font-face{font-family:Open Sans;font-style:normal;font-weight:700;src:local("Open Sans Bold"),local("OpenSans-Bold"),url(https://fonts.gstatic.com/s/opensans/v16/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format("woff2");}
+@font-face{font-family:Open Sans;font-style:normal;font-weight:800;src:local("Open Sans Bold"),local("OpenSans-ExtraBold"),url(https://fonts.gstatic.com/s/opensans/v16/mem5YaGs126MiZpBA-UN8rsOUuhpKKSTjw.woff2) format("woff2");}

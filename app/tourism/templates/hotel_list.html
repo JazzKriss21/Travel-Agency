@@ -1,0 +1,2302 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/hotel_styles.css' %}">
+  </head>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const city = urlParams.get('city_');
+        const checkin = urlParams.get('checkin');
+        const checkout = urlParams.get('checkout');
+console.log(page_type);
+  </script>
+  <body>
+  {% include 'partials/materialize_navbar.html' %}
+    <div style="margin-left: 25%; margin-right: 10%;margin-top: 100px">
+
+        {% for hotel_name,address,url_img,star_rating,total_no_ratings,badgeText,rate,hotel_id in multi_list  %}
+
+                  <div class="oyo-row oyo-row--no-spacing hotelCardListing">
+        <div class="hotelCardListing__imgCardWrapper">
+          <div class="oyo-row oyo-row--no-spacing listingImageCard">
+            <div class="oyo-cell--10-col listingImageCard__carousel">
+              <div
+                class="slick-slider slick-animatedSlideshow slick-animatedSlideshow--persistArrows slick-initialized"
+                dir="ltr"
+              >
+                <button
+                  type="button"
+                  data-role="none"
+                  class="slick-arrow slick-prev"
+                  style="display: block"
+                >
+                  Previous
+                </button>
+                <div class="slick-list">
+                  <div
+                    class="slick-track"
+                    style="
+                      width: 27740px;
+                      opacity: 1;
+                      transform: translate3d(-380px, 0px, 0px);
+                    "
+                  >
+                    <div
+                      data-index="-1"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="0"
+                      class="slick-slide slick-active slick-current"
+                      tabindex="-1"
+                      aria-hidden="false"
+                      style="outline: currentcolor none medium; width: 380px"
+                    >
+                      <div>
+                        <div class="c-ahj8kj">
+                          <img
+                            alt="OYO 47168 Kashmir Orient"
+                            src="{{ url_img }}"
+                            placeholdertype="hotel"
+                            class="c-2tglnv listingImageCard__carousel__imgWrapper listingImageCard__carouselImg"
+                            itemprop="image"
+                            lazyload="true"
+                            tabindex="-1"
+                            style="width: 100%; display: inline-block"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-index="1"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="2"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="3"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="4"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="5"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="6"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="7"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="8"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="9"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="10"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="11"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="12"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="13"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="14"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="15"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="16"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="17"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="18"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="19"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="20"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="21"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="22"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="23"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="24"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="25"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="26"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="27"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="28"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="29"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="30"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="31"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="32"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="33"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="34"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="35"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="36"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    >
+                      <div>
+                        <div class="c-113j10b">
+                          <img
+                            alt="OYO 47168 Kashmir Orient"
+                            src="https://assets.oyoroomscdn.com/pwa/images/lazy_placeholder.png"
+                            placeholdertype="hotel"
+                            class="listingImageCard__carousel__imgWrapper listingImageCard__carouselImg"
+                            itemprop="image"
+                            lazyload="true"
+                            tabindex="-1"
+                            style="width: 100%; display: inline-block"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-index="37"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="38"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="39"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="40"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="41"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="42"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="43"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="44"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="45"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="46"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="47"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="48"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="49"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="50"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="51"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="52"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="53"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="54"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="55"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="56"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="57"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="58"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="59"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="60"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="61"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="62"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="63"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="64"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="65"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="66"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="67"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="68"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="69"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="70"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="71"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  data-role="none"
+                  class="slick-arrow slick-next"
+                  style="display: block"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+            <div class="listingImageCard__sideImages"></div>
+          </div>
+        </div>
+        <div class="hotelCardListing__descriptionWrapper">
+          <div
+            class="oyo-row oyo-row--no-spacing listingHotelDescription"
+            name="HotelListCard-76132"
+            itemscope="true"
+            itemtype="http://schema.org/Hotel"
+          >
+            <meta itemprop="telephone" content="+91 9313 9313 93" /><meta
+              itemprop="checkinTime"
+              content="12:00:00"
+            /><meta itemprop="checkoutTime" content="11:00:00" /><meta
+              itemprop="url"
+              content="https://www.oyorooms.com/76132/"
+            /><meta itemprop="email" content="bookings@oyorooms.com" /><meta
+              itemprop="image"
+              content="https://images.oyoroomscdn.com/uploads/hotel_image/76132/a782dc657373fa10.jpg"
+            />
+            <div class="oyo-cell--12-col listingHotelDescription__content">
+              <div
+                itemprop="geo"
+                itemscope="true"
+                itemtype="http://schema.org/GeoCoordinates"
+              >
+                <meta itemprop="latitude" content="34.083639" /><meta
+                  itemprop="longitude"
+                  content="74.825722"
+                />
+              </div>
+              <div class="listingHotelDescription__contentWrapper">
+                <div
+                  class="listingHotelDescription__contentWrapper--left u-fullWidth"
+                >
+                  <a class="c-nn640c u-width100" href="/76132/"
+                    ><h3
+                      title="OYO 47168 Kashmir Orient"
+                      class="listingHotelDescription__hotelName d-textEllipsis"
+                      itemprop="name"
+                    >
+                      {{ hotel_name }}
+                    </h3></a
+                  >
+                  <div
+                    class="d-body-lg listingHotelDescription__hotelAddress"
+                    itemprop="address"
+                    itemscope="true"
+                    itemtype="http://schema.org/PostalAddress"
+                  >
+                    <span
+                      itemprop="streetAddress"
+                      title="Near Khona-Khan Dalgate, Srinagar"
+                      class="u-line--clamp-2"
+                      style="-moz-box-orient: vertical"
+                      >{{ address }}</span
+                    ><meta itemprop="addressRegion" content="Srinagar" /><meta
+                      itemprop="addressCountry"
+                      content="India"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="hotelRating">
+                <div
+                  itemprop="aggregateRating"
+                  itemscope="true"
+                  itemtype="http://schema.org/AggregateRating"
+                  class="hotelRating__wrapper"
+                  tabindex="-1"
+                >
+                  <meta itemprop="ratingValue" content="4" /><span
+                    class="is-fontBold hotelRating__rating hotelRating__rating--verygood hotelRating__rating--clickable"
+                    ><span>{{ star_rating }}</span
+                    ><span class="hotelRating__star"
+                      ><span lazyload="true" class="c-t93z2l"
+                        ><svg
+                          viewBox="0 0 9 10"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7.25 9.5a.238.238 0 01-.12-.032L4.5 7.948l-2.63 1.52a.238.238 0 01-.265-.017.271.271 0 01-.102-.26l.48-3.042-1.91-2.021a.276.276 0 01-.061-.268.255.255 0 01.197-.18l2.874-.508L4.276.646A.25.25 0 014.5.5c.094 0 .181.057.223.146l1.194 2.526 2.874.508a.255.255 0 01.197.18.275.275 0 01-.061.268l-1.91 2.021.48 3.042c.015.1-.024.201-.102.26a.242.242 0 01-.145.049z"
+                          ></path></svg></span
+                    ></span> </span
+                  ><meta itemprop="worstRating" content="1" /><meta
+                    itemprop="reviewCount"
+                    content="16"
+                  /><meta itemprop="bestRating" content="5" /><span
+                    class="hotelRating__ratingSummary hotelRating__rating--clickable"
+                    >({{ total_no_ratings }} Ratings)</span
+                  ><span class="hotelRating__dot">·</span
+                  ><span class="hotelRating__ratingSummary">{{ badgeText }}</span>
+                </div>
+              </div>
+              <div class="amenityWrapper">
+
+              </div>
+              <div class="oyo-cell--12-col listingHotelDescription__labels">
+                <div class="c-hpocxd">
+                  <div class="c-fjzhb9">
+                    <div class="c-ztdfbn">
+                      <svg><use xlink:href="#wizard-logo"></use></svg>
+                    </div>
+                  </div>
+                  <div class="c-1ubn3p0"></div>
+                </div>
+                <span class="c-2z8wjd">Sanitised Stay</span>
+              </div>
+            </div>
+            <div class="oyo-cell--12-col listingHotelDescription__priceBtn">
+              <div class="listingHotelDescription__HotelCategory"></div>
+              <div class="oyo-row oyo-row--no-spacing">
+                <div class="oyo-cell--5-col">
+                  <div class="listingPrice">
+                    <meta itemprop="priceRange" content="₹1332 - ₹2220" />
+                    <div class="listingPrice__numbers">
+                      <span class="listingPrice__finalPrice">₹{{ rate }}</span
+                      ><span class="listingPrice__slashedPrice d-body-lg"
+                        ></span
+                      ><span class="listingPrice__percentage">40% off</span>
+                    </div>
+                    <div class="listingPrice__perRoomNight">
+                      per room per night
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="oyo-cell--7-col listingHotelDescription__btnWrapper"
+                >
+{#                    <form action="{% url 'hotel_d' %}" method="get">#}
+{#                        <input id="hotel_id" type="text" name="city" value="{{ hotel_id }}">#}
+
+                  <button class="c-17di9jl d-whiteButton" type="button">
+                      <span><a style="text-decoration: none;color: inherit" href="http://127.0.0.1:8001/hotel_details/?checkin={{ checkin }}&checkout={{ checkout }}&id={{ hotel_id }}">View Details</a></span></button
+                  >
+{#                    <button class="c-17di9jl d-greenButton" type="button">#}
+{#                    <span>Book Now</span>#}
+{#                  </button>#}
+{#                    </form>#}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+                <hr style="margin-top: 30px">
+        {% endfor %}
+      <!-- card start -->
+{#      <div class="oyo-row oyo-row--no-spacing hotelCardListing">#}
+{#        <div class="hotelCardListing__imgCardWrapper">#}
+{#          <div class="oyo-row oyo-row--no-spacing listingImageCard">#}
+{#            <div class="oyo-cell--10-col listingImageCard__carousel">#}
+{#              <div#}
+{#                class="slick-slider slick-animatedSlideshow slick-animatedSlideshow--persistArrows slick-initialized"#}
+{#                dir="ltr"#}
+{#              >#}
+{#                <button#}
+{#                  type="button"#}
+{#                  data-role="none"#}
+{#                  class="slick-arrow slick-prev"#}
+{#                  style="display: block"#}
+{#                >#}
+{#                  Previous#}
+{#                </button>#}
+{#                <div class="slick-list">#}
+{#                  <div#}
+{#                    class="slick-track"#}
+{#                    style="#}
+{#                      width: 27740px;#}
+{#                      opacity: 1;#}
+{#                      transform: translate3d(-380px, 0px, 0px);#}
+{#                    "#}
+{#                  >#}
+{#                    <div#}
+{#                      data-index="-1"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="0"#}
+{#                      class="slick-slide slick-active slick-current"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="false"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    >#}
+{#                      <div>#}
+{#                        <div class="c-ahj8kj">#}
+{#                          <img#}
+{#                            alt="OYO 47168 Kashmir Orient"#}
+{#                            src="https://images.oyoroomscdn.com/uploads/hotel_image/76132/medium/a782dc657373fa10.jpg"#}
+{#                            placeholdertype="hotel"#}
+{#                            class="c-2tglnv listingImageCard__carousel__imgWrapper listingImageCard__carouselImg"#}
+{#                            itemprop="image"#}
+{#                            lazyload="true"#}
+{#                            tabindex="-1"#}
+{#                            style="width: 100%; display: inline-block"#}
+{#                          />#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                    <div#}
+{#                      data-index="1"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="2"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="3"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="4"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="5"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="6"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="7"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="8"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="9"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="10"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="11"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="12"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="13"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="14"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="15"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="16"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="17"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="18"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="19"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="20"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="21"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="22"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="23"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="24"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="25"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="26"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="27"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="28"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="29"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="30"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="31"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="32"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="33"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="34"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="35"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="36"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    >#}
+{#                      <div>#}
+{#                        <div class="c-113j10b">#}
+{#                          <img#}
+{#                            alt="OYO 47168 Kashmir Orient"#}
+{#                            src="{{ url_img }}"#}
+{#                            placeholdertype="hotel"#}
+{#                            class="listingImageCard__carousel__imgWrapper listingImageCard__carouselImg"#}
+{#                            itemprop="image"#}
+{#                            lazyload="true"#}
+{#                            tabindex="-1"#}
+{#                            style="width: 100%; display: inline-block"#}
+{#                          />#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                    <div#}
+{#                      data-index="37"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="38"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="39"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="40"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="41"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="42"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="43"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="44"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="45"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="46"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="47"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="48"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="49"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="50"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="51"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="52"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="53"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="54"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="55"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="56"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="57"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="58"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="59"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="60"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="61"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="62"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="63"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="64"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="65"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="66"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="67"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="68"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="69"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="70"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="71"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <button#}
+{#                  type="button"#}
+{#                  data-role="none"#}
+{#                  class="slick-arrow slick-next"#}
+{#                  style="display: block"#}
+{#                >#}
+{#                  Next#}
+{#                </button>#}
+{#              </div>#}
+{#            </div>#}
+{#            <div class="listingImageCard__sideImages"></div>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="hotelCardListing__descriptionWrapper">#}
+{#          <div#}
+{#            class="oyo-row oyo-row--no-spacing listingHotelDescription"#}
+{#            name="HotelListCard-76132"#}
+{#            itemscope="true"#}
+{#            itemtype="http://schema.org/Hotel"#}
+{#          >#}
+{#            <meta itemprop="telephone" content="+91 9313 9313 93" /><meta#}
+{#              itemprop="checkinTime"#}
+{#              content="12:00:00"#}
+{#            /><meta itemprop="checkoutTime" content="11:00:00" /><meta#}
+{#              itemprop="url"#}
+{#              content="https://www.oyorooms.com/76132/"#}
+{#            /><meta itemprop="email" content="bookings@oyorooms.com" /><meta#}
+{#              itemprop="image"#}
+{#              content="https://images.oyoroomscdn.com/uploads/hotel_image/76132/a782dc657373fa10.jpg"#}
+{#            />#}
+{#            <div class="oyo-cell--12-col listingHotelDescription__content">#}
+{#              <div#}
+{#                itemprop="geo"#}
+{#                itemscope="true"#}
+{#                itemtype="http://schema.org/GeoCoordinates"#}
+{#              >#}
+{#                <meta itemprop="latitude" content="34.083639" /><meta#}
+{#                  itemprop="longitude"#}
+{#                  content="74.825722"#}
+{#                />#}
+{#              </div>#}
+{#              <div class="listingHotelDescription__contentWrapper">#}
+{#                <div#}
+{#                  class="listingHotelDescription__contentWrapper--left u-fullWidth"#}
+{#                >#}
+{#                  <a class="c-nn640c u-width100" href="/76132/"#}
+{#                    ><h3#}
+{#                      title="OYO 47168 Kashmir Orient"#}
+{#                      class="listingHotelDescription__hotelName d-textEllipsis"#}
+{#                      itemprop="name"#}
+{#                    >#}
+{#                      OYO 47168 Kashmir Orient#}
+{#                    </h3></a#}
+{#                  >#}
+{#                  <div#}
+{#                    class="d-body-lg listingHotelDescription__hotelAddress"#}
+{#                    itemprop="address"#}
+{#                    itemscope="true"#}
+{#                    itemtype="http://schema.org/PostalAddress"#}
+{#                  >#}
+{#                    <span#}
+{#                      itemprop="streetAddress"#}
+{#                      title="Near Khona-Khan Dalgate, Srinagar"#}
+{#                      class="u-line--clamp-2"#}
+{#                      style="-moz-box-orient: vertical"#}
+{#                      >Near Khona-Khan Dalgate, Srinagar</span#}
+{#                    ><meta itemprop="addressRegion" content="Srinagar" /><meta#}
+{#                      itemprop="addressCountry"#}
+{#                      content="India"#}
+{#                    />#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="hotelRating">#}
+{#                <div#}
+{#                  itemprop="aggregateRating"#}
+{#                  itemscope="true"#}
+{#                  itemtype="http://schema.org/AggregateRating"#}
+{#                  class="hotelRating__wrapper"#}
+{#                  tabindex="-1"#}
+{#                >#}
+{#                  <meta itemprop="ratingValue" content="4" /><span#}
+{#                    class="is-fontBold hotelRating__rating hotelRating__rating--verygood hotelRating__rating--clickable"#}
+{#                    ><span>4.0</span#}
+{#                    ><span class="hotelRating__star"#}
+{#                      ><span lazyload="true" class="c-t93z2l"#}
+{#                        ><svg#}
+{#                          viewBox="0 0 9 10"#}
+{#                          xmlns="http://www.w3.org/2000/svg"#}
+{#                        >#}
+{#                          <path#}
+{#                            d="M7.25 9.5a.238.238 0 01-.12-.032L4.5 7.948l-2.63 1.52a.238.238 0 01-.265-.017.271.271 0 01-.102-.26l.48-3.042-1.91-2.021a.276.276 0 01-.061-.268.255.255 0 01.197-.18l2.874-.508L4.276.646A.25.25 0 014.5.5c.094 0 .181.057.223.146l1.194 2.526 2.874.508a.255.255 0 01.197.18.275.275 0 01-.061.268l-1.91 2.021.48 3.042c.015.1-.024.201-.102.26a.242.242 0 01-.145.049z"#}
+{#                          ></path></svg></span#}
+{#                    ></span> </span#}
+{#                  ><meta itemprop="worstRating" content="1" /><meta#}
+{#                    itemprop="reviewCount"#}
+{#                    content="16"#}
+{#                  /><meta itemprop="bestRating" content="5" /><span#}
+{#                    class="hotelRating__ratingSummary hotelRating__rating--clickable"#}
+{#                    >(16 Ratings)</span#}
+{#                  ><span class="hotelRating__dot">·</span#}
+{#                  ><span class="hotelRating__ratingSummary">Very Good</span>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="amenityWrapper">#}
+{#                <div class="amenityWrapper__amenity">#}
+{#                  <span lazyload="true" class="amenityWrapper__icon c-t93z2l"#}
+{#                    ><svg#}
+{#                      xmlns="http://www.w3.org/2000/svg"#}
+{#                      id="parking-facility"#}
+{#                      viewBox="0 0 22 20"#}
+{#                    >#}
+{#                      <path#}
+{#                        d="M18.265 11.322c-.14-.833-.6-3.383-1.096-4.348-.332-.642-1.18-1.134-2.524-1.46-1.09-.264-2.486-.41-3.927-.41-1.443 0-2.838.145-3.93.41-1.342.327-2.19.818-2.522 1.46-.496.964-.955 3.515-1.096 4.348-.758.505-1.13 1.234-1.13 2.204v2.632c0 .686.453 1.27 1.084 1.488v1.143c0 .58.487 1.052 1.085 1.052h1.085c.598 0 1.085-.473 1.085-1.053v-1.053h8.677v1.052c0 .58.487 1.052 1.085 1.052h1.084c.598 0 1.085-.473 1.085-1.053v-1.144a1.585 1.585 0 0 0 1.086-1.488v-2.632c0-.97-.373-1.7-1.13-2.204zm-7.542-5.39c3.247 0 5.352.706 5.686 1.373.322.645.68 2.352.903 3.572a5.8 5.8 0 0 0-.34-.09c-.3-.07-1.075-.148-1.42-.195l-2.86-2.165c-.252-.18-.547-.117-.728.135-.182.25-.135.45.117.63l1.763 1.26c-.957-.03-2.006-.03-3.123-.03-.132 0-.595.013-.726.013L7.03 8.427c-.26-.172-.51-.124-.68.135-.173.258-.137.47.122.643l1.85 1.23c-1.51.027-2.822.108-3.85.352a8.33 8.33 0 0 0-.34.09c.223-1.22.58-2.927.905-3.572.334-.666 2.44-1.374 5.686-1.374zM5.536 19.098H3.974v-1.363h1.562V19.1zm10.373 0v-1.363h1.56V19.1h-1.56zm2.64-2.755c0 .316-.25.572-.558.572H3.452a.566.566 0 0 1-.558-.572V13.48c0-1.058.543-1.623 1.876-1.948 1.404-.342 3.512-.342 5.953-.342 2.44 0 4.547 0 5.952.342 1.333.325 1.876.89 1.876 1.948v2.864zM5.84 15.295c.707 0 1.282-.557 1.282-1.243s-.575-1.244-1.282-1.244c-.707 0-1.282.558-1.282 1.244 0 .686.575 1.244 1.282 1.244zm0-1.658c.236 0 .427.186.427.415a.42.42 0 0 1-.427.415.42.42 0 0 1-.427-.415c0-.23.19-.415.428-.415zm9.76 1.66c.708 0 1.283-.56 1.283-1.245s-.574-1.244-1.28-1.244c-.707 0-1.282.558-1.282 1.244 0 .686.575 1.244 1.28 1.244zm0-1.66c.237 0 .43.186.43.415a.42.42 0 0 1-.43.415.42.42 0 0 1-.426-.415c0-.23.19-.415.427-.415zM21.51 2.882c.364.093.57.416.46.72l-.024.064c-.11.303-.5.475-.864.382L11.015 1.275.918 4.048c-.364.093-.753-.08-.864-.382L.03 3.6c-.11-.303.096-.626.46-.72L11.014 0 21.51 2.882z"#}
+{#                      ></path></svg></span#}
+{#                  ><span#}
+{#                    class="d-body-sm d-textEllipsis"#}
+{#                    title="Parking Facility"#}
+{#                  >#}
+{#                    Parking Facility#}
+{#                  </span>#}
+{#                </div>#}
+{#                <div class="amenityWrapper__amenity">#}
+{#                  <span lazyload="true" class="amenityWrapper__icon c-t93z2l"#}
+{#                    ><svg#}
+{#                      xmlns="http://www.w3.org/2000/svg"#}
+{#                      id="geyser"#}
+{#                      viewBox="0 0 21 21"#}
+{#                    >#}
+{#                      <path#}
+{#                        d="M20.282 2.77L17.56 18.416C17.312 19.85 15.944 21 14.49 21H5.83c-1.454 0-2.82-1.15-3.07-2.583L.04 2.767C-.222 1.264.84 0 2.368 0h15.585c1.527 0 2.59 1.264 2.33 2.77zM14.49 19.913c.926 0 1.842-.77 2-1.683l2.722-15.647c.146-.84-.406-1.497-1.26-1.497H2.37c-.854 0-1.405.656-1.26 1.497l2.723 15.65c.158.91 1.073 1.68 2 1.68h8.658zM4.986 8.892L4.12 1.595l1.08-.128.867 7.305c.343 3.326 2.322 6.61 4.25 6.61 1.847 0 3.553-3.144 3.942-6.618l.864-7.297 1.08.128-.866 7.294c-.445 3.965-2.404 7.578-5.022 7.578-2.663 0-4.936-3.772-5.33-7.576zm3.48 8.634a1.68 1.68 0 1 1-3.358 0 1.68 1.68 0 0 1 3.36 0zm-2.272 0a.593.593 0 1 0 1.187 0 .593.593 0 0 0-1.186 0zm9.02 0a1.698 1.698 0 1 1-3.396 0 1.698 1.698 0 0 1 3.396 0zm-2.31 0a.61.61 0 1 0 1.223 0 .61.61 0 0 0-1.222 0zM9.618 11.8V8.713h1.086V11.8H9.618zm-1.57-9.744h4.225v5.416H8.05V2.056zm3.682 1.087H8.592l.543-.544v4.33l-.543-.545h3.138l-.543.543V2.6l.543.544z"#}
+{#                      ></path></svg></span#}
+{#                  ><span class="d-body-sm d-textEllipsis" title="Geyser">#}
+{#                    Geyser#}
+{#                  </span>#}
+{#                </div>#}
+{#                <div class="amenityWrapper__amenity">#}
+{#                  <span lazyload="true" class="amenityWrapper__icon c-t93z2l"#}
+{#                    ><svg#}
+{#                      xmlns="http://www.w3.org/2000/svg"#}
+{#                      width="22"#}
+{#                      height="15"#}
+{#                      viewBox="0 0 22 15"#}
+{#                    >#}
+{#                      <path#}
+{#                        fill="#000"#}
+{#                        fill-opacity=".999"#}
+{#                        fill-rule="evenodd"#}
+{#                        d="M0 1.25a.5.5 0 0 0 .031.164l3.25 9.25A.5.5 0 0 0 3.75 11h3v2.25c0 .424-.326.75-.75.75H2.75a.5.5 0 1 0 0 1H6c.96 0 1.75-.79 1.75-1.75V11H18a.5.5 0 0 0 .5-.5V9.25h3a.5.5 0 0 0 .5-.5v-6.5a.5.5 0 0 0-.5-.5h-3V.5A.5.5 0 0 0 18 0H1.25C.566 0 0 .566 0 1.25zm1.351-.15H17.4v8.8H7.37a.499.499 0 0 0-.193 0h-3.01L1.12 1.305c.02-.118.105-.207.231-.207zM15 2c-.823 0-1.5.677-1.5 1.5S14.177 5 15 5s1.5-.677 1.5-1.5S15.823 2 15 2zm3.4.75H21v5.5h-2.6v-5.5zM15 2.9c.338 0 .6.261.6.6 0 .338-.262.6-.6.6a.591.591 0 0 1-.6-.6c0-.339.262-.6.6-.6z"#}
+{#                      ></path>#}
+{#                    </svg> </span#}
+{#                  ><span class="d-body-sm d-textEllipsis" title="CCTV Cameras">#}
+{#                    CCTV Cameras#}
+{#                  </span>#}
+{#                </div>#}
+{#                <div class="amenityWrapper__amenity">#}
+{#                  <span class="d-body-sm"> <span>+ 4 more</span></span>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="oyo-cell--12-col listingHotelDescription__labels">#}
+{#                <div class="c-hpocxd">#}
+{#                  <div class="c-fjzhb9">#}
+{#                    <div class="c-ztdfbn">#}
+{#                      <svg><use xlink:href="#wizard-logo"></use></svg>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="c-1ubn3p0">WIZARD MEMBER</div>#}
+{#                </div>#}
+{#                <span class="c-2z8wjd">Sanitised Stay</span>#}
+{#              </div>#}
+{#            </div>#}
+{#            <div class="oyo-cell--12-col listingHotelDescription__priceBtn">#}
+{#              <div class="listingHotelDescription__HotelCategory"></div>#}
+{#              <div class="oyo-row oyo-row--no-spacing">#}
+{#                <div class="oyo-cell--5-col">#}
+{#                  <div class="listingPrice">#}
+{#                    <meta itemprop="priceRange" content="₹1332 - ₹2220" />#}
+{#                    <div class="listingPrice__numbers">#}
+{#                      <span class="listingPrice__finalPrice">₹1332</span#}
+{#                      ><span class="listingPrice__slashedPrice d-body-lg"#}
+{#                        >₹2220</span#}
+{#                      ><span class="listingPrice__percentage">40% off</span>#}
+{#                    </div>#}
+{#                    <div class="listingPrice__perRoomNight">#}
+{#                      per room per night#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div#}
+{#                  class="oyo-cell--7-col listingHotelDescription__btnWrapper"#}
+{#                >#}
+{#                  <button class="c-17di9jl d-whiteButton" type="button">#}
+{#                    <span>View Details</span></button#}
+{#                  ><button class="c-17di9jl d-greenButton" type="button">#}
+{#                    <span>Book Now</span>#}
+{#                  </button>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+      <!-- card -end -->
+      <hr />
+{#      <div class="oyo-row oyo-row--no-spacing hotelCardListing">#}
+{#        <div class="hotelCardListing__imgCardWrapper">#}
+{#          <div class="oyo-row oyo-row--no-spacing listingImageCard">#}
+{#            <div class="oyo-cell--10-col listingImageCard__carousel">#}
+{#              <div#}
+{#                class="slick-slider slick-animatedSlideshow slick-animatedSlideshow--persistArrows slick-initialized"#}
+{#                dir="ltr"#}
+{#              >#}
+{#                <button#}
+{#                  type="button"#}
+{#                  data-role="none"#}
+{#                  class="slick-arrow slick-prev"#}
+{#                  style="display: block"#}
+{#                >#}
+{#                  Previous#}
+{#                </button>#}
+{#                <div class="slick-list">#}
+{#                  <div#}
+{#                    class="slick-track"#}
+{#                    style="#}
+{#                      width: 27740px;#}
+{#                      opacity: 1;#}
+{#                      transform: translate3d(-380px, 0px, 0px);#}
+{#                    "#}
+{#                  >#}
+{#                    <div#}
+{#                      data-index="-1"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="0"#}
+{#                      class="slick-slide slick-active slick-current"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="false"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    >#}
+{#                      <div>#}
+{#                        <div class="c-ahj8kj">#}
+{#                          <img#}
+{#                            alt="OYO 47168 Kashmir Orient"#}
+{#                            src="https://images.oyoroomscdn.com/uploads/hotel_image/76132/medium/a782dc657373fa10.jpg"#}
+{#                            placeholdertype="hotel"#}
+{#                            class="c-2tglnv listingImageCard__carousel__imgWrapper listingImageCard__carouselImg"#}
+{#                            itemprop="image"#}
+{#                            lazyload="true"#}
+{#                            tabindex="-1"#}
+{#                            style="width: 100%; display: inline-block"#}
+{#                          />#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                    <div#}
+{#                      data-index="1"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="2"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="3"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="4"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="5"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="6"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="7"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="8"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="9"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="10"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="11"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="12"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="13"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="14"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="15"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="16"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="17"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="18"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="19"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="20"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="21"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="22"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="23"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="24"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="25"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="26"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="27"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="28"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="29"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="30"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="31"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="32"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="33"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="34"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="35"#}
+{#                      class="slick-slide"#}
+{#                      tabindex="-1"#}
+{#                      aria-hidden="true"#}
+{#                      style="outline: currentcolor none medium; width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="36"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    >#}
+{#                      <div>#}
+{#                        <div class="c-113j10b">#}
+{#                          <img#}
+{#                            alt="OYO 47168 Kashmir Orient"#}
+{#                            src="https://assets.oyoroomscdn.com/pwa/images/lazy_placeholder.png"#}
+{#                            placeholdertype="hotel"#}
+{#                            class="listingImageCard__carousel__imgWrapper listingImageCard__carouselImg"#}
+{#                            itemprop="image"#}
+{#                            lazyload="true"#}
+{#                            tabindex="-1"#}
+{#                            style="width: 100%; display: inline-block"#}
+{#                          />#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                    <div#}
+{#                      data-index="37"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="38"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="39"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="40"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="41"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="42"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="43"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="44"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="45"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="46"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="47"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="48"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="49"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="50"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="51"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="52"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="53"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="54"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="55"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="56"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="57"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="58"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="59"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="60"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="61"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="62"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="63"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="64"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="65"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="66"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="67"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="68"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="69"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="70"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                    <div#}
+{#                      data-index="71"#}
+{#                      tabindex="-1"#}
+{#                      class="slick-slide slick-cloned"#}
+{#                      aria-hidden="true"#}
+{#                      style="width: 380px"#}
+{#                    ></div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <button#}
+{#                  type="button"#}
+{#                  data-role="none"#}
+{#                  class="slick-arrow slick-next"#}
+{#                  style="display: block"#}
+{#                >#}
+{#                  Next#}
+{#                </button>#}
+{#              </div>#}
+{#            </div>#}
+{#            <div class="listingImageCard__sideImages"></div>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="hotelCardListing__descriptionWrapper">#}
+{#          <div#}
+{#            class="oyo-row oyo-row--no-spacing listingHotelDescription"#}
+{#            name="HotelListCard-76132"#}
+{#            itemscope="true"#}
+{#            itemtype="http://schema.org/Hotel"#}
+{#          >#}
+{#            <meta itemprop="telephone" content="+91 9313 9313 93" /><meta#}
+{#              itemprop="checkinTime"#}
+{#              content="12:00:00"#}
+{#            /><meta itemprop="checkoutTime" content="11:00:00" /><meta#}
+{#              itemprop="url"#}
+{#              content="https://www.oyorooms.com/76132/"#}
+{#            /><meta itemprop="email" content="bookings@oyorooms.com" /><meta#}
+{#              itemprop="image"#}
+{#              content="https://images.oyoroomscdn.com/uploads/hotel_image/76132/a782dc657373fa10.jpg"#}
+{#            />#}
+{#            <div class="oyo-cell--12-col listingHotelDescription__content">#}
+{#              <div#}
+{#                itemprop="geo"#}
+{#                itemscope="true"#}
+{#                itemtype="http://schema.org/GeoCoordinates"#}
+{#              >#}
+{#                <meta itemprop="latitude" content="34.083639" /><meta#}
+{#                  itemprop="longitude"#}
+{#                  content="74.825722"#}
+{#                />#}
+{#              </div>#}
+{#              <div class="listingHotelDescription__contentWrapper">#}
+{#                <div#}
+{#                  class="listingHotelDescription__contentWrapper--left u-fullWidth"#}
+{#                >#}
+{#                  <a class="c-nn640c u-width100" href="/76132/"#}
+{#                    ><h3#}
+{#                      title="OYO 47168 Kashmir Orient"#}
+{#                      class="listingHotelDescription__hotelName d-textEllipsis"#}
+{#                      itemprop="name"#}
+{#                    >#}
+{#                      {{ hotel_name }}#}
+{#                    </h3></a#}
+{#                  >#}
+{#                  <div#}
+{#                    class="d-body-lg listingHotelDescription__hotelAddress"#}
+{#                    itemprop="address"#}
+{#                    itemscope="true"#}
+{#                    itemtype="http://schema.org/PostalAddress"#}
+{#                  >#}
+{#                    <span#}
+{#                      itemprop="streetAddress"#}
+{#                      title="Near Khona-Khan Dalgate, Srinagar"#}
+{#                      class="u-line--clamp-2"#}
+{#                      style="-moz-box-orient: vertical"#}
+{#                      >Near Khona-Khan Dalgate, Srinagar</span#}
+{#                    ><meta itemprop="addressRegion" content="Srinagar" /><meta#}
+{#                      itemprop="addressCountry"#}
+{#                      content="India"#}
+{#                    />#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="hotelRating">#}
+{#                <div#}
+{#                  itemprop="aggregateRating"#}
+{#                  itemscope="true"#}
+{#                  itemtype="http://schema.org/AggregateRating"#}
+{#                  class="hotelRating__wrapper"#}
+{#                  tabindex="-1"#}
+{#                >#}
+{#                  <meta itemprop="ratingValue" content="4" /><span#}
+{#                    class="is-fontBold hotelRating__rating hotelRating__rating--verygood hotelRating__rating--clickable"#}
+{#                    ><span>4.0</span#}
+{#                    ><span class="hotelRating__star"#}
+{#                      ><span lazyload="true" class="c-t93z2l"#}
+{#                        ><svg#}
+{#                          viewBox="0 0 9 10"#}
+{#                          xmlns="http://www.w3.org/2000/svg"#}
+{#                        >#}
+{#                          <path#}
+{#                            d="M7.25 9.5a.238.238 0 01-.12-.032L4.5 7.948l-2.63 1.52a.238.238 0 01-.265-.017.271.271 0 01-.102-.26l.48-3.042-1.91-2.021a.276.276 0 01-.061-.268.255.255 0 01.197-.18l2.874-.508L4.276.646A.25.25 0 014.5.5c.094 0 .181.057.223.146l1.194 2.526 2.874.508a.255.255 0 01.197.18.275.275 0 01-.061.268l-1.91 2.021.48 3.042c.015.1-.024.201-.102.26a.242.242 0 01-.145.049z"#}
+{#                          ></path></svg></span#}
+{#                    ></span> </span#}
+{#                  ><meta itemprop="worstRating" content="1" /><meta#}
+{#                    itemprop="reviewCount"#}
+{#                    content="16"#}
+{#                  /><meta itemprop="bestRating" content="5" /><span#}
+{#                    class="hotelRating__ratingSummary hotelRating__rating--clickable"#}
+{#                    >(16 Ratings)</span#}
+{#                  ><span class="hotelRating__dot">·</span#}
+{#                  ><span class="hotelRating__ratingSummary">Very Good</span>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="amenityWrapper">#}
+{#                <div class="amenityWrapper__amenity">#}
+{#                  <span lazyload="true" class="amenityWrapper__icon c-t93z2l"#}
+{#                    ><svg#}
+{#                      xmlns="http://www.w3.org/2000/svg"#}
+{#                      id="parking-facility"#}
+{#                      viewBox="0 0 22 20"#}
+{#                    >#}
+{#                      <path#}
+{#                        d="M18.265 11.322c-.14-.833-.6-3.383-1.096-4.348-.332-.642-1.18-1.134-2.524-1.46-1.09-.264-2.486-.41-3.927-.41-1.443 0-2.838.145-3.93.41-1.342.327-2.19.818-2.522 1.46-.496.964-.955 3.515-1.096 4.348-.758.505-1.13 1.234-1.13 2.204v2.632c0 .686.453 1.27 1.084 1.488v1.143c0 .58.487 1.052 1.085 1.052h1.085c.598 0 1.085-.473 1.085-1.053v-1.053h8.677v1.052c0 .58.487 1.052 1.085 1.052h1.084c.598 0 1.085-.473 1.085-1.053v-1.144a1.585 1.585 0 0 0 1.086-1.488v-2.632c0-.97-.373-1.7-1.13-2.204zm-7.542-5.39c3.247 0 5.352.706 5.686 1.373.322.645.68 2.352.903 3.572a5.8 5.8 0 0 0-.34-.09c-.3-.07-1.075-.148-1.42-.195l-2.86-2.165c-.252-.18-.547-.117-.728.135-.182.25-.135.45.117.63l1.763 1.26c-.957-.03-2.006-.03-3.123-.03-.132 0-.595.013-.726.013L7.03 8.427c-.26-.172-.51-.124-.68.135-.173.258-.137.47.122.643l1.85 1.23c-1.51.027-2.822.108-3.85.352a8.33 8.33 0 0 0-.34.09c.223-1.22.58-2.927.905-3.572.334-.666 2.44-1.374 5.686-1.374zM5.536 19.098H3.974v-1.363h1.562V19.1zm10.373 0v-1.363h1.56V19.1h-1.56zm2.64-2.755c0 .316-.25.572-.558.572H3.452a.566.566 0 0 1-.558-.572V13.48c0-1.058.543-1.623 1.876-1.948 1.404-.342 3.512-.342 5.953-.342 2.44 0 4.547 0 5.952.342 1.333.325 1.876.89 1.876 1.948v2.864zM5.84 15.295c.707 0 1.282-.557 1.282-1.243s-.575-1.244-1.282-1.244c-.707 0-1.282.558-1.282 1.244 0 .686.575 1.244 1.282 1.244zm0-1.658c.236 0 .427.186.427.415a.42.42 0 0 1-.427.415.42.42 0 0 1-.427-.415c0-.23.19-.415.428-.415zm9.76 1.66c.708 0 1.283-.56 1.283-1.245s-.574-1.244-1.28-1.244c-.707 0-1.282.558-1.282 1.244 0 .686.575 1.244 1.28 1.244zm0-1.66c.237 0 .43.186.43.415a.42.42 0 0 1-.43.415.42.42 0 0 1-.426-.415c0-.23.19-.415.427-.415zM21.51 2.882c.364.093.57.416.46.72l-.024.064c-.11.303-.5.475-.864.382L11.015 1.275.918 4.048c-.364.093-.753-.08-.864-.382L.03 3.6c-.11-.303.096-.626.46-.72L11.014 0 21.51 2.882z"#}
+{#                      ></path></svg></span#}
+{#                  ><span#}
+{#                    class="d-body-sm d-textEllipsis"#}
+{#                    title="Parking Facility"#}
+{#                  >#}
+{#                    Parking Facility#}
+{#                  </span>#}
+{#                </div>#}
+{#                <div class="amenityWrapper__amenity">#}
+{#                  <span lazyload="true" class="amenityWrapper__icon c-t93z2l"#}
+{#                    ><svg#}
+{#                      xmlns="http://www.w3.org/2000/svg"#}
+{#                      id="geyser"#}
+{#                      viewBox="0 0 21 21"#}
+{#                    >#}
+{#                      <path#}
+{#                        d="M20.282 2.77L17.56 18.416C17.312 19.85 15.944 21 14.49 21H5.83c-1.454 0-2.82-1.15-3.07-2.583L.04 2.767C-.222 1.264.84 0 2.368 0h15.585c1.527 0 2.59 1.264 2.33 2.77zM14.49 19.913c.926 0 1.842-.77 2-1.683l2.722-15.647c.146-.84-.406-1.497-1.26-1.497H2.37c-.854 0-1.405.656-1.26 1.497l2.723 15.65c.158.91 1.073 1.68 2 1.68h8.658zM4.986 8.892L4.12 1.595l1.08-.128.867 7.305c.343 3.326 2.322 6.61 4.25 6.61 1.847 0 3.553-3.144 3.942-6.618l.864-7.297 1.08.128-.866 7.294c-.445 3.965-2.404 7.578-5.022 7.578-2.663 0-4.936-3.772-5.33-7.576zm3.48 8.634a1.68 1.68 0 1 1-3.358 0 1.68 1.68 0 0 1 3.36 0zm-2.272 0a.593.593 0 1 0 1.187 0 .593.593 0 0 0-1.186 0zm9.02 0a1.698 1.698 0 1 1-3.396 0 1.698 1.698 0 0 1 3.396 0zm-2.31 0a.61.61 0 1 0 1.223 0 .61.61 0 0 0-1.222 0zM9.618 11.8V8.713h1.086V11.8H9.618zm-1.57-9.744h4.225v5.416H8.05V2.056zm3.682 1.087H8.592l.543-.544v4.33l-.543-.545h3.138l-.543.543V2.6l.543.544z"#}
+{#                      ></path></svg></span#}
+{#                  ><span class="d-body-sm d-textEllipsis" title="Geyser">#}
+{#                    Geyser#}
+{#                  </span>#}
+{#                </div>#}
+{#                <div class="amenityWrapper__amenity">#}
+{#                  <span lazyload="true" class="amenityWrapper__icon c-t93z2l"#}
+{#                    ><svg#}
+{#                      xmlns="http://www.w3.org/2000/svg"#}
+{#                      width="22"#}
+{#                      height="15"#}
+{#                      viewBox="0 0 22 15"#}
+{#                    >#}
+{#                      <path#}
+{#                        fill="#000"#}
+{#                        fill-opacity=".999"#}
+{#                        fill-rule="evenodd"#}
+{#                        d="M0 1.25a.5.5 0 0 0 .031.164l3.25 9.25A.5.5 0 0 0 3.75 11h3v2.25c0 .424-.326.75-.75.75H2.75a.5.5 0 1 0 0 1H6c.96 0 1.75-.79 1.75-1.75V11H18a.5.5 0 0 0 .5-.5V9.25h3a.5.5 0 0 0 .5-.5v-6.5a.5.5 0 0 0-.5-.5h-3V.5A.5.5 0 0 0 18 0H1.25C.566 0 0 .566 0 1.25zm1.351-.15H17.4v8.8H7.37a.499.499 0 0 0-.193 0h-3.01L1.12 1.305c.02-.118.105-.207.231-.207zM15 2c-.823 0-1.5.677-1.5 1.5S14.177 5 15 5s1.5-.677 1.5-1.5S15.823 2 15 2zm3.4.75H21v5.5h-2.6v-5.5zM15 2.9c.338 0 .6.261.6.6 0 .338-.262.6-.6.6a.591.591 0 0 1-.6-.6c0-.339.262-.6.6-.6z"#}
+{#                      ></path>#}
+{#                    </svg> </span#}
+{#                  ><span class="d-body-sm d-textEllipsis" title="CCTV Cameras">#}
+{#                    CCTV Cameras#}
+{#                  </span>#}
+{#                </div>#}
+{#                <div class="amenityWrapper__amenity">#}
+{#                  <span class="d-body-sm"> <span>+ 4 more</span></span>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="oyo-cell--12-col listingHotelDescription__labels">#}
+{#                <div class="c-hpocxd">#}
+{#                  <div class="c-fjzhb9">#}
+{#                    <div class="c-ztdfbn">#}
+{#                      <svg><use xlink:href="#wizard-logo"></use></svg>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="c-1ubn3p0">WIZARD MEMBER</div>#}
+{#                </div>#}
+{#                <span class="c-2z8wjd">Sanitised Stay</span>#}
+{#              </div>#}
+{#            </div>#}
+{#            <div class="oyo-cell--12-col listingHotelDescription__priceBtn">#}
+{#              <div class="listingHotelDescription__HotelCategory"></div>#}
+{#              <div class="oyo-row oyo-row--no-spacing">#}
+{#                <div class="oyo-cell--5-col">#}
+{#                  <div class="listingPrice">#}
+{#                    <meta itemprop="priceRange" content="₹1332 - ₹2220" />#}
+{#                    <div class="listingPrice__numbers">#}
+{#                      <span class="listingPrice__finalPrice">₹1332</span#}
+{#                      ><span class="listingPrice__slashedPrice d-body-lg"#}
+{#                        >₹3333</span#}
+{#                      ><span class="listingPrice__percentage">40% off</span>#}
+{#                    </div>#}
+{#                    <div class="listingPrice__perRoomNight">#}
+{#                      per room per night#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div#}
+{#                  class="oyo-cell--7-col listingHotelDescription__btnWrapper"#}
+{#                >#}
+{#                  <button class="c-17di9jl d-whiteButton" type="button">#}
+{#                    <span>View Details</span></button#}
+{#                  ><button class="c-17di9jl d-greenButton" type="button">#}
+{#                    <span>Book Now</span>#}
+{#                  </button>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+
+{#      <hr />#}
+    </div>
+
+  {% include 'partials/footer.html' %}
+
+  </body>
+
+  <script>
+      document.getElementById('city__').value =city;
+  </script>
+</html>

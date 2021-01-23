@@ -1,0 +1,388 @@
+{% load static %}
+{% include 'travelpartner/partial_components/navbar.html' %}
+
+
+<link rel="stylesheet" href="{% static 'css/patner_dstyle.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Travel Partner</title>
+    <style>
+        #footer {
+            color: white;
+            display: block;
+
+        }
+
+        .footer-bottom {
+            background-color: #f0f0f0;
+            padding: 15px 0 20px;
+        }
+
+        .copyright > p {
+            color: #666;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            color: red;
+            background-color: red;
+            margin: 20px;
+        }
+
+        .footer-dark {
+            padding: 50px 0;
+            color: white;
+            background-color: #41A3FF;
+        }
+
+        .footer-dark h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .footer-dark ul {
+            padding: 0;
+            list-style: none;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .footer-dark ul a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .footer-dark ul a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 767px) {
+            .footer-dark .item:not(.social) {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+        }
+
+        .footer-dark .item.text {
+            margin-bottom: 36px;
+        }
+
+        @media (max-width: 767px) {
+            .footer-dark .item.text {
+                margin-bottom: 0;
+            }
+        }
+
+        .footer-dark .item.text p {
+            margin-bottom: 0;
+        }
+
+        .footer-dark .item.social {
+            text-align: center;
+        }
+
+        @media (max-width: 991px) {
+            .footer-dark .item.social {
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+
+        .footer-dark .item.social > a {
+            font-size: 20px;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            /* box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4); */
+            margin: 0 8px;
+            color: #fff;
+            opacity: 0.75;
+        }
+
+        .footer-dark .item.social > a:hover {
+            opacity: 1;
+        }
+
+        .footer-dark .copyright {
+            text-align: center;
+            padding-top: 24px;
+            opacity: 0.3;
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+
+        .pt-80 {
+            padding-top: 80px;
+        }
+
+        hr {
+            background-color: white;
+        }
+
+        .copyright {
+            margin-bottom: 0;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        .shadow1 {
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+        }
+
+
+        .banner-area1, .banner-area2 {
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #0f0f0f;
+            height: 50vh;
+            color: white;
+        }
+
+        .banner-area1 {
+            background-size: cover;
+            background-repeat: round;
+        }
+
+        .mlr {
+            margin-left: 10%;
+            margin-right: 10%;
+
+        }
+
+        img {
+        {#background-size: cover;#} width: 80vw;
+            height: 50vh;
+        }
+
+        .banner-area2 {
+            background-color: #dedede;
+            height: 20vh;
+        }
+    </style>
+</head>
+<body>
+<div class="row mlr">
+    <div class="banner-area1 col-md-12" style="background-image: url({% static 'images/Traveler-in-Thailand.jpg' %})">
+        <h4>Find a Travel Partner</h4>
+        <h6>Planning a trip? Want someone to share the journey with?</h6>
+        <h6>Your travel companion is just a click away.</h6>
+    </div>
+</div>
+
+
+{#<div class=" main-content1 mlr mt-5" style="margin-top: 40px;" >#}
+{#   <div class="col-md-8" style="float: left">#}
+{#       <div class="row" style="display: flex">#}
+{#           <div class="box" ></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#       </div>#}
+{#        <div class="row" style="display: flex">#}
+{#           <div class="box" ></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#       </div>#}
+{#        <div class="row" style="display: flex">#}
+{#           <div class="box" ></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#       </div>#}
+{#        <div class="row" style="display: flex">#}
+{#           <div class="box" ></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#       </div>#}
+{#        <div class="row" style="display: flex">#}
+{#           <div class="box" ></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#       </div>#}
+{#        <div class="row" style="display: flex">#}
+{#           <div class="box" ></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#       </div>#}
+{#       <div class="row" style="display: flex">#}
+{#           <div class="box" ></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#           <div class="box"></div>#}
+{#       </div>#}
+{##}
+{#   </div>#}
+
+{#    <div class="col-md-4" style="float:right;background-color: #282828">#}
+{#        <form class="contact-form row" method="post">#}
+{#                    {% csrf_token %}#}
+{#                    <div class="col-md-12">#}
+{#                        <label></label>#}
+{#                        <input type="text" class="form-control" placeholder="Campaign Title" name="title" >#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-md-12">#}
+{#                        <label></label>#}
+{#                        <input type="number" class="form-control" placeholder="Amount funded" name="amount_funded">#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-md-12">#}
+{#                        <label></label>#}
+{#                        <input type="number" class="form-control" placeholder="Amount goal" name="amount_goal">#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-md-12">#}
+{#                        <label></label>#}
+{#                        <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="date_goal"#}
+{#                               class="form-control" placeholder="Date goal... How long are you fundraising?#}
+{#">#}
+{#                    </div>#}
+{#                    <div class="col-md-12">#}
+{#                        <label></label>#}
+{#                        <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="date_finished"#}
+{#                               class="form-control" placeholder="Date finished">#}
+{#                    </div>#}
+{#                    <div class="col-md-12">#}
+{#                        <label></label>#}
+{#                        <textarea class="form-control" rows="9" placeholder="Description..." name="description"></textarea>#}
+{#                    </div>#}
+{#                    <div class="col-md-4 col-md-offset-4">#}
+{#                        <label></label>#}
+{#                        <button type="submit" data-toggle="modal"#}
+{#                                class="btn btn-primary btn-block btn-lg">Submit <i class="ion-android-arrow-forward"></i><!--data-target="#alertModal" -->#}
+{#                        </button>#}
+{#                    </div>#}
+{#                </form>#}
+{#</div>#}
+{#</div>#}
+
+{#travel partner signup#}
+<section style="background-color: #282828">
+    <div class="container" id="fundraising_form">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="margin-top-0 wow fadeIn animated t-v" style="visibility: visible;">Join Now</h2>
+                <hr class="primary t-v">
+                <p class="t-v">Sign up, create your profile and upload your photos. In just a few minutes, join one of the largest online travel partner communities.
+                </p>
+            </div>
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <form class="contact-form row" method="post">
+                    <input type="hidden" name="csrfmiddlewaretoken"
+                           value="ljIdQCZ4kxsjwjHSekO4gwKuOnnXwzrSprSabS4QBbqXavpNPczMjKPePcFK5GCz">
+                    <div class="col-md-12">
+                        <label></label>
+                        <input type="text" class="form-control t-v" style="color:white;" placeholder="Name" name="name"
+                               required id="id_name">
+                    </div>
+
+                    <div class="col-md-12">
+                        <label></label>
+                        <input type="text" class="form-control" placeholder="Mobile Number" name="phone" id="id_phone">
+                    </div>
+
+                    <div class="col-md-12">
+                        <label></label>
+                        <input type="text" class="form-control" placeholder="Destination" name="destination" required id="id_destination">
+                    </div>
+
+                    <div class="col-md-12">
+                        <label></label>
+                        <input type="text" onfocus="(this.type='date');" onblur="(this.type='text')"  class="form-control t-v" placeholder="Start Date" name="start_date" required
+                               id="id_start_date">
+                    </div>
+
+                    <div class="col-md-12">
+                        <label></label>
+                        <input type="text" onfocus="(this.type='date');" onblur="(this.type='text')" required
+                               id="id_end_date" name="end_date" style="color: white" class="form-control t-v"
+                               placeholder="End Date">
+">
+                    </div>
+
+                    <div class="col-md-12">
+                        <label></label>
+                        <textarea style="background-color: #282828" class="form-control t-v" rows="9"
+                                 required id="id_description" placeholder="Description..." name="description"></textarea>
+                    </div>
+                    <div class="col-md-4 col-md-offset-4">
+                        <label></label>
+                        <button type="submit" data-toggle="modal" class="btn btn-primary btn-block btn-lg">Submit <i
+                                class="ion-android-arrow-forward"></i><!--data-target="#alertModal" -->
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{#travel partner end#}
+{#<div class="join_now banner-area1">#}
+{#</div>#}
+<div class="footer-dark">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Product offering</h3>
+                    <ul>
+                        <li><a href="#">Flights</a></li>
+                        <li><a href="#">Holidays in USA</a></li>
+                        <li><a href="#">Book Hotels</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>Travel Agency</h3>
+                    <p>
+                        Praesent sed lobortis mi. Suspendisse vel placerat ligula.
+                        Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam
+                        quis tristique lectus. Aliquam in arcu eget velit pulvinar
+                        dictum vel in justo.
+                    </p>
+                </div>
+                <div class="col item social">
+                    <a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                        class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a
+                        href="#"><i class="icon ion-social-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

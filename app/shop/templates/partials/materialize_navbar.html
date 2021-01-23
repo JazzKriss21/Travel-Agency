@@ -1,0 +1,42 @@
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+             <nav class="blue" style="margin-bottom:140px;position:fixed;overflow: hidden;  top: 0;z-index: 1155;opacity: 0.9;">
+            <div class="nav-wrapper shadow1" style="background-color:white !important;padding-bottom: 10px;color: #41A3FF";>
+              <div class="row">
+                <div class="col s12">
+                  <a href="/home" target="_blank" class="brand-logo"><span class="wC1">
+                    <span style='color: blue'>T</span>
+                    <span style='color: red' >r</span>
+                    <span style='color: orange'>a</span>
+                    <span style='color: blue'>v</span>
+                    <span style='color: green'>e</span>
+                    <span style='color: red'>l</span>
+                    <span style='color: orange'>A</span>
+                    <span style='color: blue'>g</span>
+                    <span style='color: red'>e</span>
+                    <span style='color: green'>n</span>
+                    <span style='color: orange'>c</span>
+                    <span style='color: blue'>y</span>
+                  </span></a>
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                  <ul class="right hide-on-med-and-down" >
+                    <li><a style="color: #007bff !important; font-weight:650" href="/home" target="_blank">HOME</a></li>
+                    <li><a style="color: #007bff !important; font-weight:650"href="/crowdfund/fund" target="_blank">CROWDFUND</a></li>
+                    <li><a style="color: #007bff !important; font-weight:650" href="#" target="_blank"></a></li>
+                                        <li><a style="color: #007bff !important; font-weight:650" href="#" target="_blank">ABOUT US</a></li>
+
+                      {% if not user.is_authenticated %}
+
+                    <li><a href="/account/signup/" class="waves-effect waves-light btn btn-large  darken-2" style="background-color: #167dec;">Register</a></li>
+                  {% endif %}
+                      {% if user.is_authenticated %}
+                                              <li><a style="color: #007bff !important; font-weight:650" href="/shop/cart" target="_blank">CART</a></li>
+
+                          <li><a style="color: #007bff!important;font-weight: 650" href="/account/logout" >LOGOUT</a></li>
+                      <li><a style="color: #007bff!important;font-weight: 650" href="/">{{ user }}</a> </li>
+                      {% endif %}
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>

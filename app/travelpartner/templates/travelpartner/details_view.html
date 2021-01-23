@@ -1,0 +1,845 @@
+{% load static %}
+{% include 'partials/materialize_navbar.html' %}
+<html>
+<head>
+{#   <link rel="stylesheet" href="{% static 'css/dstyle.css' %}">#}
+<title>Travel Partner </title>
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fredoka+One">
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic">
+{#       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">#}
+       <link rel="stylesheet" type="text/css" href="{% static 'css/hotel_styles.css' %}">
+     <link rel="stylesheet" href="https://use.fontawesome.com/063ffbfcf9.css">
+
+</head>
+
+<body>
+{#        {% for i in list_partners %}#}
+{#    <div class="container profile">#}
+{##}
+{#            <div class="row">#}
+{#                <div class="col-2">#}
+{#                    <div class="profile-photo">#}
+{#                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=640&w=950" alt="Jmnathan Smith" />#}
+{#                    </div>#}
+{#                    <div>#}
+{#                        <strong class="title">Description</strong>#}
+{##}
+{#                        {{ i.description }}#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-10">#}
+{#                    <div class="profile-info">#}
+{#                        <h1 class="profile-title"><span>I'm</span> Jonathan Smith</h1>#}
+{#                        <h2 class="profile-position">Name :{{ i.name }}</h2>#}
+{#                    </div>#}
+{#                    <ul class="profile-list">#}
+{#                        <li class="clearfix">#}
+{#                            <strong class="title">Age</strong>#}
+{#                            <span class="cont">29</span>#}
+{#                        </li>#}
+{#                        <li class="clearfix">#}
+{#                            <strong class="title">DESTINATION</strong>#}
+{#                            <span class="cont">{{ i.destination }}</span>#}
+{#                        </li>#}
+{#                        <li class="clearfix">#}
+{#                            <strong class="title">Start Date</strong>#}
+{#                            <span class="cont">#}
+{#                                <a href="mailto:jonsmith@jbs.com">jonsmith@jbs.com</a>#}
+{#                            </span>#}
+{#                        </li>#}
+{#                        <li class="clearfix">#}
+{#                            <strong class="title">Phone</strong>#}
+{#                            <span class="cont">#}
+{#                                <a href="tel:+12562548456">{{ i.phone }}</a>#}
+{#                            </span>#}
+{#                        </li>#}
+{#                        <li class="clearfix">#}
+{#                            <strong class="title">#}
+{#                                <span class="button">vacation</span>#}
+{#                            </strong>#}
+{#                        </li>#}
+{#                        <li class="clearfix">#}
+{#                            <strong class="title">Start Date</strong>#}
+{#                            <span class="cont">till {{ i.start_date }}</span>#}
+{#                        </li>#}
+{##}
+{#                        <li class="clearfix">#}
+{#                            <strong class="title">#}
+{#                                <span class="">End date</span>#}
+{#                            </strong>#}
+{#                            <span class="cont">#}
+{#                              till {{ i.end_date }}#}
+{#                          </span>#}
+{#                        </li>#}
+{##}
+{#                        <li class="clearfix">#}
+{#                            <strong class="title">#}
+{#                                <span class="">Description</span>#}
+{#                            </strong>#}
+{#                            <span class="cont">#}
+{#                              till {{ i.description}}#}
+{#                          </span>#}
+{#                        </li>#}
+{##}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#                    </div>#}
+{##}
+{#        {% endfor %}#}
+
+
+<div class="container" style="margin-top: 100px;margin-bottom: 100px">
+{% for i in list_partners %}
+                  <div class="oyo-row oyo-row--no-spacing hotelCardListing">
+        <div class="hotelCardListing__imgCardWrapper">
+          <div class="oyo-row oyo-row--no-spacing listingImageCard">
+            <div class="oyo-cell--10-col listingImageCard__carousel">
+              <div
+                class="slick-slider slick-animatedSlideshow slick-animatedSlideshow--persistArrows slick-initialized"
+                dir="ltr"
+              >
+                <div class="slick-list">
+                  <div
+                    class="slick-track"
+                    style="
+                      width: 27740px;
+                      opacity: 1;
+                      transform: translate3d(-380px, 0px, 0px);
+                    "
+                  >
+                    <div
+                      data-index="-1"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="0"
+                      class="slick-slide slick-active slick-current"
+                      tabindex="-1"
+                      aria-hidden="false"
+                      style="outline: currentcolor none medium; width: 380px"
+                    >
+                      <div>
+                        <div class="c-ahj8kj">
+                          <img
+                            alt="OYO 47168 Kashmir Orient"
+                            src="https://picsum.photos/200/300?random={{ i }}"
+                            placeholdertype="hotel"
+                            class="c-2tglnv listingImageCard__carousel__imgWrapper listingImageCard__carouselImg"
+                            itemprop="image"
+                            lazyload="true"
+                            tabindex="-1"
+                            style="width: 100%; display: inline-block"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-index="1"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="2"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="3"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="4"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="5"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="6"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="7"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="8"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="9"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="10"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="11"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="12"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="13"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="14"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="15"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="16"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="17"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="18"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="19"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="20"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="21"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="22"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="23"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="24"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="25"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="26"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="27"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="28"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="29"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="30"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="31"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="32"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="33"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="34"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="35"
+                      class="slick-slide"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      style="outline: currentcolor none medium; width: 380px"
+                    ></div>
+                    <div
+                      data-index="36"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    >
+                      <div>
+                        <div class="c-113j10b">
+                          <img
+                            alt="OYO 47168 Kashmir Orient"
+                            src="https://assets.oyoroomscdn.com/pwa/images/lazy_placeholder.png"
+                            placeholdertype="hotel"
+                            class="listingImageCard__carousel__imgWrapper listingImageCard__carouselImg"
+                            itemprop="image"
+                            lazyload="true"
+                            tabindex="-1"
+                            style="width: 100%; display: inline-block"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-index="37"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="38"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="39"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="40"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="41"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="42"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="43"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="44"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="45"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="46"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="47"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="48"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="49"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="50"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="51"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="52"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="53"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="54"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="55"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="56"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="57"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="58"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="59"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="60"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="61"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="62"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="63"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="64"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="65"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="66"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="67"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="68"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="69"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="70"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                    <div
+                      data-index="71"
+                      tabindex="-1"
+                      class="slick-slide slick-cloned"
+                      aria-hidden="true"
+                      style="width: 380px"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="listingImageCard__sideImages"></div>
+          </div>
+        </div>
+        <div class="hotelCardListing__descriptionWrapper">
+          <div
+            class="oyo-row oyo-row--no-spacing listingHotelDescription"
+            name="HotelListCard-76132"
+            itemscope="true"
+            itemtype="http://schema.org/Hotel"
+          >
+            <meta itemprop="telephone" content="+91 9313 9313 93" /><meta
+              itemprop="checkinTime"
+              content="12:00:00"
+            /><meta itemprop="checkoutTime" content="11:00:00" /><meta
+              itemprop="url"
+              content="https://www.oyorooms.com/76132/"
+            /><meta itemprop="email" content="bookings@oyorooms.com" /><meta
+              itemprop="image"
+              content="https://images.oyoroomscdn.com/uploads/hotel_image/76132/a782dc657373fa10.jpg"
+            />
+            <div class="oyo-cell--12-col listingHotelDescription__content">
+              <div
+                itemprop="geo"
+                itemscope="true"
+                itemtype="http://schema.org/GeoCoordinates"
+              >
+                <meta itemprop="latitude" content="34.083639" /><meta
+                  itemprop="longitude"
+                  content="74.825722"
+                />
+              </div>
+              <div class="listingHotelDescription__contentWrapper">
+                <div
+                  class="listingHotelDescription__contentWrapper--left u-fullWidth"
+                >
+                  <a class="c-nn640c u-width100" href="/76132/"
+                    ><h3
+                      title="OYO 47168 Kashmir Orient"
+                      class="listingHotelDescription__hotelName d-textEllipsis"
+                      itemprop="name"
+                    >
+                      {{ i.name }}
+                    </h3></a
+                  >
+                  <div
+                    class="d-body-lg listingHotelDescription__hotelAddress"
+                    itemprop="address"
+                    itemscope="true"
+                    itemtype="http://schema.org/PostalAddress"
+                  >
+                    <span
+                      itemprop="streetAddress"
+                      title="Near Khona-Khan Dalgate, Srinagar"
+                      class="u-line--clamp-2"
+                      style="-moz-box-orient: vertical"
+                      >{{ i.description }}</span
+                    ><meta itemprop="addressRegion" content="Srinagar" /><meta
+                      itemprop="addressCountry"
+                      content="India"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="hotelRating">
+                <div
+                  itemprop="aggregateRating"
+                  itemscope="true"
+                  itemtype="http://schema.org/AggregateRating"
+                  class="hotelRating__wrapper"
+                  tabindex="-1"
+                >
+                  <meta itemprop="ratingValue" content="4" /><span
+                    class="is-fontBold hotelRating__rating hotelRating__rating--verygood hotelRating__rating--clickable"
+                    >
+
+                    <span class="hotelRating__star"
+                      >
+                        <span lazyload="true" class="c-t93z2l"
+                        ><i class="fa fa-plane" aria-hidden="true"></i></span
+                    ></span> </span>
+
+                    <span><strong>Destination</strong> &nbsp;{{ i.destination }}</span
+                    ><span class="hotelRating__dot">·</span
+                  ><span class="hotelRating__ratingSummary">{{ badgeText }}</span>
+                </div>
+              </div>
+              <div class="amenityWrapper">
+ <div class="amenityWrapper__amenity">
+<i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <span class="d-body-sm d-textEllipsis" title="Parking Facility">
+                  &nbsp; <strong>Number</strong> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{{ i.phone }}
+                  </span>
+                </div>
+              </div>
+              <div class="oyo-cell--12-col listingHotelDescription__labels">
+                <div class="c-hpocxd">
+                  <div class="c-fjzhb9">
+                    <div class="c-ztdfbn">
+                      <svg><use xlink:href="#wizard-logo"></use></svg>
+                    </div>
+                  </div>
+                  <div class="c-1ubn3p0">VACATION</div>
+                </div>
+              </div>
+            </div>
+            <div class="oyo-cell--12-col listingHotelDescription__priceBtn">
+              <div class="listingHotelDescription__HotelCategory"></div>
+              <div class="oyo-row oyo-row--no-spacing">
+                <div class="oyo-cell--5-col">
+                  <div class="listingPrice">
+                    <meta itemprop="priceRange" content="₹1332 - ₹2220" />
+
+
+{#                      -------------------start date-----------#}
+{#                    <div class="listingPrice__numbers">#}
+{#                     Start Date &nbsp;&nbsp;&nbsp; <span class="listingPrice__finalPrice" style="font-size: medium"> {{ i.start_date }}</span>#}
+{#                    </div>#}
+                      <button class="c-17di9jl d-whiteButton" type="button">
+                      <span><a style="text-decoration: none;color: inherit" href="http://127.0.0.1:8001/hotel_details/?checkin={{ checkin }}&checkout={{ checkout }}&id={{ hotel_id }}">                            <div class="listingPrice__numbers">Start Date &nbsp;&nbsp;&nbsp;&nbsp;
+                      <span class="listingPrice__finalPrice" style="font-size: medium">{{ i.start_date }}</span>
+                    </div>
+</a></span></button
+                  >
+{#                      ----------------------end date-----------#}
+
+{#                    endate  ---------#}
+{#                            <div class="listingPrice__numbers">End Date &nbsp;&nbsp;&nbsp;&nbsp;#}
+{#                      <span class="listingPrice__finalPrice" style="font-size: medium">{{ i.end_date }}</span>#}
+{#                    </div>#}
+
+
+{#                    <div class="listingPrice__perRoomNight">#}
+{#                      per room per night#}
+{#                    </div>#}
+{#                      --------------enddate end#}
+                  </div>
+                </div>
+                <div
+                  class="oyo-cell--7-col listingHotelDescription__btnWrapper"
+                >
+{#                    <form action="{% url 'hotel_d' %}" method="get">#}
+{#                        <input id="hotel_id" type="text" name="city" value="{{ hotel_id }}">#}
+
+                  <button class="c-17di9jl d-whiteButton" type="button">
+                      <span><a style="text-decoration: none;color: inherit" href="http://127.0.0.1:8001/hotel_details/?checkin={{ checkin }}&checkout={{ checkout }}&id={{ hotel_id }}">                            <div class="listingPrice__numbers">End Date &nbsp;&nbsp;&nbsp;&nbsp;
+                      <span class="listingPrice__finalPrice" style="font-size: medium">{{ i.end_date }}</span>
+                    </div>
+</a></span></button
+                  >
+{#                    <button class="c-17di9jl d-greenButton" type="button">#}
+{#                    <span>Book Now</span>#}
+{#                  </button>#}
+{#                    </form>#}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+{% endfor %}
+</div>
+
+
+
+{#        Age 29#}
+{#DESTINATION sfd#}
+{#Start Date jonsmith@jbs.com#}
+{#Phone 23424324#}
+{#vacation#}
+{#Start Date till Nov. 6, 2020#}
+{#End date till Jan. 2, 2021#}
+{#Description till sdffd#}
+{#{% for i in list_partners %}#}
+{##}
+{#<h4>{{ i.name }}</h4>#}
+{#<h4>{{ i.start_date }}</h4>#}
+{#<h4>{{ i.end_date }}</h4>#}
+{#<h4>{{ i.destination }}</h4>#}
+{#<h4>{{ i.description }}</h4>#}
+{#<h4>{{ i.phone }}</h4>#}
+{#<br>#}
+{#{% endfor %}#}
+
+{% include 'partials/footer.html' %}
+</body>
+</html>

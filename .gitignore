@@ -1,0 +1,6 @@
+venv/
+app/db.sqlite3
+app/tourism/sec.py
+app/Procfile
+app/erd.dot
+app/aa.dot

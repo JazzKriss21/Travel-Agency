@@ -1,0 +1,82 @@
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class='container'>
+    <a class="navbar-brand" href="#">Travel Agency API Mock Application</a>
+    </div>
+    </nav>
+<div class="jumbotron">
+    <div>
+    <h1 class="display-4 container">Shop API</h1>
+    </div>
+</div>
+
+<div class='container'>
+    <h3>1. List of endpoints</h3>
+    <button type="button" class="btn btn-primary active">GET</button>
+    {{ endpoints  }}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>2. Carts, Addresses, Orders associated with current logged in user</h3>
+    <button type="button" class="btn btn-primary active">GET</button>
+    {{ current_user }}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>3. All Products available </h3>
+    <button type="button" class="btn btn-primary active">GET</button>
+    {{ products }}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>4. Add new product as staff user </h3>
+    <button type="button" class="btn btn-success active">POST</button>
+    {{ add_new_product }}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>5. Add product without permission</h3>
+    <button type="button" class="btn btn-success active">POST</button>
+    {{ add_without_permission}}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>6. Delete a product</h3>
+    <button type="button" class="btn btn-danger active">DELETE</button>
+    {{ delete }}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>7.  Carts associated with the current logged in user</h3>
+    <button type="button" class="btn btn-primary active">GET</button>
+    {{ cart}}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>8. Addresses added by current user</h3>
+    <button type="button" class="btn btn-primary active">GET</button>
+    {{address}}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>9. Orders placed by current logged in user</h3>
+    <button type="button" class="btn btn-primary active">GET</button>
+    {{orders}}
+    <br><br>
+    <br><br>
+    <br><br>
+
+</div>
+<div class='container'>
+
+</div>

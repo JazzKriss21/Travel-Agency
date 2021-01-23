@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/hotels_search.css' %}">
+
+</head>
+<body>
+
+
+<div class="searchContainer__searchWidgetContainer">
+    <div class="oyo-row oyo-row--no-spacing homeSearchWidget" data-cms-id="570807" data-cms-template="cWeb-Search">
+        <div class="oyo-cell oyo-cell--4-col oyo-cell--8-col-tablet oyo-cell--4-col-phone homeSearchWidget__gutter homeSearchWidget__autoComplete">
+            <div class="oyo-row oyo-row--no-spacing autoCompleteDesktop
+          autoCompleteDesktop--home
+          autoCompleteDesktop--error
+        ">
+                <div class="oyo-cell oyo-cell--12-col oyo-cell--8-col-tablet oyo-cell--4-col-phone">
+                    <form action="{% url 'list' %}" method="get" class="autoCompleteDesktop__searchContainer"><input name="city_" type="text"
+                                                                              class="autoCompleteDesktop__searchBox
+              autoCompleteDesktop__searchBox--home
+              autoCompleteDesktop__searchBox--nearbyVisible" placeholder="Search by city"
+                                                                              autocomplete="off" required="">
+                        <div class="autoCompleteDesktop__nearbyComponentWrapper">
+                            <div class="nearbyComponent ripple"><span class="nearbyComponent__iconWrapper"><svg
+                                    class="nearbyComponent__icon"><use
+                                    xlink:href="#crosshair-icon"></use></svg></span><span
+                                    class="d-text12 is-fontBold nearbyComponent__text"></span></div>
+                        </div>
+                        <span></span>
+                </div>
+                <span></span>
+                <div class="c-1xuv5j7">
+                    <div class="c-4yoqfj"></div>
+{#                    <div class="c-uvxsvt"><span>Please select a destination from the list</span></div>#}
+                </div>
+            </div>
+        </div>
+        <div class="oyo-cell oyo-cell--3-col oyo-cell--4-col-tablet oyo-cell--4-col-phone homeSearchWidget__gutter homeSearchWidget__dateRangePicker">
+            <div class="oyo-row oyo-row--no-spacing datePickerDesktop datePickerDesktop--home">
+                <div class="oyo-cell oyo-cell--12-col oyo-cell--8-col-tablet oyo-cell--4-col-phone d-text16 is-fontBold datePickerDesktop__checkInOut u-textEllipsis">
+                    <span class="datePickerDesktop__checkInOutText"><input id="checkin"  name="checkin" type="date" placeholder="Thu, 10 Dec"></span><span
+                        class="datePickerDesktop__arrowWrapper datePickerDesktop__arrowWrapper--home">–</span><span
+                        class="datePickerDesktop__checkInOutText"><input id="checkout" name="checkout" type="date" placeholder="Fri, 11 Dec"  style="outline: none"></span></div>
+                <span></span></div>
+        </div>
+        <div class="oyo-cell oyo-cell--3-col oyo-cell--4-col-tablet oyo-cell--4-col-phone homeSearchWidget__gutter homeSearchWidget__guestRoomPicker">
+            <div class="oyo-row oyo-row--no-spacing guestRoomPicker guestRoomPicker--home ">
+                <div class="oyo-cell oyo-cell--12-col oyo-cell--8-col-tablet oyo-cell--4-col-phone d-text16 is-fontBold u-textEllipsis guestRoomPicker__guestRoomCount">
+                    <input id="rooms" name="rooms" type="number"> Room
+                </div>
+                <span></span></div>
+        </div>
+        <div class="oyo-cell oyo-cell--2-col oyo-cell--8-col-tablet oyo-cell--4-col-phone homeSearchWidget__gutter homeSearchWidget__search">
+            <button type="submit" class="u-textCenter searchButton searchButton--home">Search</button>
+        </div>
+    </form>
+    </div>
+</div>
+<script>
+    Date.prototype.toDateInputValue = (function() {
+    var local = new Date(this);
+    local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+    return local.toJSON().slice(0,10);
+});
+        Date.prototype.toDateInputValue2 = (function() {
+    var local = new Date(this);
+    local.setMinutes(this.getMinutes()+1440 - this.getTimezoneOffset());
+    return local.toJSON().slice(0,10);
+});
+ document.getElementById('checkin').value = new Date().toDateInputValue();
+  document.getElementById('checkout').value = new Date().toDateInputValue2();
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <span class="nav-item active pt-3">
+          <span class="title">
+            <span style='color: blue'>T</span>
+            <span style='color: red' >R</span>
+            <span style='color: orange'>A</span>
+            <span style='color: blue'>V</span>
+            <span style='color: green'>E</span>
+            <span style='color: red'>L</span>
+            <span style='color: orange'>A</span>
+            <span style='color: blue'>G</span>
+            <span style='color: red'>E</span>
+            <span style='color: green'>N</span>
+            <span style='color: orange'>C</span>
+            <span style='color: blue'>Y</span>
+               </span>
+          </span>
+
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item active">
+                          <a href="{% url 'home' %}" class="nav-link"><strong>HOME</strong></a>
+                      </li>
+                      {% if user.is_authenticated %}
+            					<li class="nav-item active one">
+            						<a href="{% url 'partner' %}" class="nav-link" style="font-size:17px;position:relative;top:-2px;"><strong>TravelPartner</strong></a>
+            					</li>
+                      {% endif %}
+                      <li class="nav-item active three">
+                          <a href="faq.htm" class="nav-link"><strong>FAQ</strong></a>
+                      </li>
+                      <li class="nav-item active four">
+                          <a href="#aboutus" class="nav-link"><strong>ABOUT US</strong></a>
+                      </li>
+                      {% if not user.is_authenticated %}
+                      <li class="nav-item active five">
+                          <a href="{% url 'signup' %}" class="nav-link"><strong>REGISTER</strong></a>
+                      </li>
+                      {% endif %}
+                      {% if user.is_authenticated %}
+                      <li class="nav-item active two">
+                        <a href="" class="nav-link"><strong>SHOP</strong></a>
+                    </li>
+                      <li class="nav-item active six">
+                        <a href="{% url 'logout' %}" class="nav-link"><strong>LOGOUT</strong></a>
+                    </li>
+                    <li class="nav-item active seven">
+                        <a href="" class="nav-link"><strong>{{user}}</strong></a>
+                    </li>
+                    {% endif %}
+                  </ul>
+              </div>
+    </nav>
+
+     <!-- Main Header Area End Here -->
+        <!-- Breadcrumb Area Start Here -->
+    <div class="image1">
+        <div class="text-center" style="position: relative; top: -60px;">
+            <h1><bold>Product Details</bold></h1>
+            <h5><a href="/shop/products">Home</a> / Product Details</h5>
+        </div>
+    </div>
+
+
+       <div class="container" style="padding-top: 25px;padding-bottom: 30px;">
+           <div class="row" style="padding-top: 20px; padding-bottom: 50px;">
+               <div class="col-lg-5 col-md-6">
+                   <img src="{% static 'images/p2.jpg' %}" alt="image" width="100%" height="100%" class="productimage">
+               </div>
+
+               <div class="col-lg-7 col-md-6 detail">
+                <h3 class="product-header">Dorji bari East Long Style</h3>
+                <ul class="rating-summary" style="list-style-type: none;">
+                    <li class="rating-pro">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </li>
+                    <li class="read-review"><i class="fa fa-comments" aria-hidden="true"></i><a href="#" style="color: black;">  read reviews (1)</a></li>
+                    <li class="write-review"><i class="fa fa-pencil" aria-hidden="true"></i><a href="#" style="color: black;"> write review</a></li>
+                </ul>
+                <div class="pro-price">
+                    <p class="d-flex align-items-center"><span class="prev-price">16.51</span><span class="price">$15.19</span><span class="saving-price">-5%</span></p>
+                </div>
+                <p style="font-size: 17px">Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!</p>
+
+                <div class="quatity-stock">
+                    <label>Quantity</label>
+                     <ul class="d-flex flex-wrap  align-items-center" style="list-style-type: none;">
+                         <li style="padding: 10px;">
+                             <form action="#">
+                                 <input class="quantity" type="number" min="1" value="1">
+                             </form>
+                         </li>
+                         <li style="padding: 10px;">
+                             <button style="padding: 10px; border: none;">Add To Cart</button>
+                         </li>
+                         <li style="padding: 10px">
+                             <p style="padding-top: 10px; font-weight: 500;"> In Stock</p>
+                         </li>
+                     </ul>
+                 </div>
+                 <section id="socialmedia">
+                    <p>Share</p>
+                    <div style="position: relative; top: -10px;">
+                        <a href="#"><img src="{% static 'images/fb.png' %}" width="70px" height="70px"></a>
+                        <a href=""><img src="{% static 'images/instagram.png' %}" width="70px" height="70px"></a>
+                    </div>
+                  </section>
+                </div>
+
+            </div>
+       </div>
+    <!----------------------------------------------->
+
+    <div class="container-fluid jumbotron" style="padding-top: 60px;">
+        <div class="section-title text-center">
+            <h2>Related product</h2>
+            <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        </div>
+        <div class="row" style="padding: 35px;">
+            <div class="col-lg-3 col-md-3">
+                <div class="card">
+                    <a href="#"><img src="{% static 'img/products/p8.jpg' %}" alt="Avatar" height="100%" width="100%"></a>
+                    <div class="container">
+                        <h5><b>$600</b></h5>
+                        <p class="cartitem">Architect & Engineer  <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 30px; color: black;"></i></a>
+                            <a title="Wishlist" href="#"><i class="fa fa-heart" aria-hidden="true" style="font-size: 30px; color: black;"></i></a></p>
+                     </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="card">
+                    <a href="#"><img src="{% static 'img/products/p7.jpg' %}" alt="Avatar" height="100%" width="100%"></a>
+                    <div class="container">
+                        <h5><b>$600</b></h5>
+                        <p class="cartitem">Architect & Engineer  <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 30px; color: black;"></i></a>
+                            <a title="Wishlist" href="#"><i class="fa fa-heart" aria-hidden="true" style="font-size: 30px; color: black;"></i></a></p>
+                     </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="card">
+                    <a href="#"><img src="{% static 'img/products/p6.jpg' %}" alt="Avatar" height="100%" width="100%"></a>
+                    <div class="container">
+                        <h5><b>$600</b></h5>
+                        <p class="cartitem">Architect & Engineer  <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 30px;color: black;"></i></a>
+                            <a title="Wishlist" href="#"><i class="fa fa-heart" aria-hidden="true" style="font-size: 30px; color: black;"></i></a></p>
+                     </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="card">
+                    <a href="#"><img src="{% static 'img/products/p1.jpg' %}" alt="Avatar" height="100%" width="100%"></a>
+                    <div class="container">
+                        <h5><b>$600</b></h5>
+                        <p class="cartitem">Architect & Engineer  <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 30px; color: black;"></i></a>
+                            <a title="Wishlist" href="#"><i class="fa fa-heart" aria-hidden="true" style="font-size: 30px; color: black;"></i></a></p>
+                     </div>
+                </div>
+            </div>
+        </div>
+        </div>
+<!--------------------------->
+       <section id="social-media">
+        <div class="container text-center">
+          <p>FOLLOW US ON SOCIAL MEDIA</p>
+          <div class="social-icons">
+
+            <a href="https://www.facebook.com/"><img src="{% static 'images/fb.png' %}"></a>
+
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><img src="{% static 'images/instagram.png' %}"></a>
+
+            <a href="https://twitter.com/login?lang=en"><img src="{% static 'images/twitter.jpg' %}"></a>
+
+    </div>
+
+
+
+        </div>
+      </section>
+
+
+<section id="contactus">
+<footer class="page-footer font-small unique-color-dark pt-4">
+
+<!-- Footer Elements -->
+<div class="container-fluid pt-4" style="background: #41A3FF; color: white;">
+    <div class="row">
+        <div class="col-md-6 text-center">
+         <span class="logo pt-3">
+      <span style='color: blue'>T</span>
+      <span style='color: red' >R</span>
+      <span style='color: orange'>A</span>
+      <span style='color: blue'>V</span>
+      <span style='color: green'>E</span>
+      <span style='color: red'>L</span>
+      <span style='color: orange'>A</span>
+      <span style='color: blue'>G</span>
+      <span style='color: red'>E</span>
+      <span style='color: green'>N</span>
+      <span style='color: orange'>C</span>
+      <span style='color: blue'>Y</span>
+         </span>
+          <pre style="font-size: 18px;color: white;padding-top: 45px;">Examples might be simplified to improve
+reading and basic understanding.
+but we cannot warrant full correctness of all content.
+          </pre>
+        </div>
+        <div class="col-md-6 footer-box text-center ">
+          <p style="font-size: 30px;"><b>CONTACT US</b></p>
+          <p><i class="fa fa-map-marker" ></i>  Sri City, Andhra pradesh</p>
+          <p><i class="fa fa-phone"></i>  +91 6876984329</p>
+          <p><i class="fa fa-envelope"></i>  travelagency@gmail.com</p>
+        </div>
+
+</div>
+<!-- Footer Elements -->
+
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+  <p>All Right Reserved</p>
+</div>
+<!-- Copyright -->
+
+</footer>
+</section>
+</body>
+</html>

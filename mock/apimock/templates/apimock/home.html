@@ -1,0 +1,82 @@
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class='container'>
+    <a class="navbar-brand" href="#">Travel Agency API Mock Application</a>
+    </div>
+    </nav>
+<div class="jumbotron">
+    <div>
+    <h1 class="display-4 container">Accounts API</h1>
+    </div>
+</div>
+
+<div class='container'>
+    <h3>1. Create New User</h3>
+    <button type="button" class="btn btn-success active">POST</button>
+    {{ post_new_user  }}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>2. Create existing user</h3>
+    <button type="button" class="btn btn-success active">POST</button>
+    {{ post_duplicate_user}}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>3. Login to get token</h3>
+    <button type="button" class="btn btn-success active">POST</button>
+    {{ login_token }}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>4. Edit without authentication</h3>
+    <button type="button" class="btn btn-warning active">PUT</button>
+    {{ edit_without_token }}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>5. Edit current user</h3>
+    <button type="button" class="btn btn-warning active">PUT</button>
+    {{ edit}}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>6. Edit different user's profile</h3>
+    <button type="button" class="btn btn-warning active">PUT</button>
+    {{ edit_different_user }}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>7. Delete without token</h3>
+    <button type="button" class="btn btn-danger active">DELETE</button>
+    {{ delete_without_token}}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>8. Delete current user</h3>
+    <button type="button" class="btn btn-danger active">DELETE</button>
+    {{delete}}
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <h3>9. Delete different user's profile</h3>
+    <button type="button" class="btn btn-danger active">DELETE</button>
+    {{ delete_different_user}}
+    <br><br>
+    <br><br>
+    <br><br>
+
+</div>
+<div class='container'>
+
+</div>

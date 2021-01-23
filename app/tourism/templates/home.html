@@ -1,0 +1,668 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <titl>Homepage</titl>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {#            <link rel="stylesheet" href="{% static 'css/bs.css' %}">#}
+
+    {#      up down prob---#}
+    <link rel="stylesheet" href="{% static 'css/styleho22.css' %}">
+    {#      <link rel="stylesheet" href="{% static 'css/bs.css' %}">#}
+    <!-- Latest compiled and minified CSS -->
+    {#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">#}
+<title>Homepage</title>
+</head>
+<style>
+
+
+</style>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+      <span class="nav-item active pt-3">
+        <span class="title">
+          <span style='color: blue'>T</span>
+          <span style='color: red'>R</span>
+          <span style='color: orange'>A</span>
+          <span style='color: blue'>V</span>
+          <span style='color: green'>E</span>
+          <span style='color: red'>L</span>
+          <span style='color: orange'>A</span>
+          <span style='color: blue'>G</span>
+          <span style='color: red'>E</span>
+          <span style='color: green'>N</span>
+          <span style='color: orange'>C</span>
+          <span style='color: blue'>Y</span>
+			 </span>
+        </span>
+    </a>
+
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a href="" class="nav-link" style="position:relative;left:0px;"><strong>HOME</strong></a>
+            </li>
+            {% if  user.is_authenticated %}
+                <li class="nav-item active one">
+                    <a href="/travelpartner" class="nav-link"
+                        style=" position:relative;top:-2px;left:5px;"><strong>TRAVEL PARTNER</strong></a>
+                </li>
+            {% endif %}
+            <li class="nav-item active two">
+                <a href="/shop/products" class="nav-link" style="position:relative;left:10px;"><strong>SHOP</strong></a>
+            </li>
+         <li class="nav-item active two">
+                <a href="/crowdfund/fund" class="nav-link" style="position:relative;left:10px;"><strong>CROWDFUND</strong></a>
+            </li>
+            <li class="nav-item active three">
+                <a href="faq.htm" class="nav-link" style="position:relative;left:20px;"><strong>FAQ</strong></a>
+            </li>
+            <li class="nav-item active four">
+                <a href="#aboutus" class="nav-link" style="position:relative;left:30px;"><strong>ABOUT US</strong></a>
+            </li>
+
+            {% if not user.is_authenticated %}
+
+                <li class="nav-item active five">
+                    <a href="/account/signup" class="nav-link" style="position:relative;left:20px;"><strong>SIGN
+                        UP</strong></a>
+                </li>
+            {% endif %}
+            {% if user.is_authenticated %}
+                <li class="nav-item active six">
+                    <a href="#contactus" class="nav-link"><strong>{{ email }}</strong></a>
+                </li>
+                <li class="nav-item active seven">
+                    <a href="/account/logout" class="nav-link"
+                       style="font-size:17px;position:relative;top:-2px;"><strong>Logout </strong></a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+
+{#{% include 'partials/materialize_navbar.html' %}#}
+
+<div class="slider container-fluid">
+    <div class="slid-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-sm-12 detail">
+                    <h1>
+                        <bold style="font-size: 60px;font-weight: 750; font-family: 'Poppins',sans-serif;">Welcome to
+                        </bold>
+                    </h1>
+                    <h1 class="type-animation">
+                        <bold style="font-size: 55px;font-weight: 750; font-family: 'Poppins',sans-serif; color: blue;">
+                            Travel Agency
+                        </bold>
+                    </h1>
+                    <br>
+                    <h6>Fullfil your travel dreams! </h6><br>
+                    <p>Get Flight details, reviews, rent travel products, crowdfund your trip, find a travel
+                        partner. <br> All in one click!</p>
+
+                    <div class="btn-row row no-margin ml-1 pt-1">
+                        {% if not user.is_authenticated %}
+                            <a href="{% url 'login' %}" class="btn btn-primary pt-1 pb-2 pl-4 pr-4"
+                               style="font-size: 25px;"><i class="fas fa-cloud-download-alt"></i>Log In</a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-12 image">
+                    <img src="{% static 'images/38068369-travel-and-tourism-background-in-flat-style-removebg-preview.png' %}"
+                         height="500px" alt="" class="image hero"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{#    <div class="card card-body card-1">#}
+{#      <button type="button" class="btn btn-primary bt-2"><i class="fa fa-tree fa-1"></i>Tours</button>#}
+{#      <button type="button" class="btn btn-primary bt-3"><i class="fa fa-building fa-2"></i>Hotels</button>#}
+{#      <button type="button" class="btn btn-primary bt-4"><i class="fa fa-plane fa-3"></i>Flights</button>#}
+{#      <span class="dest">#}
+{#        <h4>Destination</h4>#}
+{#      </span>#}
+{#      <div class="travel-select-icon">#}
+{#        <select class="form-control ">#}
+{##}
+{#            <option value="default">enter your destination country</option><!-- /.option-->#}
+{##}
+{#            <option value="turkey">turkey</option><!-- /.option-->#}
+{##}
+{#            <option value="russia">russia</option><!-- /.option-->#}
+{#            <option value="egept">egypt</option><!-- /.option-->#}
+{##}
+{#        </select><!-- /.select-->#}
+{#    </div><!-- /.travel-select-icon -->#}
+{#    <div class="travel-select-icon">#}
+{#          <select class="form-control ">#}
+{##}
+{#              <option value="default">enter your destination location</option><!-- /.option-->#}
+{##}
+{#              <option value="istambul">istambul</option><!-- /.option-->#}
+{##}
+{#              <option value="mosko">mosko</option><!-- /.option-->#}
+{#              <option value="cairo">cairo</option><!-- /.option-->#}
+{##}
+{#          </select><!-- /.select-->#}
+{#      </div><!-- /.travel-select-icon -->#}
+{##}
+{#    </div>#}
+
+
+{##}
+{##}
+{#    <div class="single-tab-select-box">#}
+{##}
+{#        <h2>check in</h2>#}
+{#        <div class="travel-check-icon">#}
+{#            <form action="#">#}
+{#                <input type="date" name="check_in" class="form-control" placeholder="12 -01 - 2017 ">#}
+{#            </form>#}
+{##}
+{#        </div><!-- /.travel-check-icon -->#}
+{#    </div><!--/.single-tab-select-box-->#}
+{#    <div class="single-tab-select-box box-2">#}
+{##}
+{#        <h2>check out</h2>#}
+{#        <div class="travel-check-icon">#}
+{#            <form action="#">#}
+{#                <input type="date" name="check_in" class="form-control" placeholder="12 -01 - 2017 ">#}
+{#            </form>#}
+{##}
+{#        </div><!-- /.travel-check-icon -->#}
+{#    </div><!--/.single-tab-select-box-->#}
+{#    <div class="single-tab-select-box box-3">#}
+{#      <span class="mve-2">#}
+{#            <h2>duration</h2>#}
+{#            <div class="box3">#}
+{#            <select class="form-control">#}
+{##}
+{#            <option value="default">5</option><!-- /.option-->#}
+{##}
+{#            <option value="10">10</option><!-- /.option-->#}
+{##}
+{#            <option value="15">15</option><!-- /.option-->#}
+{#            <option value="20">20</option><!-- /.option-->#}
+{##}
+{#            </select><!-- /.select-->#}
+{#          </span>#}
+{#            </div><!-- /.travel-select-icon -->#}
+{#            </div><!--/.single-tab-select-box-->#}
+{#    <div class="single-tab-select-box box-4">#}
+{#      <span class="mve-3">#}
+{#            <h2>Members</h2>#}
+{#            <div class="box4">#}
+{#            <select class="form-control">#}
+{##}
+{#            <option value="default">1</option><!-- /.option-->#}
+{##}
+{#            <option value="10">2</option><!-- /.option-->#}
+{##}
+{#            <option value="15">4</option><!-- /.option-->#}
+{#            <option value="20">8</option><!-- /.option-->#}
+{##}
+{#            </select><!-- /.select-->#}
+{#</span>#}
+{#            </div><!-- /.travel-select-icon -->#}
+{#            </div><!--/.single-tab-select-box-->#}
+{#	<div class="search-1">#}
+{#    <button type="button" class="btn btn-warning search1">SEARCH</button>#}
+</div>
+
+
+{#<div class="row">#}
+{#     <span class="imp-features">#}
+{#         <h3>Important Features</h3>#}
+{#     </span>#}
+{#     <div class="card card-small card-2">#}
+{#     <span class="car-2"><h4 style="color:#2cdbb5;">Rent Travel Products</h4>#}
+{#                           <p>You can rent travel necessities from us, for a short period of time. Travelbags, Apparels,#}
+{#                           Electronics such as Cameras, Speakers, and more using our hassle free Shop feature.</p>#}
+{#                         </span>#}
+{#     </div>#}
+{#     <div class="card card-small card-3">#}
+{#     <span class="car-3"><h4 style="color:#2cdbb5;">Crowdfund Your Trip</h4>#}
+{#                           <p>Tell your story and why you need to take that trip.#}
+{#                           Our fellow travellers might make your dream trip come true.</p>#}
+{#                         </span>#}
+{#     </div>#}
+{#     <div class="card card-small card-4">#}
+{#       <span class="car-4">#}
+{#     <h4 style="color:#2cdbb5;">Find a Travel Partner</h4>#}
+{#                           <p>You can find people with similar travel partners, and plan your trip#}
+{#                           with them. It's a great way to meet new like-minded people.</p>#}
+{#                         </span>#}
+{#     </div>#}
+{##}
+{# </div>#}
+
+<!--galley start-->
+
+
+<!--travel-box start-->
+{#  <iframe src="http://127.0.0.1:8000/home/form/"   frameborder="0" allowfullscreen  width="560" height="315"  title="W3Schools Free Online Web Tutorials">#}
+{#</iframe>#}
+<div style="margin-top: 350px"></div>
+
+<div class="clearfix"></div>
+
+<div class="" style="margin-left: 8%;margin-right: 8%">
+    <!-- Nav pills -->
+    <ul class="nav nav-pills" style="margin-bottom: 2.5rem">
+        <li class="active"><a href="#tab-1" data-toggle="tab"><span style="font-size: larger;font-weight: bolder">Flights</span></a></li>
+        <li style="padding-left: 40px"><a href="#tab-2" data-toggle="tab"><span style="font-size: larger;font-weight: bolder">Hotels</span></a></li>
+
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content well">
+        <div class="tab-pane active" id="tab-1">
+
+                <form method="POST" style="position:relative;top:50px;">
+                                    {% csrf_token %}
+
+                    <input type="hidden" name="csrfmiddlewaretoken"
+                           value="CcLnVOefyUjvuLPQUwwfktMY6BSq3QRvun3ukg2fSdGt0SmJ69M46PzYofOnwf0O">
+                    <tr>
+                        <th><label for="id_originCity">OriginCity:</label></th>
+                        <td><select class="autoCompleteDesktop__searchBox--nearbyVisible" name="originCity" required id="id_originCity">
+                            <option value="" selected>---------</option>
+
+                            <option value="MAA">Chennai</option>
+
+                            <option value="DEL">DELHI</option>
+
+                            <option value="BLR">Bengaluru</option>
+
+                            <option value="CCU">Kolkata</option>
+
+                            <option value="HYD">Hyderabad</option>
+
+                            <option value="VJA">Vijayawada</option>
+
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <th><label for="id_destinationCity">DestinationCity:</label></th>
+                        <td><select name="destinationCity" required id="id_destinationCity">
+                            <option value="" selected>---------</option>
+
+                            <option value="MAA">Chennai</option>
+
+                            <option value="DEL">DELHI</option>
+
+                            <option value="BLR">Bengaluru</option>
+
+                            <option value="CCU">Kolkata</option>
+
+                            <option value="HYD">Hyderabad</option>
+
+                            <option value="VJA">Vijayawada</option>
+
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <th><label for="id_Departure_date"></label></th>
+                        <td><input class="" type="text" name="Departure_date" required id="id_Departure_date" placeholder="Departure date:"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="id_Return_date"></label></th>
+                        <td><input type="text" name="Return_date" required id="id_Return_date" placeholder="Return date:"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="id_adults"></label></th>
+                        <td><input type="text" name="adults" maxlength="10" required id="id_adults" placeholder="Adults"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="id_members"></label></th>
+                        <td><input type="text" name="members" maxlength="10" required id="id_members" placeholder="Members"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="id_classType">ClassType:</label></th>
+                        <td><select name="classType" required id="id_classType">
+                            <option value="" selected>---------</option>
+
+                            <option value="1">A</option>
+
+                            <option value="2">B</option>
+
+                            <option value="3">C</option>
+
+                        </select></td>
+                    </tr>
+                    <button class="btn btn-primary ml-5" type=submit>Submit</button>
+                </form>
+
+
+        </div>
+        <div class="tab-pane" id="tab-2">
+            {% include 'hotels_form.html' %}
+        </div>
+
+    </div>
+
+</div>
+
+<div class="clearfix"></div>
+
+<section id="gallery" class="gallery">
+    <div class="container pt-1">
+        <div class="gallery-details">
+            <div class="gallary-header text-center">
+                <h2>
+                    top destination
+                </h2>
+                <p>
+                    Duis aute irure dolor in velit esse cillum dolore eu fugiat nulla.
+                </p>
+            </div><!--/.gallery-header-->
+            <div class="gallery-box">
+                <div class="gallery-content">
+                    <div class="filtr-container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="filtr-item">
+                                    <img src="{% static 'images/gallary/china.jpg' %}" alt="portfolio image"/>
+                                    <div class="item-title">
+                                        <a href="#">
+                                            china
+                                        </a>
+                                        <p><span>20 tours</span><span>15 places</span></p>
+                                    </div><!-- /.item-title -->
+                                </div><!-- /.filtr-item -->
+                            </div><!-- /.col -->
+
+                            <div class="col-md-6">
+                                <div class="filtr-item">
+                                    <img src="{% static 'images/gallary/venz.jpg' %}" alt="portfolio image"
+                                         style="height:359px;">
+                                    <div class="item-title">
+                                        <a href="#">
+                                            venuzuala
+                                        </a>
+                                        <p><span>12 tours</span><span>9 places</span></p>
+                                    </div> <!-- /.item-title-->
+                                </div><!-- /.filtr-item -->
+                            </div><!-- /.col -->
+
+                            <div class="col-md-4">
+                                <div class="filtr-item">
+                                    <img src="{% static 'images/gallary/brazil.jpg' %}" alt="portfolio image"
+                                         style="height:620px;">
+
+                                    <div class="item-title">
+                                        <a href="#">
+                                            brazil
+                                        </a>
+                                        <p><span>25 tours</span><span>10 places</span></p>
+                                    </div><!-- /.item-title -->
+                                </div><!-- /.filtr-item -->
+                            </div><!-- /.col -->
+
+                            <div class="col-md-4">
+                                <div class="filtr-item">
+                                    <img src="{% static 'images/gallary/Aust.jpg' %}" alt="portfolio image"
+                                         style="height:300px;">
+                                    <div class="item-title">
+                                        <a href="#">
+                                            australia
+                                        </a>
+                                        <p><span>18 tours</span><span>9 places</span></p>
+                                    </div> <!-- /.item-title-->
+                                </div><!-- /.filtr-item -->
+                            </div><!-- /.col -->
+
+                            <div class="col-md-4">
+                                <div class="filtr-item">
+                                    <img src="{% static 'images/gallary/nethe.jpg' %}" alt="portfolio image"
+                                         style="height:300px;">
+                                    <div class="item-title">
+                                        <a href="#">
+                                            netharland
+                                        </a>
+                                        <p><span>14 tours</span><span>12 places</span></p>
+                                    </div> <!-- /.item-title-->
+                                </div><!-- /.filtr-item -->
+                            </div><!-- /.col -->
+
+                            <div class="col-md-8">
+                                <div class="filtr-item extra">
+                                    <img src="{% static 'images/gallary/turkey.jpg' %}" alt="portfolio image"
+                                         style="height:300px;">
+                                    <div class="item-title">
+                                        <a href="#">
+                                            turkey
+                                        </a>
+                                        <p><span>14 tours</span><span>6 places</span></p>
+                                    </div> <!-- /.item-title-->
+                                </div><!-- /.filtr-item -->
+                            </div><!-- /.col -->
+
+                        </div><!-- /.row -->
+
+                    </div><!-- /.filtr-container-->
+                </div><!-- /.gallery-content -->
+            </div><!--/.galley-box-->
+        </div><!--/.gallery-details-->
+    </div><!--/.container-->
+
+</section><!--/.gallery-->
+<!--gallery end-->
+
+{#     <div class="wrapper">#}
+{#      <div class="testimonial">#}
+{#        <div class="item">#}
+{#          <div class="img">#}
+{#            <img src="{% static 'person_1.png' %}" alt="">#}
+{#          </div>#}
+{#          <div class="name">Venkatesh</div>#}
+{#          <div class="content">#}
+{#            <h1><i class="fa fa-quote-left"></i></h1>#}
+{#            <p>I have rented products multiple times using TravelAgency, and have always had top class#}
+{#            customer service. Hightly Recommended.</p>#}
+{#            <div class="stars">#}
+{#             <img src="{% static 'star_gold.png' %}" alt="">#}
+{#             <img src="{% static 'star_gold.png' %}" alt="">#}
+{#             <img src="{% static 'star_gold.png' %}" alt="">#}
+{#             <img src="{% static 'star_gold.png' %}" alt="">#}
+{#             <img src="{% static 'star_gold.png' %}" alt="">#}
+{##}
+{##}
+{##}
+{##}
+{##}
+{#              <img src="star_gold.png" alt="">#}
+{##}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="item">#}
+{#          <div class="img">#}
+{#            <img src="{% static 'person_3.png' %}" alt="">#}
+{##}
+{#          </div>#}
+{#          <div class="name">Vishruth</div>#}
+{#          <div class="content">#}
+{#            <h1><i class="fa fa-quote-left"></i></h1>#}
+{#            <p>My travel dreams were made possible by using your Crowdfuning feature.#}
+{#            It is a great initiative, everyone has to experience travelling.</p>#}
+{#            <div class="stars">#}
+{##}
+{#            <img src="{% static 'star_gold.png' %}" alt="">#}
+{#            <img src="{% static 'star_gold.png' %}" alt="">#}
+{#            <img src="{% static 'star_gold.png' %}" alt="">#}
+{#            <img src="{% static 'star_gold.png' %}" alt="">#}
+{#            <img src="{% static 'star_gray.png' %}" alt="">#}
+{##}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="item">#}
+{#          <div class="img">#}
+{#            <img src="{% static 'person_1.png' %}" alt="">#}
+{#          </div>#}
+{#          <div class="name">Salman</div>#}
+{#          <div class="content">#}
+{#            <h1><i class="fa fa-quote-left"></i></h1>#}
+{#            <p>I have met some amazing people from the Travel Partners section of this site.#}
+{#            It is a great idea and it builds a feeling a community.</p>#}
+{#            <div class="stars">#}
+{#             <img src="{% static 'star_gold.png' %}" alt="">#}
+{#             <img src="{% static 'star_gold.png' %}" alt="">#}
+{#             <img src="{% static 'star_gold.png' %}" alt="">#}
+{#                             <img src="{% static 'star_gold.png' %}" alt="">#}
+{#                             <img src="{% static 'star_gray.png' %}" alt="">#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="clear-fix"></div>#}
+{#     </div>#}
+{#   </div>#}
+
+
+<!------------------------------------------------------->
+
+<section id="social-media">
+    <div class="container text-center">
+        <p>FOLLOW US ON SOCIAL MEDIA</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/"><img src="{% static 'images/fb.png' %}"></a>
+
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><img src="{% static 'images/twitter.jpg' %}"></a>
+
+            <a href="https://twitter.com/login?lang=en"><img src="{% static 'images/instagram.png' %}"></a>
+
+        </div>
+
+
+    </div>
+</section>
+
+<div id="footer-dark" style="background-color: #41A3FF">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h6>Product offering</h6>
+                    <ul>
+                        <li><a href="#">Flights</a></li>
+                        <li><a href="#">Holidays in USA</a></li>
+                        <li><a href="#">Book Hotels</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h6 style="color: black">About</h6>
+                    <ul>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h6 style="color: black">Travel Agency</h6>
+                    <p style="color: black" class="mt-2">
+                        Praesent sed lobortis mi. Suspendisse vel placerat ligula.
+                        Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam
+                        quis tristique lectus. Aliquam in arcu eget velit pulvinar
+                        dictum vel in justo.
+                    </p>
+                </div>
+                <div class="col item social">
+                    <a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                        class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a
+                        href="#"><i class="icon ion-social-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</div>
+
+<div id="footer-bottom">
+    <div class="container">
+        <div class="copyright text-center">
+            <p>Copyright ©. All Right Reserved.</p>
+        </div>
+    </div>
+</div>
+</div>
+
+{#<section id="contactus">#}
+{#<footer class="page-footer font-small unique-color-dark pt-4">#}
+{##}
+{#	<!-- Footer Elements -->#}
+{#	<div class="container-fluid pt-4" style="background: #41A3FF; color: white;">#}
+{#		<div class="row">#}
+{#			<div class="col-md-6 text-center">#}
+{#			 <span class="logo pt-3">#}
+{#          <span style='color: blue'>T</span>#}
+{#          <span style='color: red' >R</span>#}
+{#          <span style='color: orange'>A</span>#}
+{#          <span style='color: blue'>V</span>#}
+{#          <span style='color: green'>E</span>#}
+{#          <span style='color: red'>L</span>#}
+{#          <span style='color: orange'>A</span>#}
+{#          <span style='color: blue'>G</span>#}
+{#          <span style='color: red'>E</span>#}
+{#          <span style='color: green'>N</span>#}
+{#          <span style='color: orange'>C</span>#}
+{#          <span style='color: blue'>Y</span>#}
+{#			 </span>#}
+{#			</div>#}
+{#			<div class="col-md-6 footer-box text-center ">#}
+{#			  <p style="font-size: 30px;"><b>CONTACT US</b></p>#}
+{#			  <p><i class="fa fa-map-marker" ></i>  Sri City, Andhra pradesh</p>#}
+{#			  <p><i class="fa fa-phone"></i>  +91 6876984329</p>#}
+{#			  <p><i class="fa fa-envelope"></i>  travelagency@gmail.com</p>#}
+{#			</div>#}
+{##}
+{#	</div>#}
+{#	<!-- Footer Elements -->#}
+{##}
+{#	<!-- Copyright -->#}
+{#	<div class="footer-copyright text-center py-3">© 2020 Copyright:#}
+{#	  <p>All Right Reserved</p>#}
+{#	</div>#}
+{#	<!-- Copyright -->#}
+{##}
+{#  </footer>#}
+</section>
+
+{#          <script src="{% static 'js/jq.js' %}"></script>#}
+{##}
+{#    <script src="{% static 'js/bs.js' %}"></script>#}
+{#      <script src="{% static 'js/custom31.js' %}"></script#}
+{#      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>#}
+{##}
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+{#    <script src="{% static 'js/bs.js' %}"></script>#}
+<script src="{% static 'js/custom31.js' %}"></script>
+
+</body>
+</html>

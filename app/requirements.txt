@@ -1,0 +1,15 @@
+django
+djangorestframework
+psycopg2
+django-cors-headers
+gunicorn
+dj-database-url
+python-decouple
+whitenoise
+django-cors-headers
+requests
+django-filter
+django-extensions
+graphviz
+pyparsing
+pydot
