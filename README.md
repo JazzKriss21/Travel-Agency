@@ -18,7 +18,7 @@ It is concentrated at Service Oriented Architecture. Hence, as many as 4 RESTful
 ## Mock Server Application (Django)
 A Django based Mock Application to show the implementation, working, and permissions of the exposed APIs.
 
-#### To Run the Mock Application
+#### To Run the Mock Application:
 Go to the 'app' directory and run:
 ```bash
 python manage.py runserver 8000
