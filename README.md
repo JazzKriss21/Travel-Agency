@@ -25,4 +25,4 @@ Open another shell and go to 'mock' directory and run:
 ```bash
 python manage.py runserver 4000
 ```
-To see the mock application, go to localhost:4000 on your web browser.
+To see the mock application, go to http://localhost:4000 on your web browser.
